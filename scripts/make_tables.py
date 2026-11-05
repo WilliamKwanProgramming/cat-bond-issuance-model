@@ -59,12 +59,8 @@ def pricing_sections() -> list[str]:
             "method": main["method"],
             "b [95% interval]": [ci(r.b, r.lo, r.hi) for r in main.itertuples()],
             "p (b = 1)": main["p_b_eq_1"].map(lambda v: f"{v:.4f}"),
-            "clusters": main["n_clusters"]
-            .fillna("")
-            .map(lambda v: "" if v == "" else str(int(float(v)))),
-            "bootstrap draws": main["n_boot"]
-            .fillna("")
-            .map(lambda v: "" if v == "" else str(int(float(v)))),
+            "clusters": main["n_clusters"].map(lambda v: "" if pd.isna(v) else str(int(v))),
+            "bootstrap draws": main["n_boot"].map(lambda v: "" if pd.isna(v) else str(int(v))),
         }
     )
     out.append(
@@ -158,6 +154,106 @@ def pricing_sections() -> list[str]:
                 },
             ),
             "results/pricing/year_multiple.csv",
+        )
+    )
+    return out
+
+
+def posthoc_sections() -> list[str]:
+    """Tables of the POST HOC diagnostics (results/pricing_posthoc/), labelled as such."""
+    d = R / "pricing_posthoc"
+    if not (d / "composition.csv").exists():
+        return []
+    tag = "POST HOC, not in the protocol; REAL data: public deal terms from Artemis pages"
+    out = []
+    comp = pd.read_csv(d / "composition.csv")
+    cross = comp[comp["dimension"] == "region x peril"].pivot(
+        index="group", columns="peril_group", values="n_layers"
+    )
+    cross = cross.loc[comp[comp["dimension"] == "region"]["group"]]
+    cross["all"] = cross.sum(axis=1)
+    cross = cross.reset_index().rename(columns={"group": "region group"})
+    cross.loc[len(cross)] = ["all", *cross.drop(columns="region group").sum().astype(int)]
+    out.append(
+        section(
+            f"Composition of the 56 regression layers by region and peril ({tag})",
+            md(cross),
+            "results/pricing_posthoc/composition.csv",
+        )
+    )
+    r2 = pd.read_csv(d / "r2_partition.csv")
+    out.append(
+        section(
+            f"R-squared of log spread: log EL only, issue year only, both ({tag})",
+            md(r2, {"r2": ".3f", "adj_r2": ".3f"}),
+            "results/pricing_posthoc/r2_partition.csv",
+        )
+    )
+    sp = pd.read_csv(d / "specifications.csv")
+
+    def hc3(r) -> str:
+        return "undefined" if pd.isna(r.lo_hc3) else f"[{r.lo_hc3:.3f}, {r.hi_hc3:.3f}]"
+
+    t = pd.DataFrame(
+        {
+            "specification": sp["specification"],
+            "n (series)": [f"{r.n} ({r.n_series})" for r in sp.itertuples()],
+            "b [95% CR1 series, t(G-1)]": [ci(r.b, r.lo_cr1, r.hi_cr1) for r in sp.itertuples()],
+            "HC3 interval": [hc3(r) for r in sp.itertuples()],
+            "indicator terms: coefficient (CR1 se)": sp["indicator_terms"].fillna(""),
+        }
+    )
+    out.append(
+        section(
+            f"Slope b with region and peril indicators, and on Florida layers only ({tag}; "
+            "reference levels: Florida and other states, named storm and other perils)",
+            md(t),
+            "results/pricing_posthoc/specifications.csv",
+        )
+    )
+    fl = pd.read_csv(d / "florida_layer_spreads.csv")
+    t = pd.DataFrame(
+        {
+            "layer": fl["layer"],
+            "model": fl["model"],
+            "EL %": fl["el_pct"].map(lambda v: f"{v:.2f}"),
+            "median spread % [90% PI]": [
+                ci(r.spread_median_pct, r.pi_lo_pct, r.pi_hi_pct, ".2f") for r in fl.itertuples()
+            ],
+            "multiple": fl["multiple"].map(lambda v: f"{v:.2f}"),
+        }
+    )
+    out.append(
+        section(
+            f"Median spread of the hypothetical layers (issue year 2025, Florida only): protocol "
+            f"M2 against M2 with region-group indicators ({tag}; HYPOTHETICAL layers)",
+            md(t),
+            "results/pricing_posthoc/florida_layer_spreads.csv",
+        )
+    )
+    im = pd.read_csv(d / "implied_error_sd.csv")
+    out.append(
+        section(
+            f"Error SD in the stated log EL that would turn a true slope of 1 into the estimate, "
+            f"if the error is classical ({tag})",
+            md(im, {"b_hat": ".3f", "var_stated_log_el": ".4f", "implied_error_sd_log": ".3f"}),
+            "results/pricing_posthoc/implied_error_sd.csv",
+        )
+    )
+    at = pd.read_csv(d / "attenuation.csv")
+    wide = at.pivot_table(
+        index="error_sd_log_el", columns=["scenario", "model"], values="mean_b_hat"
+    )
+    t = pd.DataFrame({"error SD (log EL)": [f"{v:.2f}" for v in wide.index]})
+    for sc, m in wide.columns:
+        t[f"{sc} {m}"] = [f"{v:.3f}" for v in wide[(sc, m)]]
+    out.append(
+        section(
+            f"Mean estimated slope when the true slope is 1, with classical and with Berkson "
+            f"error in the stated EL (SIMULATION on the real table's design; {at['n_rep'].iloc[0]} "
+            f"replications per row; {tag})",
+            md(t),
+            "results/pricing_posthoc/attenuation.csv",
         )
     )
     return out
@@ -269,6 +365,22 @@ def main() -> int:
                 {"median_position_diff_km": ".1f", "max_abs_wind_diff_kt": ".1f"},
             ),
             "results/hazard/definition_agreement.csv",
+        )
+    )
+
+    nm = pd.read_csv(R / "hazard" / "near_miss_hurricanes.csv")
+    n_lf = len(pd.read_csv(R / "hazard" / "landfalls.csv").query("1900 <= year <= 2019"))
+    parts.append(
+        section(
+            f"Hurricane-strength storms within 50 km of the Florida coastline in 1900-2019 that "
+            f"are not counted as Florida landfalls ({len(nm)} storms, against {n_lf} counted "
+            "landfalls; real data: HURDAT2; not in the simulated event set)",
+            md(
+                nm.drop(columns=["storm_id", "time"]),
+                {"lat": ".1f", "lon": ".1f", "wind": ".0f", "distance_florida_km": ".0f",
+                 "distance_other_coast_km": ".0f"},
+            ),
+            "results/hazard/near_miss_hurricanes.csv",
         )
     )
 
@@ -502,6 +614,7 @@ def main() -> int:
     )
 
     parts.extend(pricing_sections())
+    parts.extend(posthoc_sections())
     parts.extend(transaction_sections())
 
     ex = pd.read_csv(R / "exposure" / "county_exposure.csv", dtype={"fips": str})

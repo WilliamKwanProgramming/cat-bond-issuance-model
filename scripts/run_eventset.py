@@ -232,7 +232,12 @@ def main() -> int:
             "(USD 100 bn TIV over Florida counties by 2020 Census households)",
             "n_years": str(args.n_years),
             "rp_bootstrap": f"{RP_BOOTSTRAP} resamples of years",
-            "common_random_numbers": "every variant uses the same seed",
+            "random_numbers": "every variant uses the same seed. Variants that change only the "
+            "loss settings (V_half, V_thresh, deductible, RMW, inland decay) simulate the base "
+            "case's events (common random numbers); the KDE variant has the same event counts, "
+            "positions, headings and speeds and other winds; the frequency variants draw other "
+            "event counts and the window variants other landfall pools, so every event differs "
+            "(independent Monte Carlo runs)",
         },
     )
     return 0
