@@ -48,4 +48,6 @@ for s in "${steps[@]}"; do
   python3 $s
   echo "  python3 $s  [$(( $(date +%s) - t0 )) s]" >> results/MANIFEST.txt
 done
-{ printf "total:   %s s wall; CPU of the steps (user, system): " "$(( $(date +%s) - start ))"; times | tail -1; } >> results/MANIFEST.txt
+echo "total:   $(( $(date +%s) - start )) s wall" >> results/MANIFEST.txt
+# bash 'times': first line this shell, second line its child processes (user, system CPU)
+{ echo "cpu (shell, then steps; user system):"; times; } >> results/MANIFEST.txt
