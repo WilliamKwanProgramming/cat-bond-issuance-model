@@ -1,0 +1,6 @@
+segment,n,circular_mean_heading_deg,mean_resultant_length,median_speed_kmh,speed_q25,speed_q75
+Northwest,18,18.45,0.8551,22.01,14.74,28.36
+West,9,37.2,0.9239,28.99,19.61,32.94
+South,24,347,0.5922,22.29,15.18,26.71
+East,16,292.2,0.9168,17.82,12.73,21.49
+All,67,350.4,0.6147,20.66,15.05,27.65

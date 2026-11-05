@@ -1,0 +1,4 @@
+comparison,n_first,n_second,n_both,median_position_diff_km,max_abs_wind_diff_kt,detail
+"record vs geometric, AL.rda, years with L flags",62,62,62,4.047,5.979,
+"geometric only, AL.rda, flag gap 1966-1984",0,5,0,,,ALMA 1966; INEZ 1966; GLADYS 1968; ELOISE 1975; DAVID 1979
+"geometric: AL.rda vs storms.csv, 1975-2019",19,19,19,,,AL only: ; storms.csv only: 

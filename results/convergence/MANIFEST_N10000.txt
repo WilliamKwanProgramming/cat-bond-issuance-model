@@ -1,0 +1,9 @@
+command: python3 scripts/run_convergence.py --n-years 10000 --n-seeds 20 --seed-start 1001
+seed:    1001
+git:     eeb7287fa20185de4889779e6bb5df7edc84f6b1 (clean)
+date:    2026-11-05T07:37:46Z
+python:  3.13.18; numpy 2.5.3
+machine: x86_64 Linux
+N10000: seeds 1001..1020
+data: hazard fitted on real HURDAT2 landfalls; hypothetical exposure
+reference_layer_usd: 1200000000 to 1800000000

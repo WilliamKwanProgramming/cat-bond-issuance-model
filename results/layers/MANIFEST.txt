@@ -1,0 +1,8 @@
+command: python3 scripts/run_layers.py
+seed:    none (deterministic)
+git:     eeb7287fa20185de4889779e6bb5df7edc84f6b1 (clean)
+date:    2026-11-05T07:36:53Z
+python:  3.13.18; numpy 2.5.3
+machine: x86_64 Linux
+input: results/eventset/event_table.csv.gz (base case)
+data: hazard from real HURDAT2; exposure hypothetical
