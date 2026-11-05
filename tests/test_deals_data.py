@@ -147,3 +147,15 @@ def test_non_utf8_is_reported(tmp_path: Path) -> None:
     path = tmp_path / "latin1.csv"
     path.write_bytes(",".join(vd.COLUMNS).encode() + b"\n\xe9\n")
     assert "not valid UTF-8" in vd.validate(path, TODAY)[0]
+
+
+def test_gateway_re_2025_class_aaa_region_excludes_florida() -> None:
+    # Artemis deal page (accessed 2026-11-05): the Class AAA notes cover named storm "across the
+    # states of Alabama, Louisiana, Mississippi, New York, North Carolina, South Carolina and
+    # Texas"; Florida is listed for Classes AA, A, C1 and C2 only.
+    row = next(
+        r
+        for r in _rows()
+        if r["deal_name"] == "Gateway Re Ltd. (Series 2025-1)" and r["tranche"] == "Class AAA"
+    )
+    assert "FL" not in row["region"] and "Florida" not in row["region"]

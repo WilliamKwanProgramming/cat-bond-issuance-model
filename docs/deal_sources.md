@@ -126,6 +126,9 @@ Two further corrections came out of the same pass (these cells were not among th
   4.25 to 4.75.
 - Citrus Re 2025-1 `region`: Class A covers named storm in the southeast states (AL, FL, GA, MS,
   NC, SC), and Class B covers named storm in Hawaii only; both rows had listed all seven states.
+- Gateway Re 2025-1 Class AAA `region` (found by a later review of 10 further rows): the page
+  lists Alabama, Louisiana, Mississippi, New York, North Carolina, South Carolina and Texas for
+  Class AAA; Florida is listed only for the other classes. `region` is not used by any model.
 
 **Second sources.** For six sampled rows (Alamo Re 2024-1 Classes A, B and C; Everglades Re II
 2018-1 Class A, 2021-1 Class B and 2024-1 Class B) the second reader looked for a source other than
