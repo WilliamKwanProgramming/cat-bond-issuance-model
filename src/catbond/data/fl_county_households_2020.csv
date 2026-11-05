@@ -1,0 +1,70 @@
+# Florida counties: 2020 Census households (occupied housing units), April 1 2020.
+# Source: University of Florida Bureau of Economic and Business Research (BEBR), Table 1 "Number of Households and Average Household Size in Florida and Its Counties 2025 2020 and 2010", https://bebr.ufl.edu/wp-content/uploads/2025/12/households_2025.pdf, accessed 2026-11-05. The 67 county values sum to the state total printed in the table (8529067).
+county,households_2020
+Alachua,112723
+Baker,9087
+Bay,70134
+Bradford,9462
+Brevard,257026
+Broward,756657
+Calhoun,4784
+Charlotte,85846
+Citrus,69438
+Clay,78939
+Collier,157921
+Columbia,26424
+DeSoto,11941
+Dixie,6248
+Duval,399759
+Escambia,128160
+Flagler,48450
+Franklin,4947
+Gadsden,16806
+Gilchrist,6551
+Glades,4250
+Gulf,5571
+Hamilton,4690
+Hardee,8059
+Hendry,12644
+Hernando,79773
+Highlands,44376
+Hillsborough,559949
+Holmes,7282
+Indian River,71177
+Jackson,17083
+Jefferson,5816
+Lafayette,2727
+Lake,156923
+Lee,318303
+Leon,121085
+Levy,17756
+Liberty,2491
+Madison,6877
+Manatee,168437
+Marion,156906
+Martin,68750
+Miami-Dade,967414
+Monroe,36436
+Nassau,35919
+Okaloosa,83957
+Okeechobee,14433
+Orange,519437
+Osceola,130574
+Palm Beach,607880
+Pasco,225214
+Pinellas,442789
+Polk,272418
+Putnam,29569
+St. Johns,104640
+St. Lucie,128997
+Santa Rosa,69454
+Sarasota,200211
+Seminole,182420
+Sumter,62907
+Suwannee,16385
+Taylor,8138
+Union,4271
+Volusia,232301
+Wakulla,11970
+Walton,29981
+Washington,9124
