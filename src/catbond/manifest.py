@@ -39,9 +39,12 @@ def relative_command(argv: list[str]) -> str:
 
 
 def write_manifest(
-    out_dir: pathlib.Path, seed: int | None, notes: dict[str, str] | None = None
+    out_dir: pathlib.Path,
+    seed: int | None,
+    notes: dict[str, str] | None = None,
+    name: str = "MANIFEST.txt",
 ) -> None:
-    """Write ``out_dir/MANIFEST.txt`` with the command, seed, commit and versions."""
+    """Write ``out_dir/<name>`` with the command, seed, commit and versions."""
     out_dir.mkdir(parents=True, exist_ok=True)
     commit = _git("rev-parse", "HEAD") or "unknown"
     dirty = _git("status", "--porcelain", "--", "src", "scripts")
@@ -55,4 +58,4 @@ def write_manifest(
     ]
     for k, v in (notes or {}).items():
         lines.append(f"{k}: {v}")
-    (out_dir / "MANIFEST.txt").write_text("\n".join(lines) + "\n")
+    (out_dir / name).write_text("\n".join(lines) + "\n")

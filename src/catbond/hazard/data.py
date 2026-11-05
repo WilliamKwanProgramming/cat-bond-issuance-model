@@ -87,7 +87,9 @@ def load_storms_csv(path: pathlib.Path) -> pd.DataFrame:
     """Read the dplyr ``storms.csv`` source (1975-2024) into the standard table.
 
     Storms are keyed by (name, year); a new storm is started when consecutive rows of the same
-    key are more than 72 hours apart. ``record`` is empty (not in this file).
+    key are more than 72 hours apart. ``record`` is empty (not in this file). Times are truncated
+    to the hour in this file; when two rows of a storm share a timestamp, the later one is moved
+    30 minutes later.
     """
     raw = pd.read_csv(path)
     time = pd.to_datetime(
@@ -112,6 +114,10 @@ def load_storms_csv(path: pathlib.Path) -> pd.DataFrame:
     new = (key != key.shift()) | gap
     seq = new.groupby(key).cumsum()
     df["storm_id"] = key + np.where(seq > 1, "-" + seq.astype(str), "")
+    # Off-synoptic fixes (often landfalls) lose their minutes in this file and can then share
+    # the hour of a synoptic fix; the later row of such a pair is placed 30 minutes later.
+    dup = df.duplicated(subset=["storm_id", "time"], keep="first")
+    df.loc[dup, "time"] = df.loc[dup, "time"] + pd.Timedelta(minutes=30)
     return _finish(df)
 
 
