@@ -6,11 +6,15 @@ ILLUSTRATIVE, TEACHING-GRADE, HYPOTHETICAL SPONSOR. Sheets:
 * Inputs: named input cells (attachment, limit) and fixed parameters;
 * Loss curve: the base-case OEP/AEP return-period table, and the simulated event losses and
   annual maximum losses (values) of the 100,000-year event set (seed 1), years with a loss only;
+  formula columns M-O hold, for the user's layer, the layer loss of each event and the annual
+  layer loss capped at the limit (events of a year are in adjacent rows);
 * Layer calculator: live formulas. For the user's layer, attachment probability
   COUNTIF(annual max >= A) / N, occurrence exhaustion probability COUNTIF(annual max >= E) / N,
-  event-layer expected loss SUMPRODUCT(min(max(L - A, 0), E - A)) / (N (E - A)) (no annual cap,
-  so it can exceed the capped EL of the Python layer table), and the M1/M2 median spread with a
-  90% prediction interval from the coefficients on the Pricing sheet. A check table repeats the
+  expected loss SUM(annual layer loss capped at the limit) / (N (E - A)), which is the EL of the
+  Python layer table (catbond.layers.layer_metrics), the event-layer EL without the annual cap
+  SUMPRODUCT(min(max(L - A, 0), E - A)) / (N (E - A)) for comparison (it exceeds the capped EL
+  when a year has more than one large event), and the M1/M2 median spread with a 90% prediction
+  interval from the coefficients on the Pricing sheet. A check table repeats the occurrence
   formulas for five fixed layers next to the Python values (catbond.layers);
 * Deals: the public deal table with source URLs and the regression-sample flags;
 * Pricing: M1 and M2 coefficients (main sample), the parts of (X'X)^-1 the interval needs, the
@@ -48,7 +52,14 @@ from catbond.manifest import repo_root
 from catbond.pipeline import TIV_USD
 from catbond.pricing.fit import fit_log_spread
 from catbond.pricing.sample import regression_sample
-from catbond.workbook import ap_formula, ep_formula, event_el_formula
+from catbond.workbook import (
+    annual_capped_formula,
+    ap_formula,
+    capped_el_formula,
+    ep_formula,
+    event_el_formula,
+    layer_loss_formula,
+)
 
 R = repo_root() / "results"
 OUT = repo_root() / "deliverables" / "catbond_layer_pricer.xlsx"
@@ -181,12 +192,14 @@ def build(path: pathlib.Path) -> None:
     lc["A1"] = (
         f"Simulated event set: N = {n_years:,} years, seed {seed}, base case "
         "(hazard fitted to HURDAT2 1900-2019; HYPOTHETICAL USD 100 bn portfolio). "
-        "Values, not formulas."
+        "Columns A-J are values; K and M-O are formulas."
     )
     lc["A1"].font = BOLD
     lc["A2"] = (
         f"Columns A-B: the {pos.sum():,} events with a loss. Columns D-E: the annual maximum "
-        f"event loss of the {yrs.size:,} years with a loss (the other years have no loss)."
+        f"event loss of the {yrs.size:,} years with a loss (the other years have no loss). "
+        "Columns M-O: for the layer on the Inputs sheet, the layer loss of each event (M) and "
+        "the annual layer loss, the sum over the year's events capped at the limit (O)."
     )
     lc["A3"] = "From results/eventset/event_table.csv.gz (scripts/run_eventset.py)."
     for c, h in zip(
@@ -205,6 +218,32 @@ def build(path: pathlib.Path) -> None:
     last_ev, last_yr = MIN_ROW + pos.sum() - 1, MIN_ROW + yrs.size - 1
     _name(wb, "EventLoss", f"'Loss curve'!$B${MIN_ROW}:$B${last_ev}")
     _name(wb, "AnnualMax", f"'Loss curve'!$E${MIN_ROW}:$E${last_yr}")
+    # Layer loss of each event (M) and annual layer loss capped at the limit (N: year index, O).
+    # The events of a year must be in adjacent rows so that one SUM range covers a year.
+    if np.any(np.diff(ev_year) < 0):
+        raise RuntimeError("event table is not sorted by year index")
+    starts = np.flatnonzero(np.r_[True, ev_year[1:] != ev_year[:-1]])
+    ends = np.r_[starts[1:], ev_year.size] - 1
+    if not np.array_equal(ev_year[starts], yrs):
+        raise RuntimeError("years with an event loss differ from the annual-maximum years")
+    for c, h in zip(
+        "MNO",
+        ("event layer loss (USD m)", "year index", "annual layer loss, capped (USD m)"),
+        strict=True,
+    ):
+        lc[f"{c}{MIN_ROW - 1}"] = h
+        lc[f"{c}{MIN_ROW - 1}"].font = BOLD
+    for i in range(ev_loss.size):
+        r = MIN_ROW + i
+        lc.cell(r, 13, layer_loss_formula(f"B{r}", "Attachment_USDm", "Limit_USDm"))
+    for k, (s, e) in enumerate(zip(starts, ends, strict=True)):
+        lc.cell(MIN_ROW + k, 14, int(yrs[k]))
+        lc.cell(
+            MIN_ROW + k,
+            15,
+            annual_capped_formula(f"M{MIN_ROW + s}", f"M{MIN_ROW + e}", "Limit_USDm"),
+        )
+    _name(wb, "AnnualCapped", f"'Loss curve'!$O${MIN_ROW}:$O${last_yr}")
     lc["G5"] = "Return-period losses, base case (results/eventset/rp_losses.csv)"
     lc["G5"].font = BOLD
     for j, h in enumerate(
@@ -217,7 +256,9 @@ def build(path: pathlib.Path) -> None:
         lc.cell(i, 9, round(r.loss_pct_tiv, 4))
         lc.cell(i, 10, round(r.se_pct_tiv, 4))
         lc.cell(i, 11, f"=I{i}/100*TIV_USDm").number_format = "#,##0"
-    for col, w in zip("ABCDEFGHIJK", (11, 18, 3, 11, 18, 3, 8, 20, 13, 11, 13), strict=True):
+    for col, w in zip(
+        "ABCDEFGHIJKLMNO", (11, 18, 3, 11, 18, 3, 8, 20, 13, 11, 13, 3, 22, 11, 30), strict=True
+    ):
         lc.column_dimensions[col].width = w
 
     # ---------------------------------------------------------------- Pricing
@@ -347,8 +388,8 @@ def build(path: pathlib.Path) -> None:
             "0.000%",
         ),
         (
-            "Event-layer expected loss (% of limit, no annual cap)",
-            event_el_formula("B3", "B4"),
+            "Expected loss (% of limit, annual loss capped at the limit)",
+            capped_el_formula("B4"),
             "0.000%",
         ),
         ("EL in percent (regression input)", "=100*B8", "0.000"),
@@ -369,6 +410,11 @@ def build(path: pathlib.Path) -> None:
         ("M2 interval low %", "=EXP(M2_a+M2_y+M2_b*B10-B17*B19)", "0.00"),
         ("M2 interval high %", "=EXP(M2_a+M2_y+M2_b*B10+B17*B19)", "0.00"),
         ("M2 multiple (spread / EL)", "=B18/B9", "0.00"),
+        (
+            "Event-layer EL, no annual cap (for comparison)",
+            event_el_formula("B3", "B4"),
+            "0.000%",
+        ),
     ]
     for i, (label, f, fmt) in enumerate(cells, start=3):
         lcalc.cell(i, 1, label)
@@ -377,13 +423,17 @@ def build(path: pathlib.Path) -> None:
         if f.startswith("=Attachment") or f.startswith("=Limit"):
             c.font = GREEN
     lcalc["C8"] = (
-        "Uncapped: every event pays its own layer loss. The Python layer table caps the "
-        "annual principal loss at the limit, so its EL is lower when a year has two large events."
+        "As in the Python layer table: the annual principal loss, the sum of the year's event "
+        "layer losses, is capped at the limit ('Loss curve' columns M-O)."
+    )
+    lcalc["C23"] = (
+        "Uncapped: every event pays its own layer loss, so this exceeds the EL above when a "
+        "year has more than one large event."
     )
     lcalc["C12"] = "Spread range = regression output (90% prediction interval), not a quote."
     lcalc["B8"].comment = Comment(
-        "SUMPRODUCT of min(max(L - A, 0), E - A) over the events on 'Loss curve', divided by "
-        "N years times the limit.",
+        "Sum over years of min(sum of the year's event layer losses, limit) ('Loss curve' "
+        "column O), divided by N years times the limit.",
         "make_workbook.py",
     )
     r0 = 26
@@ -484,8 +534,9 @@ def build(path: pathlib.Path) -> None:
         "hypothetical portfolio spread over county centroids by 2020 Census households.",
         "Layer calculator: per-occurrence layer [A, E]. AP = share of years whose largest event "
         "loss is at least A; EP (occurrence) = share of years whose largest event loss is at "
-        "least E; event-layer EL = mean annual sum of min(max(L - A, 0), E - A) over events, "
-        "divided by the limit, with no annual cap.",
+        "least E; EL = mean over years of the annual layer loss, the sum over the year's events "
+        "of min(max(L - A, 0), E - A) capped at the limit, divided by the limit (the EL of the "
+        "Python layer table). The event-layer EL without the annual cap is shown for comparison.",
         "Pricing: M1 log(spread) = a + b log(EL); M2 adds issue-year effects (2025 used). "
         "Fitted on the 56 distinct public layers; classical 90% prediction interval on the log "
         "scale. The spread range is a regression output, not a quote.",

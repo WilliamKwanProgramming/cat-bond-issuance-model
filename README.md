@@ -200,13 +200,17 @@ observed insured losses (none was made).
 
 | File | What it is | Regenerate |
 |---|---|---|
-| [deliverables/catbond_layer_pricer.xlsx](deliverables/catbond_layer_pricer.xlsx) | Excel layer calculator: enter attachment and limit; live COUNTIF/SUMPRODUCT formulas give attachment probability, occurrence exhaustion probability and the uncapped event-layer EL from the simulated event losses, and M1/M2 spread ranges from the committed coefficients; deal table with source URLs; notes | `python3 scripts/make_workbook.py` (recalculated with LibreOffice when `soffice` is installed) |
+| [deliverables/catbond_layer_pricer.xlsx](deliverables/catbond_layer_pricer.xlsx) | Excel layer calculator: enter attachment and limit; live COUNTIF/SUMPRODUCT formulas give attachment probability, occurrence exhaustion probability and the expected loss with the annual loss capped at the limit (the EL of the layer table; the uncapped event-layer EL is shown beside it) from the simulated event losses, and M1/M2 spread ranges from the committed coefficients; deal table with source URLs; notes | `python3 scripts/make_workbook.py` (recalculated with LibreOffice when `soffice` is installed) |
 | [deliverables/catbond_pitchbook.pdf](deliverables/catbond_pitchbook.pdf) | 12-page pitchbook-style summary: transaction, structure, exposure, hazard checks, loss curve with band, layers, pricing, sensitivities, limitations, sources | `python3 scripts/make_pitchbook.py` (needs pdflatex and latexmk; source `deliverables/pitchbook/catbond_pitchbook.tex`) |
 | [docs/findings.md](docs/findings.md) | Pricing and transaction findings, and what the data cannot support | written from `results/` |
 
 `tests/test_workbook.py` recalculates a copy of the workbook with a changed input layer and
-compares six layers and both spread ranges with Python (relative tolerance 1e-9 for the layer
-metrics, 1e-7 for spreads), and checks that no cell holds an error value.
+compares six layers (probabilities and the uncapped event-layer EL; for the changed layer also
+the EL with the annual cap against `catbond.layers.layer_metrics`) and both spread ranges with
+Python (relative tolerance 1e-9 for the layer metrics, 1e-7 for spreads). It also checks that the
+default layer of the shipped workbook equals the middle layer of `results/transaction/layers.csv`,
+that the annual sums cover each simulated year's events exactly, and that no cell holds an error
+value.
 
 ## Reproduce
 
