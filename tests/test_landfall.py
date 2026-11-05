@@ -9,6 +9,7 @@ from catbond.hazard.landfall import (
     hybrid_landfalls,
     landfalls_from_records,
     landfalls_geometric,
+    near_misses,
     synoptic_fixes,
 )
 
@@ -126,6 +127,20 @@ def test_real_florida_landfalls(al_tracks, florida):
     assert ("IVAN", 2004) not in names  # Alabama landfall
 
 
+def test_real_near_misses_are_not_landfalls(al_tracks, florida):
+    tr = al_tracks[al_tracks["year"].between(1900, 2019)]
+    hyb = hybrid_landfalls(tr, florida)
+    nm = near_misses(tr, hyb, florida, max_km=50.0)
+    names = set(zip(nm["name"], nm["year"], strict=True))
+    # Ivan came ashore 3 km from Alabama's coast; Matthew passed 42 km off Cape Canaveral
+    assert {("IVAN", 2004), ("MATTHEW", 2016)} <= names
+    assert not set(nm["storm_id"]) & set(hyb["storm_id"])
+    assert (nm["wind"] >= 64).all() and (nm["distance_florida_km"] <= 50).all()
+    assert len(near_misses(tr, hyb, florida, max_km=100.0)) > len(nm)
+    ivan = nm[nm["name"] == "IVAN"].iloc[0]
+    assert ivan["distance_other_coast_km"] < ivan["distance_florida_km"]
+
+
 def test_saffir_simpson_category():
     v = np.array([50, 63.9, 64, 82, 83, 95, 96, 112, 113, 136, 137, 180])
     assert category(v).tolist() == [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
@@ -161,3 +176,31 @@ def test_synoptic_fixes_lose_the_landfall_wind(square_region):
     assert landfalls_geometric(full, square_region)["wind"].iloc[0] == pytest.approx(90.0)
     assert landfalls_geometric(syn, square_region)["wind"].iloc[0] == pytest.approx(65.0)
     assert landfalls_geometric(synoptic_fixes(make(20.0)), square_region).empty
+
+
+def test_near_misses_are_hurricanes_close_to_the_coast_that_are_not_counted(square_region):
+    counted = track(
+        "A", 1950, [(-79.0, 26.5, 90, ""), (-80.0, 26.5, 85, "L"), (-81.0, 26.5, 60, "")]
+    )
+    # E: passes 0.3 degrees of longitude (about 30 km) off the coast at 70 kt, no landfall
+    e = track("E", 1951, [(-79.7, 25.0, 60, ""), (-79.7, 26.5, 70, ""), (-79.7, 28.0, 65, "")])
+    weak = track("F", 1952, [(-79.7, 26.5, 50, "")])  # tropical storm strength: not a hurricane
+    far = track("G", 1953, [(-77.0, 26.5, 100, "")])  # about 300 km offshore
+    # H: 60 kt at 30 km (not a hurricane), then 90 kt at about 80 km
+    near_weak_fix = track("H", 1954, [(-79.7, 26.5, 60, ""), (-79.2, 26.5, 90, "")])
+    tr = pd.concat([counted, e, weak, far, near_weak_fix], ignore_index=True)
+    lf = landfalls_from_records(tr, square_region)
+    assert lf["storm_id"].tolist() == ["A"]
+    nm = near_misses(tr, lf, square_region, max_km=50.0)
+    assert nm["storm_id"].tolist() == ["E"]
+    r = nm.iloc[0]
+    assert r["wind"] == 70 and r["lat"] == 26.5
+    km_per_degree = 111.195 * np.cos(np.deg2rad(26.5))
+    assert r["distance_florida_km"] == pytest.approx(0.3 * km_per_degree, rel=0.01)
+    # a wider radius also finds the 90 kt fix of H (its 60 kt fix is not a hurricane)
+    wide = near_misses(tr, lf, square_region, max_km=100.0)
+    assert sorted(wide["storm_id"]) == ["E", "H"]
+    assert wide.set_index("storm_id").loc["H", "wind"] == 90
+    # a counted storm is never a near miss, and an empty input gives an empty table
+    assert "A" not in wide["storm_id"].tolist()
+    assert near_misses(tr.iloc[:0], lf, square_region).empty
