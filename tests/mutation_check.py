@@ -381,6 +381,26 @@ MUTANTS = [
             )
         ],
     ),
+    (
+        "M38 workbook formula: annual layer loss not capped at the limit",
+        [
+            (
+                S + "workbook.py",
+                'return f"=MIN(SUM({first}:{last}),{lim})"',
+                'return f"=SUM({first}:{last})"',
+            )
+        ],
+    ),
+    (
+        "M39 workbook formula: capped EL divided by the number of years only",
+        [
+            (
+                S + "workbook.py",
+                'return f"=SUM({annual})/(N_years*{lim})"',
+                'return f"=SUM({annual})/N_years"',
+            )
+        ],
+    ),
 ]
 
 
