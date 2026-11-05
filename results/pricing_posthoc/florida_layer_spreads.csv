@@ -1,0 +1,7 @@
+layer,model,el_pct,spread_median_pct,pi_lo_pct,pi_hi_pct,multiple
+Layer 1 (bottom),M2 (protocol),3.90198,12.0716,7.60726,19.1559,3.09372
+Layer 2 (middle),M2 (protocol),1.97732,8.79206,5.65203,13.6766,4.44645
+Layer 3 (top),M2 (protocol),1.09367,6.67031,4.2481,10.4736,6.09902
+Layer 1 (bottom),M2 + region group (post hoc),3.90198,13.2671,9.83916,17.8893,3.40009
+Layer 2 (middle),M2 + region group (post hoc),1.97732,9.4395,7.10064,12.5488,4.77389
+Layer 3 (top),M2 + region group (post hoc),1.09367,7.01714,5.25628,9.36788,6.41614
