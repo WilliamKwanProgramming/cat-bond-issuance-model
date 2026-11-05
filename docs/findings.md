@@ -113,7 +113,7 @@ bottom / middle / top layer in percent):
 | Variant | EL bottom | EL middle | EL top | M2 spread change, middle (points) |
 |---|---|---|---|---|
 | base | 3.90 | 1.98 | 1.09 | 0.00 |
-| frequency x 0.8 | 3.15 | 1.63 | 0.91 | -0.75 |
+| frequency x 0.8 | 3.15 | 1.64 | 0.91 | -0.75 |
 | frequency x 1.2 | 4.57 | 2.29 | 1.25 | 0.63 |
 | calibration window 1950-2019 | 2.33 | 1.04 | 0.43 | -2.28 |
 | V_half 145.2 kt | 4.67 | 2.51 | 1.44 | 1.03 |
