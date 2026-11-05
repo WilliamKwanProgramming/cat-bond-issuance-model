@@ -288,6 +288,20 @@ def main() -> int:
         )
     )
 
+    ex = pd.read_csv(R / "exposure" / "county_exposure.csv", dtype={"fips": str})
+    ex = ex.assign(share_pct=100 * ex["share"], tiv_usd_m=ex["tiv_usd"] / 1e6)
+    parts.append(
+        section(
+            "Hypothetical portfolio by county (households: 2020 Census via UF BEBR; "
+            "TIV USD 100 bn, HYPOTHETICAL)",
+            md(
+                ex[["fips", "county", "households_2020", "share_pct", "tiv_usd_m", "lon", "lat"]],
+                {"share_pct": ".3f", "tiv_usd_m": ".1f", "lon": ".3f", "lat": ".3f"},
+            ),
+            "results/exposure/county_exposure.csv",
+        )
+    )
+
     (R / "tables.md").write_text("\n".join(parts))
     print(f"wrote {(R / 'tables.md').relative_to(repo_root())}")
     return 0

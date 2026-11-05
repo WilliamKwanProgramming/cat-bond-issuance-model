@@ -61,12 +61,14 @@ MUTANTS = [
         ],
     ),
     (
-        "M04 GPD profile likelihood: wrong log-likelihood term",
+        # An earlier M04 (profile log-likelihood shifted by the constant -n) survived because it
+        # is equivalent: a constant shift leaves the maximiser unchanged. Replaced by this one.
+        "M04 GPD profile likelihood: log-likelihood uses log(sigma) with sigma = xi * theta",
         [
             (
                 S + "hazard/intensity.py",
-                "return -n * np.log(sigma) - n * (1.0 + xi), xi, sigma",
-                "return -n * np.log(sigma) - n * xi, xi, sigma",
+                "    sigma = xi / theta\n    return -n * np.log(sigma)",
+                "    sigma = xi * theta\n    return -n * np.log(sigma)",
             )
         ],
     ),
