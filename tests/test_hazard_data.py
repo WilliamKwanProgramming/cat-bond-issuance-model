@@ -34,6 +34,7 @@ def test_storms_csv_loader_keys_and_gaps(tmp_path):
         ("Amy", 1975, 6, 27, 6, 28.5, -79.0, "tropical storm", 35, 1010),
         ("Amy", 1975, 9, 1, 0, 20.0, -60.0, "hurricane", 70, 990),  # > 72 h later: new storm
         ("Bob", 1975, 7, 1, 17, 30.0, -85.0, "hurricane", 80, 980),
+        ("Bob", 1975, 7, 1, 17, 30.1, -85.1, "hurricane", 75, 982),  # same hour: off-synoptic
     ]
     df = pd.DataFrame(
         rows,
@@ -58,8 +59,12 @@ def test_storms_csv_loader_keys_and_gaps(tmp_path):
     out = load_storms_csv(p)
     assert sorted(out["storm_id"].unique()) == ["1975-Amy", "1975-Amy-2", "1975-Bob"]
     assert (out["record"] == "").all()
-    assert out.loc[out["storm_id"] == "1975-Bob", "status"].item() == "HU"
-    assert out.loc[out["storm_id"] == "1975-Bob", "time"].item() == pd.Timestamp("1975-07-01 17:00")
+    bob = out[out["storm_id"] == "1975-Bob"]
+    assert (bob["status"] == "HU").all()
+    assert bob["time"].tolist() == [
+        pd.Timestamp("1975-07-01 17:00"),
+        pd.Timestamp("1975-07-01 17:30"),
+    ]
 
 
 def test_real_al_file(al_tracks):

@@ -18,3 +18,6 @@ data/raw/
 
 # Python packaging metadata
 *.egg-info/
+
+# Large regenerated simulation output
+results/eventset/event_table.csv.gz

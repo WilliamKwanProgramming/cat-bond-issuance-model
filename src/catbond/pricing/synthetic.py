@@ -7,7 +7,8 @@ SYNTHETIC DATA. Nothing here describes real cat bonds. The relation is
 
 with EL log-uniform on [0.5, 8] percent, issue years uniform on 2010-2024, 30 percent of
 tranches parametric, sponsor effects u ~ N(0, sponsor_sd^2) shared by the tranches of one sponsor
-and e ~ N(0, sigma^2). Columns follow the deals interface (``fit.DEAL_COLUMNS``).
+and e ~ N(0, s_i^2) with s_i = sigma exp(hetero (log EL_i - log 2)) (hetero = 0: constant
+variance). Columns follow the deals interface (``fit.DEAL_COLUMNS``).
 """
 
 from __future__ import annotations
@@ -26,6 +27,7 @@ def synthetic_deals(
     sigma: float = 0.25,
     n_sponsors: int = 25,
     sponsor_sd: float = 0.0,
+    hetero: float = 0.0,
     coef: dict[str, float] | None = None,
 ) -> pd.DataFrame:
     """``n`` synthetic tranches drawn from the relation in the module docstring."""
@@ -41,7 +43,7 @@ def synthetic_deals(
         + c["issue_year"] * (year - YEAR_ORIGIN)
         + c["trigger[parametric]"] * param
         + u[sponsor]
-        + sigma * rng.standard_normal(n)
+        + sigma * np.exp(hetero * (np.log(el) - np.log(2.0))) * rng.standard_normal(n)
     )
     df = pd.DataFrame(
         {
