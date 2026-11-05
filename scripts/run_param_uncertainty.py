@@ -9,7 +9,9 @@ results/eventset/reference_layer.csv.
 
 Writes results/param_uncertainty/replicates.csv, summary.csv, MANIFEST.txt, and for every layer
 of the candidate grid (catbond.pipeline.GRID_*) grid_replicates.csv (AP, EP, EL per replicate)
-and grid_summary.csv (mean and quantiles of the EL across replicates).
+and grid_summary.csv (mean and quantiles of the EL across replicates); rp_replicates.csv and
+rp_summary.csv hold the OEP and AEP return-period losses (percent of TIV) of every replicate at
+LEC_RETURN_PERIODS and their quantiles (the band around the loss exceedance curve).
 
 Usage: python3 scripts/run_param_uncertainty.py [--n-boot 200] [--n-years 10000] [--seed 5001]
 """
@@ -39,6 +41,7 @@ from catbond.uncertainty import bootstrap_hazard_models
 
 OUT = repo_root() / "results" / "param_uncertainty"
 QUANTILES = (0.05, 0.25, 0.5, 0.75, 0.95)
+LEC_RETURN_PERIODS = (2, 5, 10, 25, 50, 100, 200, 250, 500)
 
 
 def main() -> int:
@@ -52,7 +55,7 @@ def main() -> int:
     inp = load_inputs()
     base = fit_hazard(inp.landfalls, *CALIBRATION)
     models = bootstrap_hazard_models(inp.landfalls, base, args.n_boot, args.seed)
-    rows, grid = [], []
+    rows, grid, rps = [], [], []
     for b, m in enumerate(models):
         es = simulate_event_set(
             m, inp.region.coast_edges, inp.exposure, args.n_years, args.seed + 1 + b
@@ -73,6 +76,18 @@ def main() -> int:
                 "ref_el_pct": 100 * lm.expected_loss,
             }
         )
+        for curve, annual in (("OEP", mx), ("AEP", sm)):
+            for t_rp, v in zip(
+                LEC_RETURN_PERIODS, return_period_losses(annual, LEC_RETURN_PERIODS), strict=True
+            ):
+                rps.append(
+                    {
+                        "replicate": b,
+                        "curve": curve,
+                        "return_period": t_rp,
+                        "loss_pct_tiv": 100 * v / TIV_USD,
+                    }
+                )
         t = layer_table(
             y, loss, es.n_years, GRID_ATTACHMENTS * TIV_USD, GRID_LIMITS * TIV_USD, TERM_YEARS
         )
@@ -114,6 +129,13 @@ def main() -> int:
     for p in QUANTILES:
         gsum[f"el_q{int(100 * p):02d}"] = gs.quantile(p).to_numpy()
     gsum.to_csv(OUT / "grid_summary.csv", index=False, float_format="%.6g")
+    r = pd.DataFrame(rps)
+    r.to_csv(OUT / "rp_replicates.csv", index=False, float_format="%.6g")
+    rq = r.groupby(["curve", "return_period"])["loss_pct_tiv"]
+    rsum = rq.agg(n_replicates="size", mean="mean").reset_index()
+    for p in QUANTILES:
+        rsum[f"q{int(100 * p):02d}"] = rq.quantile(p).to_numpy()
+    rsum.to_csv(OUT / "rp_summary.csv", index=False, float_format="%.6g")
     write_manifest(
         OUT,
         args.seed,
