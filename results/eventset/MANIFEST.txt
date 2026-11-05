@@ -1,10 +1,10 @@
 command: python3 scripts/run_eventset.py --seed 1 --n-years 100000
 seed:    1
-git:     416d1b7885bbb35dfdcc98d4d73e3792f5793fe8 (clean)
-date:    2026-11-05T09:06:05Z
+git:     c0b9fd98b02f833d1e542bf675def0cc413748a8 (clean)
+date:    2026-11-05T11:06:54Z
 python:  3.13.18; numpy 2.5.3
 machine: x86_64 Linux
 data: hazard fitted on real HURDAT2 landfalls; exposure hypothetical (USD 100 bn TIV over Florida counties by 2020 Census households)
 n_years: 100000
 rp_bootstrap: 200 resamples of years
-common_random_numbers: every variant uses the same seed
+random_numbers: every variant uses the same seed. Variants that change only the loss settings (V_half, V_thresh, deductible, RMW, inland decay) simulate the base case's events (common random numbers); the KDE variant has the same event counts, positions, headings and speeds and other winds; the frequency variants draw other event counts and the window variants other landfall pools, so every event differs (independent Monte Carlo runs)

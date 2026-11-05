@@ -1,7 +1,7 @@
 command: python3 scripts/run_eventset.py --seed 1 --n-years 100000
 seed:    none (deterministic)
-git:     416d1b7885bbb35dfdcc98d4d73e3792f5793fe8 (clean)
-date:    2026-11-05T09:01:55Z
+git:     c0b9fd98b02f833d1e542bf675def0cc413748a8 (clean)
+date:    2026-11-05T11:02:49Z
 python:  3.13.18; numpy 2.5.3
 machine: x86_64 Linux
 data: HYPOTHETICAL portfolio: USD 100 bn TIV spread by 2020 Census households (UF BEBR table)
