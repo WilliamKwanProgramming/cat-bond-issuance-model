@@ -76,11 +76,15 @@ into `results/exposure/county_exposure.csv` and reproduced in `results/tables.md
 | Out-of-sample bootstrap | 2,000 resamples; 90% predictive intervals | own assumption |
 | Term for multi-year probability | 3 years | own assumption |
 
-## Pricing (code only in wave 1)
+## Pricing
 
 | Item | Value | Source |
 |---|---|---|
-| Model | OLS of log spread on log EL and optional covariates | brief |
-| Standard errors | classical, HC3, cluster by sponsor (CR1 small-sample factor) | brief; formulas in `src/catbond/pricing/fit.py`, checked against statsmodels |
-| Comparable-deal distance | scales 0.5 (log EL), 1.0 (log size); penalties 2.0 (peril), 1.0 (region) | own assumption |
+| Models | M1 log spread on log EL; M2 + issue-year fixed effects; M3 + trigger and log size | brief; fixed in `docs/pricing_protocol.md` |
+| Sample | 56 distinct layers (Integrity Re III A2 and B2 dropped as duplicates of A1 and B1) | `docs/pricing_protocol.md` |
+| Standard errors | classical, HC3, CR1 clustered by series and by sponsor | MacKinnon and White (1985); Cameron and Miller (2015) |
+| Wild cluster bootstrap | restricted, Rademacher weights, 9,999 draws, interval by test inversion, seed 6001 | Cameron, Gelbach and Miller (2008); Roodman et al. (2019) |
+| Prediction interval | classical, 90%, log scale; M2 evaluated at issue year 2025 | own assumption, pre-specified |
+| Comparable-deal distance | log EL scale 0.5, issue-year scale 2 years, k = 5 | own assumption, pre-specified |
+| Transaction layers | three adjacent grid layers with EL closest to 4%, 2%, 1% of limit | `docs/pricing_protocol.md` |
 | Synthetic deal generator | log spread = 1.0 + 0.65 log EL - 0.01 (year - 2000) + 0.2 parametric + noise | own assumption, used only to test the code |

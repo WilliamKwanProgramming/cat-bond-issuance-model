@@ -16,7 +16,8 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-test = ["pytest>=8", "statsmodels>=0.14", "ruff>=0.5"]
+test = ["pytest>=8", "statsmodels>=0.14", "ruff>=0.5", "openpyxl>=3.1"]
+deliverables = ["openpyxl>=3.1", "matplotlib>=3.8"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
