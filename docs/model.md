@@ -59,8 +59,13 @@ the crossing. In `AL.rda` the "L" identifier is nearly absent for 1966-1984 (six
 19 years, none in Florida, against 36 to 85 per five-year period in 1945-1964 and 1985-2019;
 see `results/hazard/l_flags_by_period.csv`), so the
 **hybrid definition** uses the record definition outside 1966-1984 and the geometric definition
-inside. Its credibility is measured: in the years with flags, the geometric definition finds the
-same storms as the record definition (`results/hazard/definition_agreement.csv`).
+inside. In the years with flags the geometric definition finds the same 62 storms as the record
+definition, but there the "L" fix itself lies on the coast and carries the landfall wind. Applied
+to the 6-hourly fixes only, as it must be in the gap, it finds 58 of the 62, with landfall winds
+4.0 kt lower on average (up to 21.9 kt), so the gap years are probably undercounted and their
+intensities biased low (`results/hazard/definition_agreement.csv`). Agnes (1972), which NOAA
+AOML describes as a minimal category 1 hurricane coming ashore near Panama City, is not found:
+the wind interpolated between its 6-hourly fixes is below 64 kt at the coast crossing.
 
 The coastline is the set of Florida county edges that no other county in the file shares (edges
 shared with Georgia and Alabama counties cancel, so the land border is not coast). Distances use
