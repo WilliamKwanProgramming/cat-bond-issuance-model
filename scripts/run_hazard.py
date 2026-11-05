@@ -35,6 +35,7 @@ from catbond.hazard.landfall import (
     category,
     landfalls_from_records,
     landfalls_geometric,
+    synoptic_fixes,
 )
 from catbond.hazard.validation import GROUPS, group_probability
 from catbond.manifest import repo_root, write_manifest
@@ -130,6 +131,18 @@ def agreement_table(inp) -> pd.DataFrame:
         )
         * 111.195
     )
+    # the geometric definition on the synoptic fixes only, as it must work in the flag gap
+    geo_syn = landfalls_geometric(synoptic_fixes(t[~gap]), inp.region)
+    m_syn = rec.merge(geo_syn, on="storm_id", suffixes=("_rec", "_geo"))
+    dist_syn = (
+        np.hypot(
+            (m_syn["lon_rec"] - m_syn["lon_geo"]) * np.cos(np.deg2rad(m_syn["lat_rec"])),
+            m_syn["lat_rec"] - m_syn["lat_geo"],
+        )
+        * 111.195
+    )
+    wind_syn = m_syn["wind_geo"] - m_syn["wind_rec"]
+    missed = rec[~rec["storm_id"].isin(geo_syn["storm_id"])]
     # storms.csv (geometric) against AL.rda (geometric) on the overlap 1975-2019, by name and year
     s = inp.storms[inp.storms["year"].between(1975, CALIBRATION[1])]
     geo_s = landfalls_geometric(s, inp.region)
@@ -145,6 +158,17 @@ def agreement_table(inp) -> pd.DataFrame:
             "median_position_diff_km": float(np.median(dist)),
             "max_abs_wind_diff_kt": float((merged["wind_rec"] - merged["wind_geo"]).abs().max()),
             "detail": "",
+        },
+        {
+            "comparison": "record vs geometric on synoptic fixes only, AL.rda, years with L flags",
+            "n_first": len(rec),
+            "n_second": len(geo_syn),
+            "n_both": len(m_syn),
+            "median_position_diff_km": float(np.median(dist_syn)),
+            "max_abs_wind_diff_kt": float(wind_syn.abs().max()),
+            "detail": f"mean wind difference (geometric - record) {wind_syn.mean():.1f} kt; "
+            "record only: "
+            + ", ".join(f"{n} {y}" for n, y in zip(missed["name"], missed["year"], strict=True)),
         },
         {
             "comparison": "geometric only, AL.rda, flag gap "

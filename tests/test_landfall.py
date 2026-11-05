@@ -9,6 +9,7 @@ from catbond.hazard.landfall import (
     hybrid_landfalls,
     landfalls_from_records,
     landfalls_geometric,
+    synoptic_fixes,
 )
 
 
@@ -128,3 +129,35 @@ def test_real_florida_landfalls(al_tracks, florida):
 def test_saffir_simpson_category():
     v = np.array([50, 63.9, 64, 82, 83, 95, 96, 112, 113, 136, 137, 180])
     assert category(v).tolist() == [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
+
+
+def test_synoptic_fixes_lose_the_landfall_wind(square_region):
+    # 90 kt at an off-synoptic landfall fix on the coast (lon -80), 100 kt offshore before and
+    # 30 kt inland after: with every fix the crossing carries 90 kt; with the 6-hourly fixes only
+    # (as in the 1966-1984 flag gap) the interpolated wind is 65 kt, and with 20 kt inland it is
+    # below hurricane strength, so the landfall is lost.
+    t0 = pd.Timestamp("1990-09-01 00:00")
+    times = [t0, t0 + pd.Timedelta(hours=3), t0 + pd.Timedelta(hours=6)]
+
+    def make(inland_wind):
+        return pd.DataFrame(
+            {
+                "storm_id": "S",
+                "name": "S",
+                "year": 1990,
+                "time": times,
+                "record": ["", "L", ""],
+                "status": "HU",
+                "lat": [26.5, 26.5, 26.5],
+                "lon": [-79.0, -80.0, -81.0],
+                "wind": [100.0, 90.0, inland_wind],
+                "pressure": np.nan,
+            }
+        )
+
+    full = make(30.0)
+    syn = synoptic_fixes(full)
+    assert list(syn["time"]) == [times[0], times[2]]
+    assert landfalls_geometric(full, square_region)["wind"].iloc[0] == pytest.approx(90.0)
+    assert landfalls_geometric(syn, square_region)["wind"].iloc[0] == pytest.approx(65.0)
+    assert landfalls_geometric(synoptic_fixes(make(20.0)), square_region).empty

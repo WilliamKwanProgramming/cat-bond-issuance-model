@@ -167,6 +167,19 @@ def landfalls_geometric(
 
 
 FLAG_GAP_YEARS = (1966, 1984)
+SYNOPTIC_HOURS = (0, 6, 12, 18)
+
+
+def synoptic_fixes(tracks: pd.DataFrame) -> pd.DataFrame:
+    """Only the fixes at 00, 06, 12 and 18 UTC on the hour.
+
+    In the 1966-1984 flag gap the tracks have (almost) no off-synoptic fixes, and the "L" fixes
+    of other years are off-synoptic, so the geometric definition applied to the synoptic fixes of
+    the flagged years measures how it performs in the gap: it must interpolate the wind between
+    6-hourly fixes instead of crossing the coast at a fix that carries the landfall wind.
+    """
+    t = tracks["time"]
+    return tracks[t.dt.hour.isin(SYNOPTIC_HOURS) & (t.dt.minute == 0)]
 
 
 def hybrid_landfalls(
