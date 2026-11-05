@@ -1,0 +1,11 @@
+command: python3 scripts/run_param_uncertainty.py --n-boot 200 --n-years 10000 --seed 5001
+seed:    5001
+git:     eeb7287fa20185de4889779e6bb5df7edc84f6b1 (clean)
+date:    2026-11-05T07:59:47Z
+python:  3.13.18; numpy 2.5.3
+machine: x86_64 Linux
+data: real HURDAT2 landfalls 1900-2019, resampled by year; hypothetical exposure
+n_boot: 200
+n_years_per_replicate: 10000
+replicate_seeds: 5002..5201
+reference_layer_usd: 1200000000 to 1800000000
