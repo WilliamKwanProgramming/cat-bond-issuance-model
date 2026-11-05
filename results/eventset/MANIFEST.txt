@@ -1,7 +1,7 @@
 command: python3 scripts/run_eventset.py --seed 1 --n-years 100000
 seed:    1
-git:     eeb7287fa20185de4889779e6bb5df7edc84f6b1 (clean)
-date:    2026-11-05T07:36:52Z
+git:     17bbe27742505f4404721477bae72e31f47c6b96 (clean)
+date:    2026-11-05T08:36:46Z
 python:  3.13.18; numpy 2.5.3
 machine: x86_64 Linux
 data: hazard fitted on real HURDAT2 landfalls; exposure hypothetical (USD 100 bn TIV over Florida counties by 2020 Census households)

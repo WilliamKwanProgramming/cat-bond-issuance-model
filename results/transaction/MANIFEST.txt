@@ -1,0 +1,10 @@
+command: python3 scripts/run_transaction.py
+seed:    none (deterministic)
+git:     81c8c007e7ec24abfe9c9400d732b24ec1d93c3c (clean)
+date:    2026-11-05T08:43:53Z
+python:  3.13.18; numpy 2.5.3
+machine: x86_64 Linux
+data: HYPOTHETICAL portfolio and sponsor; hazard from real HURDAT2; spread mapping fitted on REAL public deal terms (56 distinct layers)
+layer_choice: choose_stack on results/layers/layer_grid.csv, criterion 0.00876285
+models: M1, M2 (year fixed effects evaluated at 2025); 90% prediction intervals
+inputs: results/layers/layer_grid.csv; results/param_uncertainty/grid_summary.csv; results/eventset/sensitivity_layers.csv; data/deals/cat_bond_deals.csv

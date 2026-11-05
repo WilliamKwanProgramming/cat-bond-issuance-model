@@ -1,0 +1,4 @@
+layer,target_el_pct,attachment_pct_tiv,exhaustion_pct_tiv,limit_pct_tiv,attachment_usd_m,limit_usd_m,ap_pct,ep_pct,ep_occurrence_pct,el_pct,el_mc_se_pct,el_band_q05_pct,el_band_q50_pct,el_band_q95_pct,n_band_replicates,prob_any_loss_3y_pct
+Layer 1 (bottom),4,0.5,1,0.5,500,500,5.667,2.7,2.687,3.90198,0.0572496,2.19128,3.76055,5.33523,200,16.0952
+Layer 2 (middle),2,1,1.5,0.5,1000,500,2.687,1.446,1.444,1.97732,0.0416265,0.973667,1.89273,2.84868,200,7.84808
+Layer 3 (top),1,1.5,2,0.5,1500,500,1.444,0.819,0.819,1.09367,0.0312572,0.441934,1.00354,1.58567,200,4.26604
