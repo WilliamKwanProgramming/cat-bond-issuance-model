@@ -1,5 +1,7 @@
 # Illustrative Cat Bond Issuance: Structuring and Pricing
 
+[![CI](https://github.com/WilliamKwanProgramming/cat-bond-issuance-model/actions/workflows/ci.yml/badge.svg)](https://github.com/WilliamKwanProgramming/cat-bond-issuance-model/actions/workflows/ci.yml)
+
 A teaching-grade walk-through of how a catastrophe bond is structured and priced for a
 **hypothetical** Florida homeowners insurer: a simulated hurricane event set fitted to HURDAT2
 landfalls (1900-2019), a stated exposure and damage function, three per-occurrence layers with
