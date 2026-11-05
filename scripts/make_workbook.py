@@ -48,6 +48,7 @@ from catbond.manifest import repo_root
 from catbond.pipeline import TIV_USD
 from catbond.pricing.fit import fit_log_spread
 from catbond.pricing.sample import regression_sample
+from catbond.workbook import ap_formula, ep_formula, event_el_formula
 
 R = repo_root() / "results"
 OUT = repo_root() / "deliverables" / "catbond_layer_pricer.xlsx"
@@ -337,18 +338,17 @@ def build(path: pathlib.Path) -> None:
         ("Exhaustion E (USD m)", "=B3+B4", "#,##0"),
         (
             "Attachment probability (annual max >= A)",
-            '=COUNTIF(AnnualMax,">="&B3)/N_years',
+            ap_formula("B3"),
             "0.000%",
         ),
         (
             "Exhaustion probability, occurrence (annual max >= E)",
-            '=COUNTIF(AnnualMax,">="&B5)/N_years',
+            ep_formula("B3", "B4"),
             "0.000%",
         ),
         (
             "Event-layer expected loss (% of limit, no annual cap)",
-            "=SUMPRODUCT((EventLoss>B3)*((EventLoss<B5)*(EventLoss-B3)+(EventLoss>=B5)*B4))"
-            "/(N_years*B4)",
+            event_el_formula("B3", "B4"),
             "0.000%",
         ),
         ("EL in percent (regression input)", "=100*B8", "0.000"),
@@ -408,13 +408,12 @@ def build(path: pathlib.Path) -> None:
         e = a + lim
         lcalc.cell(i, 1, a)
         lcalc.cell(i, 2, lim)
-        lcalc.cell(i, 3, f'=COUNTIF(AnnualMax,">="&A{i})/N_years')
-        lcalc.cell(i, 4, f'=COUNTIF(AnnualMax,">="&(A{i}+B{i}))/N_years')
+        lcalc.cell(i, 3, ap_formula(f"A{i}"))
+        lcalc.cell(i, 4, ep_formula(f"A{i}", f"B{i}"))
         lcalc.cell(
             i,
             5,
-            f"=SUMPRODUCT((EventLoss>A{i})*((EventLoss<A{i}+B{i})*(EventLoss-A{i})"
-            f"+(EventLoss>=A{i}+B{i})*B{i}))/(N_years*B{i})",
+            event_el_formula(f"A{i}", f"B{i}"),
         )
         m = layer_metrics(ev["year"], loss_m, n_years, a, e)
         lcalc.cell(i, 6, m.attachment_prob)
@@ -469,6 +468,11 @@ def build(path: pathlib.Path) -> None:
         dl.column_dimensions[chr(65 + j)].width = w
 
     # ---------------------------------------------------------------- Notes
+    sens = pd.read_csv(R / "transaction" / "sensitivity.csv")
+    sens_lo, sens_hi = sens["el_ratio_to_base"].min(), sens["el_ratio_to_base"].max()
+    cv = pd.read_csv(R / "pricing" / "cv.csv")
+    sel = (cv["sample"] == main_name) & (cv["model"] == "M2") & (cv["held_out"] == "series")
+    cv_pp = cv.loc[sel, "rmse_pp"].iloc[0]
     nt = wb.create_sheet("Notes")
     notes = [
         DISCLAIMER,
@@ -489,12 +493,13 @@ def build(path: pathlib.Path) -> None:
         "Limits",
         "The loss model is teaching-grade: no surge, rain, terrain or building inventory, "
         "straight tracks, centroid exposure, losses not calibrated to any insured loss. "
-        "Model-form choices move layer EL by factors of 2 to 7 (see results/transaction/"
-        "sensitivity.csv).",
+        f"Across the sensitivity variants the layer EL is {sens_lo:.2f} to {sens_hi:.2f} "
+        "times the base case (results/transaction/sensitivity.csv).",
         "Deal ELs come from each deal's own vendor model at the offering stage; this model's EL "
         "is on a different scale, so putting it through the regression mixes two scales.",
-        "The regression has year effects that absorb the market cycle; out-of-sample errors "
-        "are about 3 percentage points of spread (results/pricing/cv.csv).",
+        "The regression has year effects that absorb the market cycle; the M2 "
+        f"leave-one-series-out RMSE is {cv_pp:.2f} percentage points of spread "
+        "(results/pricing/cv.csv).",
         "",
         "Sources",
         "HURDAT2 (NOAA NHC; Landsea and Franklin 2013), via the timtrice/HURDAT GitHub mirror.",

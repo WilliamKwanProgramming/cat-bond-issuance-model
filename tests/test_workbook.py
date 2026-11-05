@@ -24,15 +24,16 @@ DEALS = ROOT / "data" / "deals" / "cat_bond_deals.csv"
 ERRORS = ("#DIV/0!", "#N/A", "#NAME?", "#NULL!", "#NUM!", "#REF!", "#VALUE!", "Err:")
 REL = 1e-9
 
-pytestmark = [
-    pytest.mark.skipif(shutil.which("soffice") is None, reason="LibreOffice (soffice) not found"),
-    pytest.mark.skipif(not BOOK.exists(), reason="workbook not built"),
-]
+pytestmark = pytest.mark.skipif(
+    shutil.which("soffice") is None, reason="LibreOffice (soffice) not found"
+)
 
 
 @pytest.fixture(scope="module")
 def recalculated(tmp_path_factory):
     openpyxl = pytest.importorskip("openpyxl")
+    if not BOOK.exists():
+        pytest.skip("workbook not built (python3 scripts/make_workbook.py)")
     tmp = tmp_path_factory.mktemp("book")
     src = tmp / "in" / BOOK.name
     src.parent.mkdir()
@@ -116,3 +117,71 @@ def test_spread_formulas_match_python(recalculated):
         m2["pi_hi_pct"],
     ]
     np.testing.assert_allclose(got, want, rtol=1e-7)
+
+
+def test_formula_text_on_a_small_event_set(tmp_path):
+    """The formula builders, evaluated by LibreOffice on 40 random events, equal Python."""
+    openpyxl = pytest.importorskip("openpyxl")
+    from openpyxl.workbook.defined_name import DefinedName
+
+    from catbond.layers import layer_metrics
+    from catbond.workbook import ap_formula, ep_formula, event_el_formula
+
+    rng = np.random.default_rng(31)
+    n_years = 25
+    year = np.sort(rng.integers(0, n_years, 40))
+    loss = np.round(rng.lognormal(3.0, 1.0, 40), 3)
+    occ = np.zeros(n_years)
+    np.maximum.at(occ, year, loss)
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Data"
+    for i, v in enumerate(loss, start=1):
+        ws.cell(i, 1, float(v))
+    nz = occ[occ > 0]
+    for i, v in enumerate(nz, start=1):
+        ws.cell(i, 2, float(v))
+    ws["D1"] = n_years
+    for name, ref in (
+        ("EventLoss", f"Data!$A$1:$A${len(loss)}"),
+        ("AnnualMax", f"Data!$B$1:$B${len(nz)}"),
+        ("N_years", "Data!$D$1"),
+    ):
+        wb.defined_names[name] = DefinedName(name, attr_text=ref)
+    q = np.quantile(loss, [0.2, 0.5, 0.8, 0.95])
+    layers = [
+        (float(q[0]), float(q[1] - q[0])),
+        (float(q[1]), float(q[3] - q[1])),
+        (float(q[2]), 1000.0),
+        (float(loss[3]), 5.0),
+    ]
+    for r, (a, lim) in enumerate(layers, start=1):
+        ws.cell(r, 6, a)
+        ws.cell(r, 7, lim)
+        ws.cell(r, 8, ap_formula(f"F{r}"))
+        ws.cell(r, 9, ep_formula(f"F{r}", f"G{r}"))
+        ws.cell(r, 10, event_el_formula(f"F{r}", f"G{r}"))
+    src = tmp_path / "in" / "small.xlsx"
+    src.parent.mkdir()
+    wb.save(src)
+    subprocess.run(
+        [
+            "soffice",
+            "--headless",
+            "--calc",
+            "--convert-to",
+            "xlsx",
+            "--outdir",
+            str(tmp_path),
+            str(src),
+        ],
+        check=True,
+        capture_output=True,
+        timeout=300,
+    )
+    out = openpyxl.load_workbook(tmp_path / "small.xlsx", data_only=True)["Data"]
+    for r, (a, lim) in enumerate(layers, start=1):
+        m = layer_metrics(year, loss, n_years, a, a + lim)
+        el = event_layer_expected_loss(loss, n_years, a, a + lim)
+        got = [out.cell(r, c).value for c in (8, 9, 10)]
+        np.testing.assert_allclose(got, (m.attachment_prob, m.ep_occurrence, el), rtol=REL)
