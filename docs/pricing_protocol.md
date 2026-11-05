@@ -2,9 +2,13 @@
 
 This document fixes every analysis choice of the spread regression on the public deal table and
 of the hypothetical transaction **before** any model was fitted on the real table. It was
-committed before `scripts/run_pricing.py` was first run on `data/deals/cat_bond_deals.csv`;
-`git log` shows the order. Every model and sample listed here is reported in `results/pricing/`
-whatever it shows. No other specification is fitted.
+committed together with `scripts/run_pricing.py` (commit 1efd8d9) and before any results file
+(47a6a66). The commits show what the protocol and the script said when the results were
+produced; they cannot show that no fit had been run on the table before the protocol was
+written, and the statement that none had been run rests on this project's own record. Every
+model and sample listed here is reported in `results/pricing/` whatever it shows. No other
+specification is fitted in the protocol; the post hoc diagnostics that came later are in
+`results/pricing_posthoc/` and are labelled as such.
 
 What had been seen of the real table before this protocol: the table itself (identifiers, flags,
 EL and spread values) and the numbers in the re-check of the deal data (by-year medians of the

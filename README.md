@@ -3,8 +3,9 @@
 [![CI](https://github.com/WilliamKwanProgramming/cat-bond-issuance-model/actions/workflows/ci.yml/badge.svg)](https://github.com/WilliamKwanProgramming/cat-bond-issuance-model/actions/workflows/ci.yml)
 
 A teaching-grade walk-through of how a catastrophe bond is structured and priced for a
-**hypothetical** Florida homeowners insurer: a simulated hurricane event set fitted to HURDAT2
-landfalls (1900-2019), a stated exposure and damage function, three per-occurrence layers with
+**hypothetical** Florida homeowners insurer: a simulated event set of hurricane-strength Florida
+landfalls fitted to HURDAT2 (1900-2019), a stated exposure and damage function, three
+per-occurrence layers with
 attachment probability, exhaustion probability and expected loss (EL), and a spread range from a
 pre-specified regression on 56 public tranche prices. It is not a vendor catastrophe model, not an
 offering and not a quote; CLIMADA is not used.
@@ -20,6 +21,7 @@ offering and not a quote; CLIMADA is not used.
 | Layer metrics and layer grid | yes | yes | yes | hazard from real data, portfolio hypothetical |
 | Hazard-parameter uncertainty (year bootstrap, 200 refits) | yes | yes | yes | yes |
 | Spread regression M1-M3, HC3 and clustered SEs, wild cluster bootstrap, leave-group-out errors | yes | yes (statsmodels, coverage on synthetic data) | yes | yes (56 public layers) |
+| Post hoc diagnostics of the spread regression (sample composition, R-squared split, region and peril indicators, error-in-EL simulation) | yes | yes | yes (simulation) | yes (56 public layers) |
 | Hypothetical three-layer transaction (spread range, comparables, sensitivities) | yes | yes | n/a | layers from the model, spreads from the real-data regression |
 | Excel layer pricer (live formulas) | yes | yes (LibreOffice recalculation vs Python; skipped in CI) | yes | event set from the model |
 | Pitchbook PDF (LaTeX, generated tables and figures) | yes | pages checked visually | n/a | built from results files |
@@ -56,7 +58,11 @@ Source: `results/pricing/slope_intervals.csv`
 Reading: the EL slope is about 0.47 to 0.55 on the log scale, well below 1, but every interval is
 wide (series-clustered wild bootstrap for M2: 0.466 [0.115, 0.830]). Not shown: a market price of
 risk; the table is a selection of programs, 23 of 56 layers are from 2025, and each EL comes from
-a different vendor model at the offering stage.
+a different vendor model at the offering stage. Only 21 of the 56 layers list Florida alone, 19 list
+no Florida and 15 cover perils besides named storm, and the regression has no region or peril
+term (post hoc checks: [docs/findings.md](docs/findings.md), Section 2). An error in the stated EL
+biases the slope toward zero only if it is classical; an error of SD 0.23 in log EL would turn a
+true slope of 1 into the estimates above, and no such error was measured.
 
 #### Pre-specified test of proportionality (b = 1) in every sample (REAL data: public deal terms from Artemis pages)
 
@@ -73,8 +79,10 @@ Source: `results/pricing/proportionality.csv`
 Reading: by the pre-specified rule (reject b = 1 only if the series wild bootstrap interval
 excludes 1 in both M1 and M2) proportionality is rejected in the main sample, but not after
 removing the guidance prices, the discount notes or all flagged rows, because the M1 interval
-then reaches 1. The M2 interval excludes 1 in every sample. Not shown: why; with 37 series and
-14 sponsors the evidence is thin.
+then reaches 1. The M2 interval excludes 1 in every sample. With sponsors as the clusters the
+M1 wild bootstrap interval is [0.167, 1.155] (p = 0.157), so the rule would not reject; it was
+fixed with series as the clusters before the first fit and is not changed after the fact. Not
+shown: why; with 37 series and 14 sponsors the evidence is thin.
 
 #### Spread / EL multiple by issue year, 56 distinct layers (REAL data: public deal terms from Artemis pages)
 
@@ -93,8 +101,9 @@ then reaches 1. The M2 interval excludes 1 in every sample. Not shown: why; with
 
 Source: `results/pricing/year_multiple.csv`
 
-Reading: the issue year explains more of the spread than EL does (R-squared on the log scale
-0.208 for M1, 0.691 with year effects). Holding out one series at a time, M2 predicts spreads with
+Reading: the issue year explains more of the spread than EL does (post hoc, R-squared on the log
+scale: issue-year effects alone 0.562, adjusted 0.487; log EL alone 0.208, adjusted 0.193; both
+0.691). Holding out one series at a time, M2 predicts spreads with
 an RMSE of 3.02 percentage points (0.322 on the log scale); holding out a sponsor, 3.20 points
 (`results/pricing/cv.csv`). Not shown: what drives the year effects.
 
@@ -141,7 +150,9 @@ model-form choices move the EL much more (V_half 110 kt gives a middle-layer EL 
 Source: `results/transaction/spreads.csv`
 
 Reading: the 90% prediction interval (scatter of public deals around the fit) is wider than the
-range produced by the EL band. Not shown: a price at which the notes would sell. The five
+range produced by the EL band. Post hoc, adding region-group indicators raises the M2 medians by
+5% to 10% (middle layer 9.44 against 8.79; [docs/findings.md](docs/findings.md)); the ranges
+above keep the pre-specified models. Not shown: a price at which the notes would sell. The five
 nearest public layers by EL and year are in `results/transaction/comparables.csv`.
 
 ### Hazard and loss model (hazard fitted to real data; portfolio hypothetical)
@@ -238,16 +249,18 @@ with its geospatial stack was not needed for what is modelled here. The damage f
 uses for US hurricanes (Emanuel 2011) is implemented directly, the wind field is a parametric
 profile, and the exposure is a stated hypothetical portfolio, so nothing here depends on CLIMADA.
 
-**The deal data.** `data/deals/cat_bond_deals.csv` holds 58 tranches (56 distinct layers) of US
-named-storm cat bonds issued 2017-2025, read from Artemis deal-directory pages with a summarising
-web-fetch tool ([docs/deal_sources.md](docs/deal_sources.md)). It was checked twice: 10 random
-rows by the collector (1 of 70 fields wrong, fixed) and 20 further random rows by a second reader
-(2 of 200 fields, 0 of 60 EL, spread and size cells); `scripts/validate_deals.py` checks types,
-ranges and consistency. The checks show transcription is accurate in the sampled rows. They do
-not show that Artemis is right, that the 28 unchecked rows are right, that the programs are
+**The deal data.** `data/deals/cat_bond_deals.csv` holds 58 tranches (56 distinct layers) of cat
+bonds with US named-storm exposure issued 2017-2025, read from Artemis deal-directory pages with a
+summarising web-fetch tool ([docs/deal_sources.md](docs/deal_sources.md)). It was checked twice: 10
+random rows by the collector (1 of 70 fields wrong, fixed) and 20 further random rows by a second
+reader (2 of 200 fields, 0 of 60 EL, spread and size cells); `scripts/validate_deals.py` checks
+types, ranges and consistency. The checks show transcription is accurate in the sampled rows. They
+do not show that Artemis is right, that the 28 unchecked rows are right, that the programs are
 representative (they were chosen by name), or that ELs from different modelling firms are on one
 scale. Three prices are guidance and four are discount-note equivalents; both are sensitivity
-samples.
+samples. "Distinct" means not identical in EL, attachment probability and spread: Gateway Re 2025-1
+Classes C1 and C2 (the same layer as a one-season zero-coupon note and a two-season coupon note,
+priced at different spreads) are both kept.
 
 ## Limitations
 
@@ -258,12 +271,29 @@ samples.
 * Model-form choices (damage-function half-damage wind, inland decay, radius of maximum wind)
   move layer EL by far more than the hazard-parameter band; the 1950-2019 calibration window
   gives layer ELs of 0.39 to 0.60 times the base case (`results/transaction/sensitivity.csv`).
-* The 1966-1984 landfall flags are missing from the data file; a geometric rule fills them.
+* The hazard model counts only the 67 hurricane-strength landfalls of its definition (a fix
+  within 25 km of the Florida coast and not nearer to another state's). Tropical storms are
+  excluded by design, and 7 hurricanes that came within 50 km of the coastline without being
+  counted (Ivan 2004 and Matthew 2016 at 105 kt, Agnes 1972 and four others,
+  `results/hazard/near_miss_hurricanes.csv`) contribute nothing. Simulated losses are biased low
+  in a way the parameter band does not show.
+* The 1966-1984 landfall flags are missing from the data file; a geometric rule fills them. On
+  the years that have flags, applied to 6-hourly fixes only as in the gap, the rule finds 58 of
+  the 62 landfalls with landfall winds 4.0 kt lower on average, so the gap years probably have
+  too few and too weak landfalls ([docs/model.md](docs/model.md)).
 * The regression has 56 layers, 37 series and 14 sponsors; two sponsors give 26 layers; year
-  effects absorb the market cycle; the M1 proportionality result depends on eight flagged rows.
+  effects absorb the market cycle; the M1 proportionality result depends on eight flagged rows and
+  on the clustering level.
+* Only 21 of the 56 layers list Florida alone; the others are other states or several states, and
+  15 cover perils besides named storm. The regression has no region or peril term, and the
+  post hoc fits with such terms are not part of the protocol.
 * The prediction interval is the classical one on the log scale; it ignores clustering and the
   uncertainty of the model's own EL.
 * Collateral yield, terms, reset and extension provisions, ratings and expenses are not modelled.
+* Not done: a benchmark of the modelled AAL or 1-in-100 loss against a published Florida industry
+  figure; calibration of the damage function to insured losses; term statistics under a clustered
+  frequency model or with loss erosion across years; intensity by coast segment; a prediction
+  interval that carries the EL uncertainty ([docs/findings.md](docs/findings.md), Section 4).
 
 ## References
 
