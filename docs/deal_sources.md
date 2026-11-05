@@ -12,8 +12,8 @@ except the final Bowline Re 2018-1 coupon, whose source is named in that row's `
 The table compiles individual facts (names, dates, sizes, percentages) from public web pages and
 gives the page for every row. No text from the pages is reproduced; the `notes` column is short
 factual wording written for this table. The source sites' own terms of use apply to anyone who
-reuses the table. William should read those terms before relying on the table commercially or
-redistributing it beyond this repository. A web search during an independent review did not find
+reuses the table. Read those terms before relying on the table commercially or redistributing it beyond
+this repository. A web search during an independent review did not find
 the site's terms of use. The table (58 rows taken from one site's deal directory) is the kind of
 compilation that a site's terms or database-right rules can address; if they object, it can be
 reduced to the source URLs plus the extraction script.
