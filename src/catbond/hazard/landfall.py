@@ -166,6 +166,58 @@ def landfalls_geometric(
     return _one_per_storm(pd.DataFrame(rows), "geometric")
 
 
+NEAR_MISS_COLUMNS = [
+    "storm_id",
+    "name",
+    "year",
+    "time",
+    "lat",
+    "lon",
+    "wind",
+    "record",
+    "distance_florida_km",
+    "distance_other_coast_km",
+]
+
+
+def near_misses(
+    tracks: pd.DataFrame,
+    landfalls: pd.DataFrame,
+    region: Region,
+    max_km: float = 50.0,
+    min_wind: float = HURRICANE_KT,
+) -> pd.DataFrame:
+    """Storms that were hurricanes within ``max_km`` of the Florida coastline but are not landfalls.
+
+    One row per storm that is not in ``landfalls``: its fix of at least ``min_wind`` kt that lies
+    nearest to the Florida coastline, if that distance is at most ``max_km``. The hazard model
+    counts only the storms in ``landfalls`` (a hurricane-strength fix within 25 km of the Florida
+    coast, not nearer to another state's coast), so these storms contribute nothing to the
+    simulated events although they may have damaged Florida. The distance is to the coastline,
+    from either side (a fix inland in the Panhandle is within ``max_km`` too).
+    """
+    fixes = tracks[tracks["lon"].notna() & tracks["lat"].notna() & (tracks["wind"] >= min_wind)]
+    margin = max_km / 111.0 + 0.5  # degrees: enough to include every fix within max_km
+    e = region.coast_edges
+    box = fixes[
+        fixes["lon"].between(e[:, [0, 2]].min() - margin, e[:, [0, 2]].max() + margin)
+        & fixes["lat"].between(e[:, [1, 3]].min() - margin, e[:, [1, 3]].max() + margin)
+        & ~fixes["storm_id"].isin(landfalls["storm_id"])
+    ].copy()
+    if box.empty:
+        return pd.DataFrame(columns=NEAR_MISS_COLUMNS)
+    lon, lat = box["lon"].to_numpy(), box["lat"].to_numpy()
+    box["distance_florida_km"], _ = distance_to_edges_km(lon, lat, region.coast_edges)
+    box["distance_other_coast_km"], _ = distance_to_edges_km(lon, lat, region.other_coast_edges)
+    box = box[box["distance_florida_km"] <= max_km]
+    best = (
+        box.sort_values(["storm_id", "distance_florida_km", "time"], kind="stable")
+        .groupby("storm_id", sort=False)
+        .head(1)
+    )
+    return best[NEAR_MISS_COLUMNS].sort_values("time", kind="stable").reset_index(drop=True)
+
+
 FLAG_GAP_YEARS = (1966, 1984)
 SYNOPTIC_HOURS = (0, 6, 12, 18)
 

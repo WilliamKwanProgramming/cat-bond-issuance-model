@@ -4,6 +4,8 @@
 Writes to results/hazard/:
   landfalls.csv              Florida hurricane landfalls 1900-2024 (one row per storm)
   definition_agreement.csv   record against geometric definition, and the two data files
+  near_miss_hurricanes.csv   hurricane-strength storms within 50 km of the Florida coastline in
+                             1900-2019 that are not counted as Florida landfalls (not modelled)
   frequency.csv              count models and tests for the three pre-specified windows
   intensity.csv              GPD and KDE fits against observed category frequencies
   motion_by_coast.csv        heading and translation speed by coast segment
@@ -35,6 +37,7 @@ from catbond.hazard.landfall import (
     category,
     landfalls_from_records,
     landfalls_geometric,
+    near_misses,
     synoptic_fixes,
 )
 from catbond.hazard.validation import GROUPS, group_probability
@@ -236,6 +239,10 @@ def main() -> int:
     lf["category"] = category(lf["wind"].to_numpy())
     lf.to_csv(OUT / "landfalls.csv", index=False, float_format="%.4f")
     agreement_table(inp).to_csv(OUT / "definition_agreement.csv", index=False, float_format="%.3f")
+    cal = inp.tracks[inp.tracks["year"].between(*CALIBRATION)]
+    near_misses(cal, inp.landfalls, inp.region).to_csv(
+        OUT / "near_miss_hurricanes.csv", index=False, float_format="%.4f"
+    )
     frequency_table(inp).to_csv(OUT / "frequency.csv", index=False, float_format="%.6g")
     intensity_table(inp).to_csv(OUT / "intensity.csv", index=False, float_format="%.6g")
     motion_table(inp).to_csv(OUT / "motion_by_coast.csv", index=False, float_format="%.4g")
