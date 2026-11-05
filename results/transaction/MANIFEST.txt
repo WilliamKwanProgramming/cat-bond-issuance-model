@@ -1,7 +1,7 @@
 command: python3 scripts/run_transaction.py
 seed:    none (deterministic)
-git:     81c8c007e7ec24abfe9c9400d732b24ec1d93c3c (clean)
-date:    2026-11-05T08:43:53Z
+git:     416d1b7885bbb35dfdcc98d4d73e3792f5793fe8 (clean)
+date:    2026-11-05T09:23:47Z
 python:  3.13.18; numpy 2.5.3
 machine: x86_64 Linux
 data: HYPOTHETICAL portfolio and sponsor; hazard from real HURDAT2; spread mapping fitted on REAL public deal terms (56 distinct layers)

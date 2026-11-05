@@ -1,7 +1,7 @@
-command: python3 scripts/run_pricing.py
+command: python3 scripts/run_pricing.py --n-boot 9999 --seed 6001
 seed:    6001
-git:     1efd8d95743b4ef7d2ee3879876471425be7efe7 (clean)
-date:    2026-11-05T08:39:13Z
+git:     416d1b7885bbb35dfdcc98d4d73e3792f5793fe8 (clean)
+date:    2026-11-05T09:23:46Z
 python:  3.13.18; numpy 2.5.3
 machine: x86_64 Linux
 data: REAL public deal terms, data/deals/cat_bond_deals.csv (Artemis pages)
