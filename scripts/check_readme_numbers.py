@@ -22,6 +22,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 T = "results/tables.md"
 README = "README.md"
 FINDINGS = "docs/findings.md"
+MODEL = "docs/model.md"
 
 CHECKS = [
     # slope b, main sample (wild cluster bootstrap by series and by sponsor, HC3)
@@ -104,6 +105,9 @@ CHECKS = [
     (T, "| Layer 1 (bottom) | V_half 110 kt (Emanuel 2011 sensitivity) | True | 13.98 |", FINDINGS, "| V_half 110 kt | 13.98 | 10.32 | 7.95 | 10.21 |"),
     (T, "| Layer 2 (middle) | V_half 110 kt (Emanuel 2011 sensitivity) | True | 10.32 | 19.63 | 19.00 | 5.22 | 11.75 | 10.21 |", FINDINGS, "| V_half 110 kt | 13.98 | 10.32 | 7.95 | 10.21 |"),
     (T, "| Layer 3 (top) | V_half 110 kt (Emanuel 2011 sensitivity) | True | 7.95 |", FINDINGS, "| V_half 110 kt | 13.98 | 10.32 | 7.95 | 10.21 |"),
+    # landfall definitions: geometric rule on 6-hourly fixes only
+    (T, "| record vs geometric on synoptic fixes only, AL.rda, years with L flags | 62 | 58 | 58 | 6.3 | 21.9 | mean wind difference (geometric - record) -4.0 kt;",
+     MODEL, "it finds 58 of the 62, with landfall winds\n4.0 kt lower on average (up to 21.9 kt)"),
     # hazard and losses
     (T, "| All hurricanes | 25.0 | 17 | 33 | 15 | 36 | 17 |", README, "25.0 hurricanes for 1980-2019 against 17 observed (p = 0.21)"),
     (T, "| OEP | 100 | 1.814 | 0.027 |", README, "1.814% of TIV"),

@@ -114,8 +114,9 @@ damage ratio.
   KS distance \numKSgpd).
 \item Track: historical landfall position, heading and speed resampled with jitter; Holland
   wind profile; Kaplan--DeMaria inland decay; Emanuel (2011) damage function.
-\item Landfall definition: the geometric rule reproduces \numDefAgree{} of \numDefN{} flagged
-  landfalls in years with flags.
+\item Landfall definition (1966--1984): on 6-hourly fixes only, the geometric rule finds
+  \numDefSynAgree{} of \numDefN{} flagged landfalls of other years, with winds \numDefSynWind{} kt
+  lower on average.
 \end{itemize}
 \textbf{Weak points.}
 \begin{itemize}
@@ -242,7 +243,7 @@ Inland decay & Kaplan and DeMaria (1995), NHC operational constants \\
 Damage & Emanuel (2011): threshold 50 kt, half-damage 150 kt (110 kt and 145.2 kt as sensitivities) \\
 Exposure & 2020 Census households by county (UF BEBR); TIV hypothetical; 2\% deductible \\
 Simulation & 100,000 years, seed 1; hazard-parameter band from 200 year-bootstrap refits \\
-Deal terms & Artemis deal directory pages, accessed 2026-11-05; two independent transcription checks \\
+Deal terms & Artemis deal directory pages, accessed 2026-11-05; two transcription checks (the first by the collector) \\
 Regression & OLS of log spread on log EL; HC3 (MacKinnon and White 1985), cluster-robust
 (Cameron and Miller 2015), wild cluster bootstrap (Cameron, Gelbach and Miller 2008; Roodman et al.\ 2019) \\
 Protocol & All models, samples and the layer rule fixed in docs/pricing\_protocol.md before the first fit \\

@@ -242,6 +242,9 @@ def main() -> int:
     da = pd.read_csv(R / "hazard" / "definition_agreement.csv")
     num["DefAgree"] = str(int(da["n_both"].iloc[0]))
     num["DefN"] = str(int(da["n_first"].iloc[0]))
+    syn = da[da["comparison"].str.contains("synoptic fixes only")].iloc[0]
+    num["DefSynAgree"] = str(int(syn["n_both"]))
+    num["DefSynWind"] = syn["detail"].split(" kt;")[0].rsplit(" ", 1)[1].lstrip("-")
 
     # ------------------------------------------------------------ loss exceedance curve
     rp = pd.read_csv(R / "eventset" / "rp_losses.csv")
