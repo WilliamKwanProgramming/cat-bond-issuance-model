@@ -321,6 +321,112 @@ Source: `results/pricing/coefficients.csv`
 
 Source: `results/pricing/year_multiple.csv`
 
+### Hypothetical three-layer transaction (HYPOTHETICAL sponsor and portfolio; hazard fitted to real HURDAT2; 100,000 simulated years, seed 1; band from 200 bootstrap refits x 10,000 years)
+
+| layer | attach - exhaust (% TIV) | attach - exhaust (USD m) | AP % | EP % | EL % (MC SE) | EL hazard-parameter band 5-95% | P(any loss in 3 years) % |
+|---|---|---|---|---|---|---|---|
+| Layer 1 (bottom) | 0.50 - 1.00 | 500 - 1,000 | 5.67 | 2.70 | 3.90 (0.06) | 2.19 - 5.34 | 16.1 |
+| Layer 2 (middle) | 1.00 - 1.50 | 1,000 - 1,500 | 2.69 | 1.45 | 1.98 (0.04) | 0.97 - 2.85 | 7.8 |
+| Layer 3 (top) | 1.50 - 2.00 | 1,500 - 2,000 | 1.44 | 0.82 | 1.09 (0.03) | 0.44 - 1.59 | 4.3 |
+
+Source: `results/transaction/layers.csv`
+
+### Regression spread range for the hypothetical layers (M1, M2 at issue year 2025, fitted on the REAL deal table; a regression output, not a quote)
+
+| layer | model | EL case | EL % | median spread % [90% PI] | multiple |
+|---|---|---|---|---|---|
+| Layer 1 (bottom) | M1 | EL point | 3.90 | 11.47 [5.84, 22.54] | 2.94 |
+| Layer 1 (bottom) | M1 | EL band q05 | 2.19 | 8.34 [4.37, 15.91] | 3.81 |
+| Layer 1 (bottom) | M1 | EL band q95 | 5.34 | 13.63 [6.75, 27.55] | 2.56 |
+| Layer 1 (bottom) | M2 | EL point | 3.90 | 12.07 [7.61, 19.16] | 3.09 |
+| Layer 1 (bottom) | M2 | EL band q05 | 2.19 | 9.22 [5.92, 14.36] | 4.21 |
+| Layer 1 (bottom) | M2 | EL band q95 | 5.34 | 13.97 [8.63, 22.60] | 2.62 |
+| Layer 2 (middle) | M1 | EL point | 1.98 | 7.88 [4.14, 15.00] | 3.98 |
+| Layer 2 (middle) | M1 | EL band q05 | 0.97 | 5.33 [2.76, 10.26] | 5.47 |
+| Layer 2 (middle) | M1 | EL band q95 | 2.85 | 9.64 [5.00, 18.57] | 3.38 |
+| Layer 2 (middle) | M2 | EL point | 1.98 | 8.79 [5.65, 13.68] | 4.45 |
+| Layer 2 (middle) | M2 | EL band q05 | 0.97 | 6.32 [4.01, 9.97] | 6.49 |
+| Layer 2 (middle) | M2 | EL band q95 | 2.85 | 10.42 [6.66, 16.32] | 3.66 |
+| Layer 3 (top) | M1 | EL point | 1.09 | 5.68 [2.96, 10.89] | 5.19 |
+| Layer 3 (top) | M1 | EL band q05 | 0.44 | 3.44 [1.68, 7.07] | 7.79 |
+| Layer 3 (top) | M1 | EL band q95 | 1.59 | 6.97 [3.67, 13.26] | 4.40 |
+| Layer 3 (top) | M2 | EL point | 1.09 | 6.67 [4.25, 10.47] | 6.10 |
+| Layer 3 (top) | M2 | EL band q05 | 0.44 | 4.37 [2.63, 7.28] | 9.89 |
+| Layer 3 (top) | M2 | EL band q95 | 1.59 | 7.93 [5.10, 12.35] | 5.00 |
+
+Source: `results/transaction/spreads.csv`
+
+### Five nearest public layers by EL and issue year (REAL data: Artemis pages)
+
+| layer | rank | deal_name | tranche | issue_year | expected_loss_pct | spread_pct | multiple | distance |
+|---|---|---|---|---|---|---|---|---|
+| Layer 1 (bottom) | 1 | Integrity Re III Ltd. (Series 2025-1) | Class D | 2025 | 4.52 | 25.50 | 5.64 | 0.294 |
+| Layer 1 (bottom) | 2 | Gateway Re Ltd. (Series 2025-1) | Class A | 2025 | 3.17 | 10.50 | 3.31 | 0.416 |
+| Layer 1 (bottom) | 3 | Nature Coast Re Ltd. (Series 2025-1) | Class A | 2025 | 2.92 | 9.75 | 3.34 | 0.580 |
+| Layer 1 (bottom) | 4 | Alamo Re Ltd. (Series 2024-1) | Class C | 2024 | 3.29 | 11.25 | 3.42 | 0.605 |
+| Layer 1 (bottom) | 5 | Everglades Re II Ltd. (Series 2025-1) | Class D | 2025 | 2.8 | 13.00 | 4.64 | 0.664 |
+| Layer 2 (middle) | 1 | Integrity Re III Ltd. (Series 2025-1) | Class B1 | 2025 | 2.01 | 9.75 | 4.85 | 0.033 |
+| Layer 2 (middle) | 2 | Everglades Re II Ltd. (Series 2025-1) | Class B | 2025 | 1.9 | 9.75 | 5.13 | 0.080 |
+| Layer 2 (middle) | 3 | Palm Re Ltd. (Series 2025-1) | Class A | 2025 | 1.8 | 7.75 | 4.31 | 0.188 |
+| Layer 2 (middle) | 4 | Gateway Re Ltd. (Series 2025-1) | Class AA | 2025 | 1.79 | 6.25 | 3.49 | 0.199 |
+| Layer 2 (middle) | 5 | Cape Lookout Re Ltd. (Series 2025-1) | Class A | 2025 | 2.24 | 6.90 | 3.08 | 0.249 |
+| Layer 3 (top) | 1 | Gateway Re Ltd. (Series 2025-1) | Class AAA | 2025 | 1.07 | 4.25 | 3.97 | 0.044 |
+| Layer 3 (top) | 2 | Purple Re Ltd. (Series 2025-1) | Class A | 2025 | 1.04 | 7.25 | 6.97 | 0.101 |
+| Layer 3 (top) | 3 | Purple Re Ltd. (Series 2025-1) | Class B | 2025 | 1.24 | 7.75 | 6.25 | 0.251 |
+| Layer 3 (top) | 4 | First Coast Re IV Ltd. (Series 2025-1) | Class A | 2025 | 1.3 | 6.50 | 5.00 | 0.346 |
+| Layer 3 (top) | 5 | Gateway Re Ltd. (Series 2025-1) | Class C1 | 2025 | 1.31 | 8.25 | 6.30 | 0.361 |
+
+Source: `results/transaction/comparables.csv`
+
+### Sensitivity of layer EL and implied spread (HYPOTHETICAL sponsor and portfolio; hazard fitted to real HURDAT2; same seed, 100,000 years per variant; in_protocol_list marks the variants named in the protocol)
+
+| layer | variant | in_protocol_list | el_pct | M1_spread_median_pct | M2_spread_median_pct | el_ratio_to_base | M1_change_pp | M2_change_pp |
+|---|---|---|---|---|---|---|---|---|
+| Layer 1 (bottom) | base | True | 3.90 | 11.47 | 12.07 | 1.00 | 0.00 | 0.00 |
+| Layer 1 (bottom) | frequency x 0.8 | True | 3.15 | 10.19 | 10.92 | 0.81 | -1.28 | -1.15 |
+| Layer 1 (bottom) | frequency x 1.2 | True | 4.57 | 12.51 | 12.99 | 1.17 | 1.04 | 0.92 |
+| Layer 1 (bottom) | intensity: KDE instead of GPD | False | 3.85 | 11.39 | 12.00 | 0.99 | -0.08 | -0.07 |
+| Layer 1 (bottom) | window 1950-2019 | True | 2.33 | 8.62 | 9.49 | 0.60 | -2.84 | -2.58 |
+| Layer 1 (bottom) | window 1900-2024 (2020-24 geometric) | False | 4.00 | 11.63 | 12.22 | 1.03 | 0.16 | 0.14 |
+| Layer 1 (bottom) | V_half 110 kt (Emanuel 2011 sensitivity) | True | 13.98 | 23.21 | 21.89 | 3.58 | 11.74 | 9.82 |
+| Layer 1 (bottom) | V_half 145.2 kt (CLIMADA default) | True | 4.67 | 12.67 | 13.13 | 1.20 | 1.20 | 1.06 |
+| Layer 1 (bottom) | V_thresh 40 kt | True | 6.11 | 14.69 | 14.88 | 1.57 | 3.22 | 2.81 |
+| Layer 1 (bottom) | deductible 0% | False | 6.08 | 14.66 | 14.85 | 1.56 | 3.19 | 2.78 |
+| Layer 1 (bottom) | deductible 5% | False | 2.37 | 8.70 | 9.56 | 0.61 | -2.77 | -2.51 |
+| Layer 1 (bottom) | RMW x 0.8 | False | 2.15 | 8.24 | 9.14 | 0.55 | -3.22 | -2.94 |
+| Layer 1 (bottom) | RMW x 1.2 | False | 5.92 | 14.43 | 14.66 | 1.52 | 2.96 | 2.59 |
+| Layer 1 (bottom) | no inland decay | False | 12.41 | 21.73 | 20.70 | 3.18 | 10.26 | 8.63 |
+| Layer 2 (middle) | base | True | 1.98 | 7.88 | 8.79 | 1.00 | 0.00 | 0.00 |
+| Layer 2 (middle) | frequency x 0.8 | True | 1.64 | 7.09 | 8.05 | 0.83 | -0.78 | -0.75 |
+| Layer 2 (middle) | frequency x 1.2 | True | 2.29 | 8.55 | 9.42 | 1.16 | 0.67 | 0.63 |
+| Layer 2 (middle) | intensity: KDE instead of GPD | False | 1.88 | 7.66 | 8.58 | 0.95 | -0.22 | -0.21 |
+| Layer 2 (middle) | window 1950-2019 | True | 1.04 | 5.52 | 6.51 | 0.52 | -2.36 | -2.28 |
+| Layer 2 (middle) | window 1900-2024 (2020-24 geometric) | False | 2.03 | 7.99 | 8.90 | 1.03 | 0.11 | 0.11 |
+| Layer 2 (middle) | V_half 110 kt (Emanuel 2011 sensitivity) | True | 10.32 | 19.63 | 19.00 | 5.22 | 11.75 | 10.21 |
+| Layer 2 (middle) | V_half 145.2 kt (CLIMADA default) | True | 2.51 | 8.98 | 9.82 | 1.27 | 1.10 | 1.03 |
+| Layer 2 (middle) | V_thresh 40 kt | True | 3.24 | 10.34 | 11.06 | 1.64 | 2.47 | 2.27 |
+| Layer 2 (middle) | deductible 0% | False | 3.11 | 10.11 | 10.86 | 1.57 | 2.24 | 2.06 |
+| Layer 2 (middle) | deductible 5% | False | 1.18 | 5.92 | 6.90 | 0.60 | -1.96 | -1.89 |
+| Layer 2 (middle) | RMW x 0.8 | False | 1.05 | 5.54 | 6.53 | 0.53 | -2.34 | -2.26 |
+| Layer 2 (middle) | RMW x 1.2 | False | 3.35 | 10.54 | 11.24 | 1.69 | 2.66 | 2.45 |
+| Layer 2 (middle) | no inland decay | False | 9.66 | 18.92 | 18.42 | 4.88 | 11.04 | 9.63 |
+| Layer 3 (top) | base | True | 1.09 | 5.68 | 6.67 | 1.00 | 0.00 | 0.00 |
+| Layer 3 (top) | frequency x 0.8 | True | 0.91 | 5.14 | 6.13 | 0.83 | -0.54 | -0.54 |
+| Layer 3 (top) | frequency x 1.2 | True | 1.25 | 6.12 | 7.10 | 1.14 | 0.44 | 0.43 |
+| Layer 3 (top) | intensity: KDE instead of GPD | False | 1.07 | 5.62 | 6.62 | 0.98 | -0.05 | -0.05 |
+| Layer 3 (top) | window 1950-2019 | True | 0.43 | 3.39 | 4.31 | 0.39 | -2.29 | -2.36 |
+| Layer 3 (top) | window 1900-2024 (2020-24 geometric) | False | 1.08 | 5.65 | 6.65 | 0.99 | -0.02 | -0.02 |
+| Layer 3 (top) | V_half 110 kt (Emanuel 2011 sensitivity) | True | 7.95 | 16.99 | 16.82 | 7.27 | 11.31 | 10.15 |
+| Layer 3 (top) | V_half 145.2 kt (CLIMADA default) | True | 1.44 | 6.61 | 7.59 | 1.32 | 0.93 | 0.92 |
+| Layer 3 (top) | V_thresh 40 kt | True | 1.83 | 7.55 | 8.48 | 1.67 | 1.87 | 1.81 |
+| Layer 3 (top) | deductible 0% | False | 1.72 | 7.29 | 8.24 | 1.57 | 1.61 | 1.57 |
+| Layer 3 (top) | deductible 5% | False | 0.65 | 4.26 | 5.23 | 0.59 | -1.42 | -1.44 |
+| Layer 3 (top) | RMW x 0.8 | False | 0.60 | 4.07 | 5.03 | 0.55 | -1.61 | -1.64 |
+| Layer 3 (top) | RMW x 1.2 | False | 2.08 | 8.09 | 8.99 | 1.90 | 2.41 | 2.32 |
+| Layer 3 (top) | no inland decay | False | 7.83 | 16.85 | 16.71 | 7.16 | 11.17 | 10.04 |
+
+Source: `results/transaction/sensitivity.csv`
+
 ### Hypothetical portfolio by county (households: 2020 Census via UF BEBR; TIV USD 100 bn, HYPOTHETICAL)
 
 | fips | county | households_2020 | share_pct | tiv_usd_m | lon | lat |

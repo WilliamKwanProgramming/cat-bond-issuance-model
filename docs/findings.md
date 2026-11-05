@@ -76,3 +76,57 @@ before any doubt about its EL.
   sponsor-clustered inference is coarse, and the two clusterings disagree for M1.
 * **Prices.** Three prices are guidance and four are 100 minus a discount-note issue price for
   one season; removing them moves b in M1 from 0.553 to 0.619 and 0.635.
+
+## 3. Hypothetical transaction (hypothetical sponsor and portfolio)
+
+Layer rule (protocol): three adjacent layers of the base-case grid with EL closest to 4%, 2% and
+1% of limit. Chosen: USD 500 million each, attaching at 0.50%, 1.00% and 1.50% of the USD 100
+billion TIV (`results/transaction/layers.csv`; 100,000 simulated years, seed 1).
+
+| Layer | AP % | EP % | EL % | hazard-parameter band (5-95%) |
+|---|---|---|---|---|
+| bottom, USD 500-1,000 million | 5.67 | 2.70 | 3.90 | 2.19 - 5.34 |
+| middle, USD 1,000-1,500 million | 2.69 | 1.45 | 1.98 | 0.97 - 2.85 |
+| top, USD 1,500-2,000 million | 1.44 | 0.82 | 1.09 | 0.44 - 1.59 |
+
+The band comes from 200 refits of the hazard model on bootstrap samples of the 1900-2019 years
+(10,000 simulated years each); it covers frequency, intensity and landfall-pool uncertainty and
+nothing else. Monte Carlo standard errors of the EL are 0.03 to 0.06 points.
+
+**Regression spread range** (`results/transaction/spreads.csv`; median spread with 90%
+prediction interval, issue year 2025 in M2; a regression output, not a quote):
+
+| Layer | M1 at EL point | M2 at EL point | M2 median at band ends |
+|---|---|---|---|
+| bottom | 11.47 [5.84, 22.54] | 12.07 [7.61, 19.16] | 9.22 - 13.97 |
+| middle | 7.88 [4.14, 15.00] | 8.79 [5.65, 13.68] | 6.32 - 10.42 |
+| top | 5.68 [2.96, 10.89] | 6.67 [4.25, 10.47] | 4.37 - 7.93 |
+
+The prediction interval (residual scatter of public deals) is wider than the range produced by
+the hazard-parameter band, and both are narrower than the model-form sensitivities below. The
+five nearest public layers by EL and year (`results/transaction/comparables.csv`) priced at 9.75
+to 25.50 (bottom), 6.25 to 9.75 (middle) and 4.25 to 8.25 (top).
+
+**Sensitivities** (`results/transaction/sensitivity.csv`, same seed, 100,000 years each; EL of
+bottom / middle / top layer in percent):
+
+| Variant | EL bottom | EL middle | EL top | M2 spread change, middle (points) |
+|---|---|---|---|---|
+| base | 3.90 | 1.98 | 1.09 | 0.00 |
+| frequency x 0.8 | 3.15 | 1.63 | 0.91 | -0.75 |
+| frequency x 1.2 | 4.57 | 2.29 | 1.25 | 0.63 |
+| calibration window 1950-2019 | 2.33 | 1.04 | 0.43 | -2.28 |
+| V_half 145.2 kt | 4.67 | 2.51 | 1.44 | 1.03 |
+| V_thresh 40 kt | 6.11 | 3.24 | 1.83 | 2.27 |
+| V_half 110 kt | 13.98 | 10.32 | 7.95 | 10.21 |
+
+Frequency moves the EL roughly in proportion (x 0.8 gives 0.81 to 0.83 of base), the calibration
+window by a factor 0.39 to 0.60, and the damage-function half-damage wind by up to 7.3. The
+V_half 110 kt ELs lie far outside the 0.83% to 4.52% EL range of the public deals, so the spread
+mapped from them is an extrapolation of the regression.
+
+**What this does not show.** The model's EL is not comparable to a vendor model's EL (no
+calibration to insured losses, centroid exposure, no surge, a hypothetical portfolio), so
+mapping it through a regression fitted on vendor ELs mixes two scales. The layer choice
+depends on the base-case grid; any variant above would select different attachments for the
+same EL targets.
