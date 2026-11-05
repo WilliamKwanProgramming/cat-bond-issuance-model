@@ -208,7 +208,10 @@ Every results directory has a MANIFEST with the command, seed, commit and versio
 mutation check applies deliberate bugs one at a time (sign errors, wrong degrees of freedom,
 look-ahead, wrong bootstrap weights, wrong workbook formulas, ...) and runs the tests:
 37 of 37 mutants caught (`results/mutation_check.txt`).
-The run times of the last full reproduction are in `results/MANIFEST.txt`. The NHC download route in
+The run times of the last full reproduction are in `results/MANIFEST.txt`; in the committed
+file the line `1 cores` and the empty CPU line are artefacts of the script as it was then (`nproc`
+honours `OMP_NUM_THREADS=1`; the CPU time was read in a subshell), both fixed in
+`scripts/reproduce.sh` and shown correctly by the next full run. The NHC download route in
 `scripts/fetch_data.py` was not exercised here (the GitHub mirrors were used).
 
 ## Method (short)
