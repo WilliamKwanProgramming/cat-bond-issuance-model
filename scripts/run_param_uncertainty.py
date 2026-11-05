@@ -7,7 +7,9 @@ the replicate results combines parameter uncertainty and Monte Carlo noise at --
 Monte Carlo part is measured separately by scripts/run_convergence.py. Needs
 results/eventset/reference_layer.csv.
 
-Writes results/param_uncertainty/replicates.csv, summary.csv and MANIFEST.txt.
+Writes results/param_uncertainty/replicates.csv, summary.csv, MANIFEST.txt, and for every layer
+of the candidate grid (catbond.pipeline.GRID_*) grid_replicates.csv (AP, EP, EL per replicate)
+and grid_summary.csv (mean and quantiles of the EL across replicates).
 
 Usage: python3 scripts/run_param_uncertainty.py [--n-boot 200] [--n-years 10000] [--seed 5001]
 """
@@ -22,10 +24,17 @@ import pandas as pd
 
 from catbond.eventset import simulate_event_set
 from catbond.hazard.model import fit_hazard
-from catbond.layers import layer_metrics
+from catbond.layers import layer_metrics, layer_table
 from catbond.losses import annual_max_and_sum, return_period_losses
 from catbond.manifest import repo_root, write_manifest
-from catbond.pipeline import CALIBRATION, TIV_USD, load_inputs
+from catbond.pipeline import (
+    CALIBRATION,
+    GRID_ATTACHMENTS,
+    GRID_LIMITS,
+    TERM_YEARS,
+    TIV_USD,
+    load_inputs,
+)
 from catbond.uncertainty import bootstrap_hazard_models
 
 OUT = repo_root() / "results" / "param_uncertainty"
@@ -43,7 +52,7 @@ def main() -> int:
     inp = load_inputs()
     base = fit_hazard(inp.landfalls, *CALIBRATION)
     models = bootstrap_hazard_models(inp.landfalls, base, args.n_boot, args.seed)
-    rows = []
+    rows, grid = [], []
     for b, m in enumerate(models):
         es = simulate_event_set(
             m, inp.region.coast_edges, inp.exposure, args.n_years, args.seed + 1 + b
@@ -64,6 +73,21 @@ def main() -> int:
                 "ref_el_pct": 100 * lm.expected_loss,
             }
         )
+        t = layer_table(
+            y, loss, es.n_years, GRID_ATTACHMENTS * TIV_USD, GRID_LIMITS * TIV_USD, TERM_YEARS
+        )
+        grid.append(
+            pd.DataFrame(
+                {
+                    "replicate": b,
+                    "attachment_pct_tiv": 100 * t["attachment_usd"] / TIV_USD,
+                    "limit_pct_tiv": 100 * t["limit_usd"] / TIV_USD,
+                    "ap_pct": 100 * t["attachment_prob"],
+                    "ep_pct": 100 * t["exhaustion_prob"],
+                    "el_pct": 100 * t["expected_loss"],
+                }
+            )
+        )
         if b % 20 == 0:
             print(rows[-1], flush=True)
     df = pd.DataFrame(rows)
@@ -82,6 +106,14 @@ def main() -> int:
             | {f"q{int(100 * p):02d}": v for p, v in zip(QUANTILES, q, strict=True)}
         )
     pd.DataFrame(summ).to_csv(OUT / "summary.csv", index=False, float_format="%.6g")
+    g = pd.concat(grid, ignore_index=True)
+    g.to_csv(OUT / "grid_replicates.csv", index=False, float_format="%.6g")
+    keys = ["attachment_pct_tiv", "limit_pct_tiv"]
+    gs = g.groupby(keys)["el_pct"]
+    gsum = gs.agg(n_replicates="size", el_mean="mean", el_sd="std").reset_index()
+    for p in QUANTILES:
+        gsum[f"el_q{int(100 * p):02d}"] = gs.quantile(p).to_numpy()
+    gsum.to_csv(OUT / "grid_summary.csv", index=False, float_format="%.6g")
     write_manifest(
         OUT,
         args.seed,

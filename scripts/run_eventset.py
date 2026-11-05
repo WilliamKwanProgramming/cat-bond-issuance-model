@@ -9,6 +9,7 @@ Writes to results/eventset/:
   rp_losses.csv        OEP and AEP return-period losses, base case, with bootstrap SEs
   reference_layer.csv  the pre-specified reference layer (1-in-50 to 1-in-100 OEP, rounded)
   sensitivity.csv      AAL, 1-in-100 / 1-in-250 OEP and reference-layer metrics per variant
+  sensitivity_layers.csv  AP, EP and EL of every layer of the candidate grid, per variant
   MANIFEST.txt
 and results/exposure/county_exposure.csv (the hypothetical portfolio by county).
 
@@ -26,7 +27,7 @@ import pandas as pd
 
 from catbond.eventset import LossSettings, simulate_event_set
 from catbond.hazard.model import fit_hazard
-from catbond.layers import layer_metrics
+from catbond.layers import layer_metrics, layer_table
 from catbond.losses import (
     RETURN_PERIODS,
     annual_max_and_sum,
@@ -40,6 +41,8 @@ from catbond.pipeline import (
     BASE_SEED,
     CALIBRATION,
     EXTENDED,
+    GRID_ATTACHMENTS,
+    GRID_LIMITS,
     RP_BOOTSTRAP,
     TERM_YEARS,
     TIV_USD,
@@ -69,6 +72,28 @@ def summary_row(name: str, es, a: float, e: float) -> dict:
         "ref_ep_pct": 100 * m.exhaustion_prob,
         "ref_el_pct": 100 * m.expected_loss,
     }
+
+
+def grid_rows(name: str, es) -> pd.DataFrame:
+    """AP, EP and EL (percent) of every candidate-grid layer for one variant."""
+    t = layer_table(
+        es.events["year"],
+        es.events["loss_usd"],
+        es.n_years,
+        GRID_ATTACHMENTS * TIV_USD,
+        GRID_LIMITS * TIV_USD,
+        TERM_YEARS,
+    )
+    return pd.DataFrame(
+        {
+            "variant": name,
+            "attachment_pct_tiv": 100 * t["attachment_usd"] / TIV_USD,
+            "limit_pct_tiv": 100 * t["limit_usd"] / TIV_USD,
+            "ap_pct": 100 * t["attachment_prob"],
+            "ep_pct": 100 * t["exhaustion_prob"],
+            "el_pct": 100 * t["expected_loss"],
+        }
+    )
 
 
 def main() -> int:
@@ -179,7 +204,7 @@ def main() -> int:
         ("RMW x 1.2", base_model, replace(base_settings, rmw_scale=1.2)),
         ("no inland decay", base_model, replace(base_settings, decay=False)),
     ]
-    sens = []
+    sens, grids = [], []
     for name, model, st in variants:
         es = (
             base
@@ -194,7 +219,11 @@ def main() -> int:
             }
         )
         print(sens[-1], flush=True)
+        grids.append(grid_rows(name, es))
     pd.DataFrame(sens).to_csv(OUT / "sensitivity.csv", index=False, float_format="%.6g")
+    pd.concat(grids, ignore_index=True).to_csv(
+        OUT / "sensitivity_layers.csv", index=False, float_format="%.6g"
+    )
     write_manifest(
         OUT,
         args.seed,
