@@ -2,7 +2,13 @@ import numpy as np
 import pytest
 from scipy import integrate, stats
 
-from catbond.layers import annual_principal_loss, event_layer_loss, layer_metrics, layer_table
+from catbond.layers import (
+    annual_principal_loss,
+    event_layer_expected_loss,
+    event_layer_loss,
+    layer_metrics,
+    layer_table,
+)
 
 LAM, MU, N = 0.6, 1.0, 200_000
 
@@ -124,3 +130,12 @@ def test_stacked_layers(poisson_exponential):
         edges[-1] - edges[0]
     )
     assert sum(usd_all) <= full_all + 1e-12
+
+
+def test_event_layer_expected_loss_hand_computed_and_cap():
+    year = np.array([0, 0, 2])
+    loss = np.array([15.0, 30.0, 12.0])
+    # layer [10, 20]: event layer losses 5, 10, 2 -> 17 / (4 years * 10)
+    assert event_layer_expected_loss(loss, 4, 10.0, 20.0) == pytest.approx(17 / 40)
+    # the capped EL limits year 0 to 10: (10 + 2) / 40
+    assert layer_metrics(year, loss, 4, 10.0, 20.0).expected_loss == pytest.approx(12 / 40)

@@ -101,9 +101,7 @@ def test_valid_copy_passes(tmp_path: Path) -> None:
         ("deal_name", " ", "deal_name is empty"),
     ],
 )
-def test_planted_defect_is_reported(
-    tmp_path: Path, column: str, value: str, expected: str
-) -> None:
+def test_planted_defect_is_reported(tmp_path: Path, column: str, value: str, expected: str) -> None:
     rows = _rows()
     target = next(r for r in rows if r["attachment_prob_pct"] and r["spread_basis"] == "final")
     target[column] = value

@@ -33,6 +33,19 @@ def event_layer_loss(loss: np.ndarray, attachment: float, exhaustion: float) -> 
     )
 
 
+def event_layer_expected_loss(
+    loss: np.ndarray, n_years: int, attachment: float, exhaustion: float
+) -> float:
+    """Event-layer EL without the annual cap: sum of event layer losses / (n_years (E - A)).
+
+    This is the quantity the Excel layer calculator computes with SUMPRODUCT. It equals the
+    capped EL of ``layer_metrics`` when no simulated year has more principal loss than the limit,
+    and is otherwise larger.
+    """
+    lay = event_layer_loss(loss, attachment, exhaustion)
+    return float(lay.sum() / (n_years * (exhaustion - attachment)))
+
+
 def annual_principal_loss(
     year: np.ndarray, loss: np.ndarray, n_years: int, attachment: float, exhaustion: float
 ) -> np.ndarray:
