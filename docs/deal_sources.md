@@ -13,7 +13,10 @@ The table compiles individual facts (names, dates, sizes, percentages) from publ
 gives the page for every row. No text from the pages is reproduced; the `notes` column is short
 factual wording written for this table. The source sites' own terms of use apply to anyone who
 reuses the table. William should read those terms before relying on the table commercially or
-redistributing it beyond this repository.
+redistributing it beyond this repository. A web search during an independent review did not find
+the site's terms of use. The table (58 rows taken from one site's deal directory) is the kind of
+compilation that a site's terms or database-right rules can address; if they object, it can be
+reduced to the source URLs plus the extraction script.
 
 ## Sources
 
@@ -166,7 +169,13 @@ Artemis.
   figures, may not describe the notes as issued.
 - Duplicate layers: Integrity Re III 2025-1 A1 and A2, and B1 and B2, have identical expected loss,
   attachment probability and spread, so the 58 rows are 56 distinct layers. A regression should use
-  the distinct layers.
+  the distinct layers. "Distinct" is this rule and no more: Gateway Re 2025-1 Classes C1 and C2
+  have the same attachment and exhaustion points, deductible, attachment probability (2.43%) and
+  expected loss (1.31%) but differ in note format and price (the Artemis page: C1 is a one-season
+  zero-coupon note of USD 50 million priced at 91.75, C2 a two-season note of USD 150 million at
+  a 9.5% coupon), so they are one layer of risk in two formats and both rows are kept. Everglades
+  Re II 2021-1 and 2021-2, and 2023-1 and 2023-2, share one Artemis page per year but are
+  separate series.
 - Sponsor strings: "Citizens Property Insurance Corporation" (Florida) and "Louisiana Citizens
   Property Insurance Corporation" are different entities, so grouping by a substring would merge
   them.
