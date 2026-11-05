@@ -1,7 +1,7 @@
 command: python3 scripts/run_pricing_synthetic.py --reps 1000 --n 60 --seed 4001
 seed:    4001
-git:     eeb7287fa20185de4889779e6bb5df7edc84f6b1 (clean)
-date:    2026-11-05T08:00:41Z
+git:     416d1b7885bbb35dfdcc98d4d73e3792f5793fe8 (clean)
+date:    2026-11-05T09:23:30Z
 python:  3.13.18; numpy 2.5.3
 machine: x86_64 Linux
 data: synthetic deal tables only (no real deals)

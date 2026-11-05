@@ -1,7 +1,7 @@
 command: python3 scripts/run_layers.py
 seed:    none (deterministic)
-git:     17bbe27742505f4404721477bae72e31f47c6b96 (clean)
-date:    2026-11-05T08:36:47Z
+git:     416d1b7885bbb35dfdcc98d4d73e3792f5793fe8 (clean)
+date:    2026-11-05T09:06:06Z
 python:  3.13.18; numpy 2.5.3
 machine: x86_64 Linux
 input: results/eventset/event_table.csv.gz (base case)
