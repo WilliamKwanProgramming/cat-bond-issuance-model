@@ -245,6 +245,16 @@ def main() -> int:
     syn = da[da["comparison"].str.contains("synoptic fixes only")].iloc[0]
     num["DefSynAgree"] = str(int(syn["n_both"]))
     num["DefSynWind"] = syn["detail"].split(" kt;")[0].rsplit(" ", 1)[1].lstrip("-")
+    nm = pd.read_csv(R / "hazard" / "near_miss_hurricanes.csv")
+    num["NearMiss"] = str(len(nm))
+    lfall = pd.read_csv(R / "hazard" / "landfalls.csv")
+    num["NLandfalls"] = str(int(lfall["year"].between(1900, 2019).sum()))
+    comp = pd.read_csv(R / "pricing_posthoc" / "composition.csv")
+    by_region = comp[comp["dimension"] == "region"].set_index("group")["n_layers"]
+    by_peril = comp[comp["dimension"] == "peril"].set_index("group")["n_layers"]
+    num["NFloridaOnly"] = str(int(by_region["Florida only"]))
+    num["NNoFlorida"] = str(int(by_region["no Florida listed"]))
+    num["NMultiPeril"] = str(int(by_peril["named storm and other perils"]))
 
     # ------------------------------------------------------------ loss exceedance curve
     rp = pd.read_csv(R / "eventset" / "rp_losses.csv")

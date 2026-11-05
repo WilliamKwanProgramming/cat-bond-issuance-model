@@ -25,10 +25,10 @@
 \begin{document}
 \thispagestyle{fancy}
 \vspace*{0.6in}
-{\color{accent}\Huge\textbf{Florida Named-Storm Catastrophe Bond}}\par\vspace{8pt}
+{\color{accent}\Huge\textbf{Florida Hurricane Catastrophe Bond}}\par\vspace{8pt}
 {\LARGE Three-layer per-occurrence structure for a hypothetical homeowners insurer}\par\vspace{18pt}
-{\large Teaching-grade illustration: simulated hurricane event set fitted to HURDAT2 (1900--2019),
-hypothetical USD \numTIVbn{} billion portfolio, spread range from a regression on
+{\large Teaching-grade illustration: simulated event set of hurricane-strength Florida landfalls
+fitted to HURDAT2 (1900--2019), hypothetical USD \numTIVbn{} billion portfolio, spread range from a regression on
 \numNLayers{} public tranche prices.}\par\vspace{30pt}
 \fcolorbox{warn}{white}{\parbox{0.9\linewidth}{\large\color{warn}\textbf{Illustrative only.}
 \color{ink} The sponsor and its portfolio are hypothetical. This document is not an offering of
@@ -204,8 +204,10 @@ points. The model's EL and the deals' ELs are on different scales.
 \begin{minipage}[t]{0.5\linewidth}\vspace{0pt}
 \footnotesize\resizebox{\linewidth}{!}{\input{build/tab_sens.tex}}
 \end{minipage}\par\vspace{6pt}
-Same seed and 100,000 years per variant. The half-damage wind of the damage function moves the
-middle-layer EL to \numVhalfMid\% and the 1950--2019 window to \numWindowMid\%; the public deals
+Same seed and 100,000 years per variant. Variants that change only loss settings reuse the base
+case's events, the KDE variant keeps their counts, positions and tracks with other winds, and
+the frequency and window variants are independent runs. The half-damage wind of the damage
+function moves the middle-layer EL to \numVhalfMid\% and the 1950--2019 window to \numWindowMid\%; the public deals
 span EL \numDealELmin--\numDealELmax\%, so spreads mapped from ELs outside that range are
 extrapolations.
 
@@ -217,14 +219,21 @@ extrapolations.
   move layer EL far more than the hazard-parameter band.
 \item \textbf{Hypothetical portfolio.} Value spread by households, not insured values; one
   deductible applied to county mean damage.
-\item \textbf{Hazard record.} 120 years of landfalls; the 1966--1984 landfall flags are missing
-  in the data file and a geometric rule replaces them; intensity is drawn independently of
+\item \textbf{Hazard record.} 120 years of landfalls. Only the \numNLandfalls{} hurricane-strength
+  landfalls of the definition are counted: tropical storms are excluded by design, and
+  \numNearMiss{} hurricanes that came within 50 km of the Florida coast without being counted
+  (Ivan 2004 and Matthew 2016 among them) add nothing, so simulated losses are biased low in a
+  way the band does not show. The 1966--1984 landfall flags are missing in the data file and a
+  geometric rule replaces them; on 6-hourly fixes the rule finds \numDefSynAgree{} of \numDefN{}
+  landfalls with winds \numDefSynWind{} kt lower on average. Intensity is drawn independently of
   location.
 \item \textbf{Deal data.} Only Artemis pages, programs chosen by name, offering-stage ELs from
   different vendor models, a few guidance and discount-note prices; transcription re-checked on
   30 rows, not the source itself.
-\item \textbf{Pricing regression.} Year effects absorb the market cycle; errors correlated
-  within series and sponsor; leave-one-series-out RMSE \numCVseriesPP{} points of spread; mapping this
+\item \textbf{Pricing regression.} Only \numNFloridaOnly{} of the \numNLayers{} layers list
+  Florida alone, \numNNoFlorida{} list no Florida and \numNMultiPeril{} cover other perils too,
+  and the regression has no region or peril term. Year effects absorb the market cycle; errors
+  correlated within series and sponsor; leave-one-series-out RMSE \numCVseriesPP{} points of spread; mapping this
   model's EL through it assumes a common EL scale that is not shown.
 \item \textbf{Not modelled.} Collateral yield, term structure, reset and extension provisions,
   ratings, investor demand, fees and expenses.
