@@ -1,0 +1,9 @@
+command: python3 scripts/run_pricing_posthoc.py
+seed:    7001
+git:     2ad29bd8b6bc389fa49b39a3510a1f25fc912379 (uncommitted changes in src/ or scripts/)
+date:    2026-11-05T10:42:46Z
+python:  3.13.18; numpy 2.5.3
+machine: x86_64 Linux
+data: REAL: data/deals/cat_bond_deals.csv, main regression sample (56 layers)
+status: POST HOC; not in docs/pricing_protocol.md
+simulation: 2000 replications per error SD; residual SD of M2 (0.2575); true slope 1; no intercept, no year effects

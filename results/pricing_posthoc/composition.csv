@@ -1,0 +1,15 @@
+dimension,group,peril_group,n_layers
+region,Florida only,all,21
+region,Florida and other states,all,15
+region,no Florida listed,all,19
+region,"whole US, Florida not named",all,1
+peril,named storm only,all,41
+peril,named storm and other perils,all,15
+region x peril,Florida only,named storm only,20
+region x peril,Florida only,named storm and other perils,1
+region x peril,Florida and other states,named storm only,15
+region x peril,Florida and other states,named storm and other perils,0
+region x peril,no Florida listed,named storm only,6
+region x peril,no Florida listed,named storm and other perils,13
+region x peril,"whole US, Florida not named",named storm only,0
+region x peril,"whole US, Florida not named",named storm and other perils,1

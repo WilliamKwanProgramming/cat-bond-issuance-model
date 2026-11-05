@@ -20,6 +20,7 @@ steps=(
   "scripts/run_pricing_synthetic.py --reps 1000 --n 60 --seed 4001"
   "scripts/run_pricing.py --n-boot 9999 --seed 6001"
   "scripts/run_transaction.py"
+  "scripts/run_pricing_posthoc.py --reps 2000 --seed 7001"
   "scripts/make_tables.py"
   "scripts/make_workbook.py"
   "scripts/make_pitchbook.py"
@@ -38,7 +39,7 @@ mkdir -p results
   echo "date:    $(date -u +%Y-%m-%dT%H:%M:%SZ)"
   python3 -c 'import platform, numpy, scipy, pandas; print(f"python:  {platform.python_version()}; numpy {numpy.__version__}; scipy {scipy.__version__}; pandas {pandas.__version__}")'
   echo "machine: $(uname -m) $(uname -s); $(nproc --all) cores (nproc alone honours OMP_NUM_THREADS=1)"
-  echo "seeds:   eventset 1; oos 3001; convergence 1001-1020 (N=10000), 2001-2020 (N=100000); param bootstrap 5001 (replicates 5002-5201); synthetic pricing 4001; deal-table wild bootstrap 6001"
+  echo "seeds:   eventset 1; oos 3001; convergence 1001-1020 (N=10000), 2001-2020 (N=100000); param bootstrap 5001 (replicates 5002-5201); synthetic pricing 4001; deal-table wild bootstrap 6001; post hoc attenuation simulation 7001"
   echo "commands (from the repository root):"
 } > results/MANIFEST.txt
 for s in "${steps[@]}"; do

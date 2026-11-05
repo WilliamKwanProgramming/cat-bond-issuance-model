@@ -1,0 +1,7 @@
+specification,sample,n,n_series,k,b,se_cr1,lo_cr1,hi_cr1,lo_hc3,hi_hc3,indicator_terms
+"M2 (protocol), for reference",56 layers,56,37,10,0.466365,0.152858,0.156354,0.776375,0.127791,0.804938,
+M2 + region group,56 layers,56,37,13,0.500754,0.123224,0.250844,0.750663,,,"region[Florida only] -0.007 (0.075); region[no Florida listed] -0.423 (0.065); region[whole US, Florida not named] -0.039 (0.074)"
+M2 + multi-peril indicator,56 layers,56,37,11,0.508498,0.147822,0.208701,0.808294,0.189805,0.82719,peril[named storm only] 0.356 (0.067)
+M2 + region group + multi-peril indicator,56 layers,56,37,14,0.499324,0.124577,0.246671,0.751978,,,"region[Florida only] -0.005 (0.078); region[no Florida listed] -0.433 (0.068); region[whole US, Florida not named] -0.053 (0.076); peril[named storm only] -0.023 (0.071)"
+"M1, Florida-only layers",Florida only,21,14,2,0.333442,0.228163,-0.159474,0.826358,-0.161774,0.828658,
+"M1, layers naming Florida",Florida only + Florida and other,36,21,2,0.412565,0.199542,-0.00367166,0.828802,-0.0235978,0.848728,

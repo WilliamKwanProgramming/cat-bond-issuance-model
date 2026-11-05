@@ -1,0 +1,4 @@
+model,n,k,r2,adj_r2
+log EL only (M1),56,2,0.207847,0.193178
+issue-year effects only,56,9,0.561739,0.487142
+log EL and issue-year effects (M2),56,10,0.690815,0.630322

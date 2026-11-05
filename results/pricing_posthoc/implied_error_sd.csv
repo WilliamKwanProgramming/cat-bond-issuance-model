@@ -1,0 +1,3 @@
+model,b_hat,true_b,var_stated_log_el,implied_error_sd_log
+M1,0.552522,1,0.11998,0.231708
+M2,0.466365,1,0.104582,0.236238
