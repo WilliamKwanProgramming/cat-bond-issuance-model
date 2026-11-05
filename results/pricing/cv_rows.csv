@@ -1,0 +1,1579 @@
+row,group,spread_pct,predictable,pred_spread_pct,err_log,err_pp,sample,model,held_out
+0,Citrus Re Ltd. (Series 2017-1),6,True,10.4912,-0.558777,-4.4912,main (56 distinct layers),M1,series
+1,Sanders Re Ltd. (Series 2017-1),3,True,5.20446,-0.550905,-2.20446,main (56 distinct layers),M1,series
+2,Alamo Re Ltd. (Series 2017-1),3.75,True,7.35906,-0.674176,-3.60906,main (56 distinct layers),M1,series
+3,Everglades Re II Ltd. (Series 2017-1),5,True,7.8953,-0.45683,-2.8953,main (56 distinct layers),M1,series
+4,Alamo Re Ltd. (Series 2018-1),3.25,True,7.23092,-0.799711,-3.98092,main (56 distinct layers),M1,series
+5,Bowline Re Ltd. (Series 2018-1),4.5,True,7.06555,-0.451154,-2.56555,main (56 distinct layers),M1,series
+6,Everglades Re II Ltd. (Series 2018-1),4.75,True,7.85646,-0.503192,-3.10646,main (56 distinct layers),M1,series
+7,Long Point Re III Ltd. (Series 2018-1),2.75,True,6.17737,-0.809291,-3.42737,main (56 distinct layers),M1,series
+8,Cape Lookout Re Ltd. (Series 2019-1),4.25,True,7.09759,-0.512837,-2.84759,main (56 distinct layers),M1,series
+9,Alamo Re Ltd. (Series 2019-1),4.5,True,7.55257,-0.51781,-3.05257,main (56 distinct layers),M1,series
+10,Integrity Re Ltd. (Series 2019-1),4.75,True,5.85899,-0.209833,-1.10899,main (56 distinct layers),M1,series
+11,Everglades Re II Ltd. (Series 2020-2),6.25,True,6.02602,0.0364944,0.223978,main (56 distinct layers),M1,series
+12,Alamo Re II Pte. Ltd. (Series 2020-1),5.75,True,7.46955,-0.261635,-1.71955,main (56 distinct layers),M1,series
+13,Alamo Re Ltd. (Series 2021-1),4,True,7.47227,-0.624904,-3.47227,main (56 distinct layers),M1,series
+14,Everglades Re II Ltd. (Series 2021-1),5.75,True,5.70178,0.00842087,0.0482167,main (56 distinct layers),M1,series
+15,Everglades Re II Ltd. (Series 2021-1),6.75,True,7.18286,-0.0621552,-0.43286,main (56 distinct layers),M1,series
+16,Everglades Re II Ltd. (Series 2021-2),5.75,True,5.48068,0.0479715,0.269325,main (56 distinct layers),M1,series
+17,Cape Lookout Re Ltd. (Series 2022-1),5,True,6.9033,-0.322562,-1.9033,main (56 distinct layers),M1,series
+18,Everglades Re II Ltd. (Series 2022-1),7.75,True,4.65902,0.508888,3.09098,main (56 distinct layers),M1,series
+19,Lightning Re Ltd. (Series 2023-1),11,True,7.42435,0.393131,3.57565,main (56 distinct layers),M1,series
+20,Alamo Re Ltd. (Series 2023-1),8.5,True,8.02539,0.0574561,0.474612,main (56 distinct layers),M1,series
+21,Cape Lookout Re Ltd. (Series 2023-1),6.5,True,6.43067,0.0107242,0.0693348,main (56 distinct layers),M1,series
+22,Everglades Re II Ltd. (Series 2023-1),11.375,True,6.92123,0.496824,4.45377,main (56 distinct layers),M1,series
+23,Everglades Re II Ltd. (Series 2023-2),10.125,True,4.90689,0.724368,5.21811,main (56 distinct layers),M1,series
+24,Cape Lookout Re Ltd. (Series 2024-1),8,True,9.1417,-0.133405,-1.1417,main (56 distinct layers),M1,series
+25,Citrus Re Ltd. (Series 2024-1),9.25,True,6.09009,0.417961,3.15991,main (56 distinct layers),M1,series
+26,Citrus Re Ltd. (Series 2024-1),10.5,True,6.64213,0.457942,3.85787,main (56 distinct layers),M1,series
+27,Alamo Re Ltd. (Series 2024-1),6,True,6.57383,-0.0913369,-0.573828,main (56 distinct layers),M1,series
+28,Alamo Re Ltd. (Series 2024-1),7.75,True,7.8294,-0.010193,-0.0794,main (56 distinct layers),M1,series
+29,Alamo Re Ltd. (Series 2024-1),11.25,True,10.3687,0.0815809,0.881346,main (56 distinct layers),M1,series
+30,Everglades Re II Ltd. (Series 2024-1),10.5,True,5.87005,0.581512,4.62995,main (56 distinct layers),M1,series
+31,Everglades Re II Ltd. (Series 2024-1),11.5,True,6.57411,0.559207,4.92589,main (56 distinct layers),M1,series
+32,Everglades Re II Ltd. (Series 2024-1),12.75,True,7.52525,0.527267,5.22475,main (56 distinct layers),M1,series
+33,Nature Coast Re Ltd. (Series 2025-1),9.75,True,9.77292,-0.00234807,-0.0229206,main (56 distinct layers),M1,series
+34,Gateway Re Ltd. (Series 2025-1),10.5,True,10.2151,0.0275058,0.284875,main (56 distinct layers),M1,series
+35,Gateway Re Ltd. (Series 2025-1),6.25,True,7.42178,-0.171837,-1.17178,main (56 distinct layers),M1,series
+36,Gateway Re Ltd. (Series 2025-1),4.25,True,5.56672,-0.269886,-1.31672,main (56 distinct layers),M1,series
+37,Gateway Re Ltd. (Series 2025-1),8.25,True,6.23339,0.280294,2.01661,main (56 distinct layers),M1,series
+38,Gateway Re Ltd. (Series 2025-1),9.5,True,6.23339,0.421372,3.26661,main (56 distinct layers),M1,series
+39,Integrity Re III Ltd. (Series 2025-1),8,True,6.80346,0.16201,1.19654,main (56 distinct layers),M1,series
+40,Integrity Re III Ltd. (Series 2025-1),9.75,True,7.46197,0.267448,2.28803,main (56 distinct layers),M1,series
+41,Integrity Re III Ltd. (Series 2025-1),12.25,True,8.17558,0.404374,4.07442,main (56 distinct layers),M1,series
+42,Integrity Re III Ltd. (Series 2025-1),25.5,True,10.1844,0.917824,15.3156,main (56 distinct layers),M1,series
+43,Cape Lookout Re Ltd. (Series 2025-1),6.9,True,8.49476,-0.207928,-1.59476,main (56 distinct layers),M1,series
+44,Citrus Re Ltd. (Series 2025-1),7.75,True,6.96946,0.106155,0.780536,main (56 distinct layers),M1,series
+45,Citrus Re Ltd. (Series 2025-1),4.5,True,6.37027,-0.347564,-1.87027,main (56 distinct layers),M1,series
+46,First Coast Re IV Ltd. (Series 2025-1),6.5,True,6.24716,0.0396745,0.252835,main (56 distinct layers),M1,series
+47,First Coast Re IV Ltd. (Series 2025-1),7.5,True,8.49168,-0.124184,-0.991683,main (56 distinct layers),M1,series
+48,Bayou Re Ltd. (Series 2025-1),7,True,7.22745,-0.0319755,-0.227445,main (56 distinct layers),M1,series
+49,Palm Re Ltd. (Series 2025-1),7.75,True,7.47432,0.0362193,0.275677,main (56 distinct layers),M1,series
+50,Everglades Re II Ltd. (Series 2025-1),8.75,True,6.78703,0.254041,1.96297,main (56 distinct layers),M1,series
+51,Everglades Re II Ltd. (Series 2025-1),9.75,True,7.50089,0.262245,2.24911,main (56 distinct layers),M1,series
+52,Everglades Re II Ltd. (Series 2025-1),11.25,True,8.30055,0.304046,2.94945,main (56 distinct layers),M1,series
+53,Everglades Re II Ltd. (Series 2025-1),13,True,9.13129,0.353242,3.86871,main (56 distinct layers),M1,series
+54,Purple Re Ltd. (Series 2025-1),7.25,True,5.38725,0.296967,1.86275,main (56 distinct layers),M1,series
+55,Purple Re Ltd. (Series 2025-1),7.75,True,5.97071,0.260826,1.77929,main (56 distinct layers),M1,series
+0,Heritage Property and Casualty Insurance Company,6,True,10.4477,-0.554622,-4.44769,main (56 distinct layers),M1,sponsor
+1,Allstate,3,True,5.20446,-0.550905,-2.20446,main (56 distinct layers),M1,sponsor
+2,Texas Windstorm Insurance Association,3.75,True,7.7224,-0.722369,-3.9724,main (56 distinct layers),M1,sponsor
+3,Citizens Property Insurance Corporation,5,True,7.27337,-0.374782,-2.27337,main (56 distinct layers),M1,sponsor
+4,Texas Windstorm Insurance Association,3.25,True,7.56719,-0.845166,-4.31719,main (56 distinct layers),M1,sponsor
+5,Transatlantic Reinsurance Company,4.5,True,7.06555,-0.451154,-2.56555,main (56 distinct layers),M1,sponsor
+6,Citizens Property Insurance Corporation,4.75,True,7.21786,-0.418414,-2.46786,main (56 distinct layers),M1,sponsor
+7,Travelers,2.75,True,6.17737,-0.809291,-3.42737,main (56 distinct layers),M1,sponsor
+8,North Carolina Insurance Underwriting Association,4.25,True,7.18878,-0.525603,-2.93878,main (56 distinct layers),M1,sponsor
+9,Texas Windstorm Insurance Association,4.5,True,7.95088,-0.569205,-3.45088,main (56 distinct layers),M1,sponsor
+10,American Integrity Insurance Group,4.75,True,6.06326,-0.244104,-1.31326,main (56 distinct layers),M1,sponsor
+11,Citizens Property Insurance Corporation,6.25,True,5.13313,0.196866,1.11687,main (56 distinct layers),M1,sponsor
+12,Texas Windstorm Insurance Association,5.75,True,7.90054,-0.317731,-2.15054,main (56 distinct layers),M1,sponsor
+13,Texas Windstorm Insurance Association,4,True,7.84996,-0.674214,-3.84996,main (56 distinct layers),M1,sponsor
+14,Citizens Property Insurance Corporation,5.75,True,4.75299,0.190427,0.997014,main (56 distinct layers),M1,sponsor
+15,Citizens Property Insurance Corporation,6.75,True,6.48203,0.0405093,0.267974,main (56 distinct layers),M1,sponsor
+16,Citizens Property Insurance Corporation,5.75,True,4.52633,0.239288,1.22367,main (56 distinct layers),M1,sponsor
+17,North Carolina Insurance Underwriting Association,5,True,7.01017,-0.337924,-2.01017,main (56 distinct layers),M1,sponsor
+18,Citizens Property Insurance Corporation,7.75,True,3.85543,0.69821,3.89457,main (56 distinct layers),M1,sponsor
+19,Citizens Property Insurance Corporation,11,True,6.85336,0.473156,4.14664,main (56 distinct layers),M1,sponsor
+20,Texas Windstorm Insurance Association,8.5,True,8.56095,-0.00714494,-0.0609495,main (56 distinct layers),M1,sponsor
+21,North Carolina Insurance Underwriting Association,6.5,True,6.56108,-0.00935343,-0.0610825,main (56 distinct layers),M1,sponsor
+22,Citizens Property Insurance Corporation,11.375,True,6.24983,0.598864,5.12517,main (56 distinct layers),M1,sponsor
+23,Citizens Property Insurance Corporation,10.125,True,4.16195,0.889023,5.96305,main (56 distinct layers),M1,sponsor
+24,North Carolina Insurance Underwriting Association,8,True,9.34667,-0.155578,-1.34667,main (56 distinct layers),M1,sponsor
+25,Heritage Property and Casualty Insurance Company,9.25,True,6.11148,0.414455,3.13852,main (56 distinct layers),M1,sponsor
+26,Heritage Property and Casualty Insurance Company,10.5,True,6.70662,0.44828,3.79338,main (56 distinct layers),M1,sponsor
+27,Texas Windstorm Insurance Association,6,True,6.94823,-0.146727,-0.948228,main (56 distinct layers),M1,sponsor
+28,Texas Windstorm Insurance Association,7.75,True,8.34523,-0.0739976,-0.595233,main (56 distinct layers),M1,sponsor
+29,Texas Windstorm Insurance Association,11.25,True,11.2022,0.0042539,0.0477548,main (56 distinct layers),M1,sponsor
+30,Citizens Property Insurance Corporation,10.5,True,5.19553,0.703576,5.30447,main (56 distinct layers),M1,sponsor
+31,Citizens Property Insurance Corporation,11.5,True,6.01461,0.648156,5.48539,main (56 distinct layers),M1,sponsor
+32,Citizens Property Insurance Corporation,12.75,True,7.16221,0.576713,5.58779,main (56 distinct layers),M1,sponsor
+33,SafePoint Insurance Company,9.75,True,9.77292,-0.00234807,-0.0229206,main (56 distinct layers),M1,sponsor
+34,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,10.5,True,10.2151,0.0275058,0.284875,main (56 distinct layers),M1,sponsor
+35,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,6.25,True,7.42178,-0.171837,-1.17178,main (56 distinct layers),M1,sponsor
+36,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,4.25,True,5.56672,-0.269886,-1.31672,main (56 distinct layers),M1,sponsor
+37,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,8.25,True,6.23339,0.280294,2.01661,main (56 distinct layers),M1,sponsor
+38,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,9.5,True,6.23339,0.421372,3.26661,main (56 distinct layers),M1,sponsor
+39,American Integrity Insurance Group,8,True,6.83768,0.156993,1.16232,main (56 distinct layers),M1,sponsor
+40,American Integrity Insurance Group,9.75,True,7.47148,0.266174,2.27852,main (56 distinct layers),M1,sponsor
+41,American Integrity Insurance Group,12.25,True,8.15577,0.4068,4.09423,main (56 distinct layers),M1,sponsor
+42,American Integrity Insurance Group,25.5,True,10.0697,0.929151,15.4303,main (56 distinct layers),M1,sponsor
+43,North Carolina Insurance Underwriting Association,6.9,True,8.66629,-0.227919,-1.76629,main (56 distinct layers),M1,sponsor
+44,Heritage Property and Casualty Insurance Company,7.75,True,6.89776,0.116496,0.852236,main (56 distinct layers),M1,sponsor
+45,Heritage Property and Casualty Insurance Company,4.5,True,6.22755,-0.324905,-1.72755,main (56 distinct layers),M1,sponsor
+46,Security First Insurance Company,6.5,True,6.24716,0.0396745,0.252835,main (56 distinct layers),M1,sponsor
+47,Security First Insurance Company,7.5,True,8.49168,-0.124184,-0.991683,main (56 distinct layers),M1,sponsor
+48,Louisiana Citizens Property Insurance Corporation,7,True,7.22745,-0.0319755,-0.227445,main (56 distinct layers),M1,sponsor
+49,Florida Peninsula Insurance Company,7.75,True,7.47432,0.0362193,0.275677,main (56 distinct layers),M1,sponsor
+50,Citizens Property Insurance Corporation,8.75,True,6.16199,0.350655,2.58801,main (56 distinct layers),M1,sponsor
+51,Citizens Property Insurance Corporation,9.75,True,7.13432,0.31235,2.61568,main (56 distinct layers),M1,sponsor
+52,Citizens Property Insurance Corporation,11.25,True,8.27573,0.307041,2.97427,main (56 distinct layers),M1,sponsor
+53,Citizens Property Insurance Corporation,13,True,9.51692,0.311878,3.48308,main (56 distinct layers),M1,sponsor
+54,Slide Insurance Company,7.25,True,5.38725,0.296967,1.86275,main (56 distinct layers),M1,sponsor
+55,Slide Insurance Company,7.75,True,5.97071,0.260826,1.77929,main (56 distinct layers),M1,sponsor
+0,Citrus Re Ltd. (Series 2017-1),6,True,5.45672,0.0949121,0.543283,main (56 distinct layers),M2,series
+1,Sanders Re Ltd. (Series 2017-1),3,True,3.14949,-0.0486273,-0.149487,main (56 distinct layers),M2,series
+2,Alamo Re Ltd. (Series 2017-1),3.75,True,4.45886,-0.173138,-0.708863,main (56 distinct layers),M2,series
+3,Everglades Re II Ltd. (Series 2017-1),5,True,4.3939,0.12922,0.606098,main (56 distinct layers),M2,series
+4,Alamo Re Ltd. (Series 2018-1),3.25,True,3.99945,-0.207502,-0.749449,main (56 distinct layers),M2,series
+5,Bowline Re Ltd. (Series 2018-1),4.5,True,3.51992,0.245638,0.980075,main (56 distinct layers),M2,series
+6,Everglades Re II Ltd. (Series 2018-1),4.75,True,3.87732,0.202999,0.872676,main (56 distinct layers),M2,series
+7,Long Point Re III Ltd. (Series 2018-1),2.75,True,3.50687,-0.243124,-0.756875,main (56 distinct layers),M2,series
+8,Cape Lookout Re Ltd. (Series 2019-1),4.25,True,4.88325,-0.138892,-0.633248,main (56 distinct layers),M2,series
+9,Alamo Re Ltd. (Series 2019-1),4.5,True,5.13596,-0.132189,-0.635961,main (56 distinct layers),M2,series
+10,Integrity Re Ltd. (Series 2019-1),4.75,True,3.60913,0.274678,1.14087,main (56 distinct layers),M2,series
+11,Everglades Re II Ltd. (Series 2020-2),6.25,True,4.8058,0.262758,1.4442,main (56 distinct layers),M2,series
+12,Alamo Re II Pte. Ltd. (Series 2020-1),5.75,True,7.47794,-0.262758,-1.72794,main (56 distinct layers),M2,series
+13,Alamo Re Ltd. (Series 2021-1),4,True,7.21789,-0.590269,-3.21789,main (56 distinct layers),M2,series
+14,Everglades Re II Ltd. (Series 2021-1),5.75,True,4.36357,0.275909,1.38643,main (56 distinct layers),M2,series
+15,Everglades Re II Ltd. (Series 2021-1),6.75,True,5.30368,0.241142,1.44632,main (56 distinct layers),M2,series
+16,Everglades Re II Ltd. (Series 2021-2),5.75,True,4.52232,0.240175,1.22768,main (56 distinct layers),M2,series
+17,Cape Lookout Re Ltd. (Series 2022-1),5,True,10.5958,-0.751017,-5.59578,main (56 distinct layers),M2,series
+18,Everglades Re II Ltd. (Series 2022-1),7.75,True,3.65712,0.751017,4.09288,main (56 distinct layers),M2,series
+19,Lightning Re Ltd. (Series 2023-1),11,True,9.95628,0.0996916,1.04372,main (56 distinct layers),M2,series
+20,Alamo Re Ltd. (Series 2023-1),8.5,True,11.5399,-0.305745,-3.03991,main (56 distinct layers),M2,series
+21,Cape Lookout Re Ltd. (Series 2023-1),6.5,True,9.69844,-0.400163,-3.19844,main (56 distinct layers),M2,series
+22,Everglades Re II Ltd. (Series 2023-1),11.375,True,9.18959,0.213347,2.18541,main (56 distinct layers),M2,series
+23,Everglades Re II Ltd. (Series 2023-2),10.125,True,6.74032,0.4069,3.38468,main (56 distinct layers),M2,series
+24,Cape Lookout Re Ltd. (Series 2024-1),8,True,11.9315,-0.399738,-3.93148,main (56 distinct layers),M2,series
+25,Citrus Re Ltd. (Series 2024-1),9.25,True,7.82914,0.16677,1.42086,main (56 distinct layers),M2,series
+26,Citrus Re Ltd. (Series 2024-1),10.5,True,8.41854,0.220939,2.08146,main (56 distinct layers),M2,series
+27,Alamo Re Ltd. (Series 2024-1),6,True,9.68339,-0.478653,-3.68339,main (56 distinct layers),M2,series
+28,Alamo Re Ltd. (Series 2024-1),7.75,True,11.3147,-0.378414,-3.56474,main (56 distinct layers),M2,series
+29,Alamo Re Ltd. (Series 2024-1),11.25,True,14.5315,-0.255953,-3.28153,main (56 distinct layers),M2,series
+30,Everglades Re II Ltd. (Series 2024-1),10.5,True,6.98645,0.407403,3.51355,main (56 distinct layers),M2,series
+31,Everglades Re II Ltd. (Series 2024-1),11.5,True,7.7033,0.400698,3.7967,main (56 distinct layers),M2,series
+32,Everglades Re II Ltd. (Series 2024-1),12.75,True,8.65523,0.387367,4.09477,main (56 distinct layers),M2,series
+33,Nature Coast Re Ltd. (Series 2025-1),9.75,True,10.6175,-0.0852409,-0.867549,main (56 distinct layers),M2,series
+34,Gateway Re Ltd. (Series 2025-1),10.5,True,11.0755,-0.0533583,-0.575479,main (56 distinct layers),M2,series
+35,Gateway Re Ltd. (Series 2025-1),6.25,True,8.58344,-0.317253,-2.33344,main (56 distinct layers),M2,series
+36,Gateway Re Ltd. (Series 2025-1),4.25,True,6.82328,-0.473421,-2.57328,main (56 distinct layers),M2,series
+37,Gateway Re Ltd. (Series 2025-1),8.25,True,7.46778,0.0996158,0.782222,main (56 distinct layers),M2,series
+38,Gateway Re Ltd. (Series 2025-1),9.5,True,7.46778,0.240694,2.03222,main (56 distinct layers),M2,series
+39,Integrity Re III Ltd. (Series 2025-1),8,True,7.61654,0.0491196,0.383462,main (56 distinct layers),M2,series
+40,Integrity Re III Ltd. (Series 2025-1),9.75,True,8.20827,0.172125,1.54173,main (56 distinct layers),M2,series
+41,Integrity Re III Ltd. (Series 2025-1),12.25,True,8.83842,0.326418,3.41158,main (56 distinct layers),M2,series
+42,Integrity Re III Ltd. (Series 2025-1),25.5,True,10.5596,0.881645,14.9404,main (56 distinct layers),M2,series
+43,Cape Lookout Re Ltd. (Series 2025-1),6.9,True,9.46814,-0.316411,-2.56814,main (56 distinct layers),M2,series
+44,Citrus Re Ltd. (Series 2025-1),7.75,True,8.12999,-0.0478668,-0.37999,main (56 distinct layers),M2,series
+45,Citrus Re Ltd. (Series 2025-1),4.5,True,7.56196,-0.519054,-3.06196,main (56 distinct layers),M2,series
+46,First Coast Re IV Ltd. (Series 2025-1),6.5,True,7.34052,-0.121608,-0.840522,main (56 distinct layers),M2,series
+47,First Coast Re IV Ltd. (Series 2025-1),7.5,True,9.48594,-0.234907,-1.98594,main (56 distinct layers),M2,series
+48,Bayou Re Ltd. (Series 2025-1),7,True,8.23053,-0.161941,-1.23053,main (56 distinct layers),M2,series
+49,Palm Re Ltd. (Series 2025-1),7.75,True,8.44674,-0.0860872,-0.696736,main (56 distinct layers),M2,series
+50,Everglades Re II Ltd. (Series 2025-1),8.75,True,7.6417,0.135434,1.1083,main (56 distinct layers),M2,series
+51,Everglades Re II Ltd. (Series 2025-1),9.75,True,8.33581,0.156707,1.41419,main (56 distinct layers),M2,series
+52,Everglades Re II Ltd. (Series 2025-1),11.25,True,9.10317,0.211745,2.14683,main (56 distinct layers),M2,series
+53,Everglades Re II Ltd. (Series 2025-1),13,True,9.8902,0.273405,3.1098,main (56 distinct layers),M2,series
+54,Purple Re Ltd. (Series 2025-1),7.25,True,6.37662,0.128364,0.873385,main (56 distinct layers),M2,series
+55,Purple Re Ltd. (Series 2025-1),7.75,True,6.94584,0.10955,0.804157,main (56 distinct layers),M2,series
+0,Heritage Property and Casualty Insurance Company,6,True,5.38446,0.108242,0.615539,main (56 distinct layers),M2,sponsor
+1,Allstate,3,True,3.14949,-0.0486273,-0.149487,main (56 distinct layers),M2,sponsor
+2,Texas Windstorm Insurance Association,3.75,True,4.45481,-0.172229,-0.704811,main (56 distinct layers),M2,sponsor
+3,Citizens Property Insurance Corporation,5,True,4.4927,0.106984,0.507301,main (56 distinct layers),M2,sponsor
+4,Texas Windstorm Insurance Association,3.25,True,4.01932,-0.212457,-0.769316,main (56 distinct layers),M2,sponsor
+5,Transatlantic Reinsurance Company,4.5,True,3.51992,0.245638,0.980075,main (56 distinct layers),M2,sponsor
+6,Citizens Property Insurance Corporation,4.75,True,4.02588,0.165401,0.724119,main (56 distinct layers),M2,sponsor
+7,Travelers,2.75,True,3.50687,-0.243124,-0.756875,main (56 distinct layers),M2,sponsor
+8,North Carolina Insurance Underwriting Association,4.25,True,4.92527,-0.147461,-0.675275,main (56 distinct layers),M2,sponsor
+9,Texas Windstorm Insurance Association,4.5,True,5.25332,-0.154783,-0.75332,main (56 distinct layers),M2,sponsor
+10,American Integrity Insurance Group,4.75,True,3.84263,0.211987,0.907369,main (56 distinct layers),M2,sponsor
+11,Citizens Property Insurance Corporation,6.25,True,4.58562,0.309656,1.66438,main (56 distinct layers),M2,sponsor
+12,Texas Windstorm Insurance Association,5.75,True,7.69375,-0.291208,-1.94375,main (56 distinct layers),M2,sponsor
+13,Texas Windstorm Insurance Association,4,True,7.36481,-0.610419,-3.36481,main (56 distinct layers),M2,sponsor
+14,Citizens Property Insurance Corporation,5.75,True,3.01852,0.644432,2.73148,main (56 distinct layers),M2,sponsor
+15,Citizens Property Insurance Corporation,6.75,True,3.87619,0.554689,2.87381,main (56 distinct layers),M2,sponsor
+16,Citizens Property Insurance Corporation,5.75,True,2.90195,0.683816,2.84805,main (56 distinct layers),M2,sponsor
+17,North Carolina Insurance Underwriting Association,5,True,10.8313,-0.773002,-5.8313,main (56 distinct layers),M2,sponsor
+18,Citizens Property Insurance Corporation,7.75,True,3.45284,0.808496,4.29716,main (56 distinct layers),M2,sponsor
+19,Citizens Property Insurance Corporation,11,True,7.75811,0.349157,3.24189,main (56 distinct layers),M2,sponsor
+20,Texas Windstorm Insurance Association,8.5,True,11.852,-0.332431,-3.35201,main (56 distinct layers),M2,sponsor
+21,North Carolina Insurance Underwriting Association,6.5,True,9.61496,-0.391518,-3.11496,main (56 distinct layers),M2,sponsor
+22,Citizens Property Insurance Corporation,11.375,True,7.20253,0.456985,4.17247,main (56 distinct layers),M2,sponsor
+23,Citizens Property Insurance Corporation,10.125,True,5.18992,0.66829,4.93508,main (56 distinct layers),M2,sponsor
+24,North Carolina Insurance Underwriting Association,8,True,12.1836,-0.420653,-4.18365,main (56 distinct layers),M2,sponsor
+25,Heritage Property and Casualty Insurance Company,9.25,True,7.953,0.151075,1.297,main (56 distinct layers),M2,sponsor
+26,Heritage Property and Casualty Insurance Company,10.5,True,8.49834,0.211505,2.00166,main (56 distinct layers),M2,sponsor
+27,Texas Windstorm Insurance Association,6,True,9.60036,-0.470041,-3.60036,main (56 distinct layers),M2,sponsor
+28,Texas Windstorm Insurance Association,7.75,True,11.4628,-0.391415,-3.71281,main (56 distinct layers),M2,sponsor
+29,Texas Windstorm Insurance Association,11.25,True,15.242,-0.303687,-3.992,main (56 distinct layers),M2,sponsor
+30,Citizens Property Insurance Corporation,10.5,True,6.68975,0.450799,3.81025,main (56 distinct layers),M2,sponsor
+31,Citizens Property Insurance Corporation,11.5,True,7.52759,0.423772,3.97241,main (56 distinct layers),M2,sponsor
+32,Citizens Property Insurance Corporation,12.75,True,8.66536,0.386198,4.08464,main (56 distinct layers),M2,sponsor
+33,SafePoint Insurance Company,9.75,True,10.6175,-0.0852409,-0.867549,main (56 distinct layers),M2,sponsor
+34,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,10.5,True,11.0755,-0.0533583,-0.575479,main (56 distinct layers),M2,sponsor
+35,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,6.25,True,8.58344,-0.317253,-2.33344,main (56 distinct layers),M2,sponsor
+36,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,4.25,True,6.82328,-0.473421,-2.57328,main (56 distinct layers),M2,sponsor
+37,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,8.25,True,7.46778,0.0996158,0.782222,main (56 distinct layers),M2,sponsor
+38,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,9.5,True,7.46778,0.240694,2.03222,main (56 distinct layers),M2,sponsor
+39,American Integrity Insurance Group,8,True,7.60871,0.0501472,0.391285,main (56 distinct layers),M2,sponsor
+40,American Integrity Insurance Group,9.75,True,8.22302,0.17033,1.52698,main (56 distinct layers),M2,sponsor
+41,American Integrity Insurance Group,12.25,True,8.87904,0.321832,3.37096,main (56 distinct layers),M2,sponsor
+42,American Integrity Insurance Group,25.5,True,10.6796,0.870345,14.8204,main (56 distinct layers),M2,sponsor
+43,North Carolina Insurance Underwriting Association,6.9,True,9.59631,-0.329858,-2.69631,main (56 distinct layers),M2,sponsor
+44,Heritage Property and Casualty Insurance Company,7.75,True,8.12543,-0.0473059,-0.375431,main (56 distinct layers),M2,sponsor
+45,Heritage Property and Casualty Insurance Company,4.5,True,7.55378,-0.517971,-3.05378,main (56 distinct layers),M2,sponsor
+46,Security First Insurance Company,6.5,True,7.34052,-0.121608,-0.840522,main (56 distinct layers),M2,sponsor
+47,Security First Insurance Company,7.5,True,9.48594,-0.234907,-1.98594,main (56 distinct layers),M2,sponsor
+48,Louisiana Citizens Property Insurance Corporation,7,True,8.23053,-0.161941,-1.23053,main (56 distinct layers),M2,sponsor
+49,Florida Peninsula Insurance Company,7.75,True,8.44674,-0.0860872,-0.696736,main (56 distinct layers),M2,sponsor
+50,Citizens Property Insurance Corporation,8.75,True,7.48136,0.156639,1.26864,main (56 distinct layers),M2,sponsor
+51,Citizens Property Insurance Corporation,9.75,True,8.41921,0.146751,1.33079,main (56 distinct layers),M2,sponsor
+52,Citizens Property Insurance Corporation,11.25,True,9.48908,0.170226,1.76092,main (56 distinct layers),M2,sponsor
+53,Citizens Property Insurance Corporation,13,True,10.6205,0.202167,2.37953,main (56 distinct layers),M2,sponsor
+54,Slide Insurance Company,7.25,True,6.37662,0.128364,0.873385,main (56 distinct layers),M2,sponsor
+55,Slide Insurance Company,7.75,True,6.94584,0.10955,0.804157,main (56 distinct layers),M2,sponsor
+0,Citrus Re Ltd. (Series 2017-1),6,True,6.24727,-0.040385,-0.247269,main (56 distinct layers),M3,series
+1,Sanders Re Ltd. (Series 2017-1),3,True,2.92557,0.0251241,0.0744334,main (56 distinct layers),M3,series
+2,Alamo Re Ltd. (Series 2017-1),3.75,True,4.24687,-0.124427,-0.496871,main (56 distinct layers),M3,series
+3,Everglades Re II Ltd. (Series 2017-1),5,True,4.36014,0.136933,0.639858,main (56 distinct layers),M3,series
+4,Alamo Re Ltd. (Series 2018-1),3.25,True,3.84113,-0.167112,-0.59113,main (56 distinct layers),M3,series
+5,Bowline Re Ltd. (Series 2018-1),4.5,True,3.70945,0.193195,0.790555,main (56 distinct layers),M3,series
+6,Everglades Re II Ltd. (Series 2018-1),4.75,True,3.92008,0.192032,0.829919,main (56 distinct layers),M3,series
+7,Long Point Re III Ltd. (Series 2018-1),2.75,True,3.234,-0.162119,-0.484,main (56 distinct layers),M3,series
+8,Cape Lookout Re Ltd. (Series 2019-1),4.25,True,4.22432,0.00606104,0.0256815,main (56 distinct layers),M3,series
+9,Alamo Re Ltd. (Series 2019-1),4.5,True,5.02988,-0.111318,-0.529875,main (56 distinct layers),M3,series
+10,Integrity Re Ltd. (Series 2019-1),4.75,True,4.23009,0.115922,0.519913,main (56 distinct layers),M3,series
+11,Everglades Re II Ltd. (Series 2020-2),6.25,True,5.38417,0.149118,0.865827,main (56 distinct layers),M3,series
+12,Alamo Re II Pte. Ltd. (Series 2020-1),5.75,True,6.67466,-0.149118,-0.924656,main (56 distinct layers),M3,series
+13,Alamo Re Ltd. (Series 2021-1),4,True,6.97459,-0.555979,-2.97459,main (56 distinct layers),M3,series
+14,Everglades Re II Ltd. (Series 2021-1),5.75,True,4.39947,0.267716,1.35053,main (56 distinct layers),M3,series
+15,Everglades Re II Ltd. (Series 2021-1),6.75,True,5.53318,0.198779,1.21682,main (56 distinct layers),M3,series
+16,Everglades Re II Ltd. (Series 2021-2),5.75,True,4.52941,0.238609,1.22059,main (56 distinct layers),M3,series
+17,Cape Lookout Re Ltd. (Series 2022-1),5,True,10.261,-0.718912,-5.261,main (56 distinct layers),M3,series
+18,Everglades Re II Ltd. (Series 2022-1),7.75,True,3.77644,0.718912,3.97356,main (56 distinct layers),M3,series
+19,Lightning Re Ltd. (Series 2023-1),11,True,10.3332,0.0625364,0.666833,main (56 distinct layers),M3,series
+20,Alamo Re Ltd. (Series 2023-1),8.5,True,11.2611,-0.281289,-2.76111,main (56 distinct layers),M3,series
+21,Cape Lookout Re Ltd. (Series 2023-1),6.5,True,9.76204,-0.406699,-3.26204,main (56 distinct layers),M3,series
+22,Everglades Re II Ltd. (Series 2023-1),11.375,True,9.34381,0.196704,2.03119,main (56 distinct layers),M3,series
+23,Everglades Re II Ltd. (Series 2023-2),10.125,True,6.38279,0.461402,3.74221,main (56 distinct layers),M3,series
+24,Cape Lookout Re Ltd. (Series 2024-1),8,True,11.3634,-0.350961,-3.36345,main (56 distinct layers),M3,series
+25,Citrus Re Ltd. (Series 2024-1),9.25,True,9.61922,-0.0391395,-0.369218,main (56 distinct layers),M3,series
+26,Citrus Re Ltd. (Series 2024-1),10.5,True,10.3588,0.0135423,0.141235,main (56 distinct layers),M3,series
+27,Alamo Re Ltd. (Series 2024-1),6,True,8.99973,-0.405436,-2.99973,main (56 distinct layers),M3,series
+28,Alamo Re Ltd. (Series 2024-1),7.75,True,10.5654,-0.309896,-2.81545,main (56 distinct layers),M3,series
+29,Alamo Re Ltd. (Series 2024-1),11.25,True,13.9,-0.211522,-2.65001,main (56 distinct layers),M3,series
+30,Everglades Re II Ltd. (Series 2024-1),10.5,True,6.27883,0.514191,4.22117,main (56 distinct layers),M3,series
+31,Everglades Re II Ltd. (Series 2024-1),11.5,True,7.03335,0.491684,4.46665,main (56 distinct layers),M3,series
+32,Everglades Re II Ltd. (Series 2024-1),12.75,True,8.63437,0.389781,4.11563,main (56 distinct layers),M3,series
+33,Nature Coast Re Ltd. (Series 2025-1),9.75,True,12.2637,-0.229378,-2.51372,main (56 distinct layers),M3,series
+34,Gateway Re Ltd. (Series 2025-1),10.5,True,12.1838,-0.148729,-1.68377,main (56 distinct layers),M3,series
+35,Gateway Re Ltd. (Series 2025-1),6.25,True,8.79424,-0.341516,-2.54424,main (56 distinct layers),M3,series
+36,Gateway Re Ltd. (Series 2025-1),4.25,True,7.00943,-0.500338,-2.75943,main (56 distinct layers),M3,series
+37,Gateway Re Ltd. (Series 2025-1),8.25,True,8.42104,-0.0205205,-0.171043,main (56 distinct layers),M3,series
+38,Gateway Re Ltd. (Series 2025-1),9.5,True,7.45953,0.2418,2.04047,main (56 distinct layers),M3,series
+39,Integrity Re III Ltd. (Series 2025-1),8,True,8.20616,-0.0254434,-0.206159,main (56 distinct layers),M3,series
+40,Integrity Re III Ltd. (Series 2025-1),9.75,True,8.87301,0.0942532,0.87699,main (56 distinct layers),M3,series
+41,Integrity Re III Ltd. (Series 2025-1),12.25,True,8.84706,0.325441,3.40294,main (56 distinct layers),M3,series
+42,Integrity Re III Ltd. (Series 2025-1),25.5,True,11.0177,0.839175,14.4823,main (56 distinct layers),M3,series
+43,Cape Lookout Re Ltd. (Series 2025-1),6.9,True,8.35661,-0.191531,-1.45661,main (56 distinct layers),M3,series
+44,Citrus Re Ltd. (Series 2025-1),7.75,True,8.46038,-0.0877016,-0.710383,main (56 distinct layers),M3,series
+45,Citrus Re Ltd. (Series 2025-1),4.5,True,7.83511,-0.554537,-3.33511,main (56 distinct layers),M3,series
+46,First Coast Re IV Ltd. (Series 2025-1),6.5,True,7.57169,-0.152614,-1.07169,main (56 distinct layers),M3,series
+47,First Coast Re IV Ltd. (Series 2025-1),7.5,True,9.52791,-0.239322,-2.02791,main (56 distinct layers),M3,series
+48,Bayou Re Ltd. (Series 2025-1),7,True,7.69534,-0.0947048,-0.69534,main (56 distinct layers),M3,series
+49,Palm Re Ltd. (Series 2025-1),7.75,True,7.99214,-0.0307662,-0.242144,main (56 distinct layers),M3,series
+50,Everglades Re II Ltd. (Series 2025-1),8.75,True,6.23774,0.338435,2.51226,main (56 distinct layers),M3,series
+51,Everglades Re II Ltd. (Series 2025-1),9.75,True,6.79276,0.361409,2.95724,main (56 distinct layers),M3,series
+52,Everglades Re II Ltd. (Series 2025-1),11.25,True,7.73736,0.374308,3.51264,main (56 distinct layers),M3,series
+53,Everglades Re II Ltd. (Series 2025-1),13,True,9.13473,0.352866,3.86527,main (56 distinct layers),M3,series
+54,Purple Re Ltd. (Series 2025-1),7.25,True,6.38253,0.127438,0.867474,main (56 distinct layers),M3,series
+55,Purple Re Ltd. (Series 2025-1),7.75,True,6.98357,0.104133,0.76643,main (56 distinct layers),M3,series
+0,Heritage Property and Casualty Insurance Company,6,True,6.18807,-0.0308639,-0.188071,main (56 distinct layers),M3,sponsor
+1,Allstate,3,True,2.92557,0.0251241,0.0744334,main (56 distinct layers),M3,sponsor
+2,Texas Windstorm Insurance Association,3.75,True,4.33379,-0.144686,-0.583789,main (56 distinct layers),M3,sponsor
+3,Citizens Property Insurance Corporation,5,True,4.44096,0.118566,0.559035,main (56 distinct layers),M3,sponsor
+4,Texas Windstorm Insurance Association,3.25,True,3.96115,-0.19788,-0.711154,main (56 distinct layers),M3,sponsor
+5,Transatlantic Reinsurance Company,4.5,True,3.70945,0.193195,0.790555,main (56 distinct layers),M3,sponsor
+6,Citizens Property Insurance Corporation,4.75,True,4.28294,0.103506,0.467064,main (56 distinct layers),M3,sponsor
+7,Travelers,2.75,True,3.234,-0.162119,-0.484,main (56 distinct layers),M3,sponsor
+8,North Carolina Insurance Underwriting Association,4.25,True,4.41415,-0.0378954,-0.164146,main (56 distinct layers),M3,sponsor
+9,Texas Windstorm Insurance Association,4.5,True,5.18933,-0.142527,-0.689331,main (56 distinct layers),M3,sponsor
+10,American Integrity Insurance Group,4.75,True,4.28133,0.103881,0.468669,main (56 distinct layers),M3,sponsor
+11,Citizens Property Insurance Corporation,6.25,True,5.59952,0.109901,0.65048,main (56 distinct layers),M3,sponsor
+12,Texas Windstorm Insurance Association,5.75,True,7.20522,-0.225607,-1.45522,main (56 distinct layers),M3,sponsor
+13,Texas Windstorm Insurance Association,4,True,7.21253,-0.589526,-3.21253,main (56 distinct layers),M3,sponsor
+14,Citizens Property Insurance Corporation,5.75,True,3.125,0.609765,2.625,main (56 distinct layers),M3,sponsor
+15,Citizens Property Insurance Corporation,6.75,True,4.28119,0.455312,2.46881,main (56 distinct layers),M3,sponsor
+16,Citizens Property Insurance Corporation,5.75,True,3.03146,0.640155,2.71854,main (56 distinct layers),M3,sponsor
+17,North Carolina Insurance Underwriting Association,5,True,10.5312,-0.744904,-5.53119,main (56 distinct layers),M3,sponsor
+18,Citizens Property Insurance Corporation,7.75,True,3.63357,0.757479,4.11643,main (56 distinct layers),M3,sponsor
+19,Citizens Property Insurance Corporation,11,True,8.01218,0.316932,2.98782,main (56 distinct layers),M3,sponsor
+20,Texas Windstorm Insurance Association,8.5,True,11.7312,-0.322184,-3.23117,main (56 distinct layers),M3,sponsor
+21,North Carolina Insurance Underwriting Association,6.5,True,9.69742,-0.400058,-3.19742,main (56 distinct layers),M3,sponsor
+22,Citizens Property Insurance Corporation,11.375,True,7.60182,0.40303,3.77318,main (56 distinct layers),M3,sponsor
+23,Citizens Property Insurance Corporation,10.125,True,4.95584,0.71444,5.16916,main (56 distinct layers),M3,sponsor
+24,North Carolina Insurance Underwriting Association,8,True,11.6987,-0.38004,-3.69875,main (56 distinct layers),M3,sponsor
+25,Heritage Property and Casualty Insurance Company,9.25,True,10.0474,-0.0826872,-0.797369,main (56 distinct layers),M3,sponsor
+26,Heritage Property and Casualty Insurance Company,10.5,True,10.7749,-0.0258457,-0.274918,main (56 distinct layers),M3,sponsor
+27,Texas Windstorm Insurance Association,6,True,9.09776,-0.416269,-3.09776,main (56 distinct layers),M3,sponsor
+28,Texas Windstorm Insurance Association,7.75,True,10.9041,-0.341451,-3.15415,main (56 distinct layers),M3,sponsor
+29,Texas Windstorm Insurance Association,11.25,True,14.7659,-0.271954,-3.51592,main (56 distinct layers),M3,sponsor
+30,Citizens Property Insurance Corporation,10.5,True,5.77918,0.597114,4.72082,main (56 distinct layers),M3,sponsor
+31,Citizens Property Insurance Corporation,11.5,True,6.63993,0.549246,4.86007,main (56 distinct layers),M3,sponsor
+32,Citizens Property Insurance Corporation,12.75,True,8.63567,0.38963,4.11433,main (56 distinct layers),M3,sponsor
+33,SafePoint Insurance Company,9.75,True,12.2637,-0.229378,-2.51372,main (56 distinct layers),M3,sponsor
+34,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,10.5,True,12.1838,-0.148729,-1.68377,main (56 distinct layers),M3,sponsor
+35,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,6.25,True,8.79424,-0.341516,-2.54424,main (56 distinct layers),M3,sponsor
+36,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,4.25,True,7.00943,-0.500338,-2.75943,main (56 distinct layers),M3,sponsor
+37,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,8.25,True,8.42104,-0.0205205,-0.171043,main (56 distinct layers),M3,sponsor
+38,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,9.5,True,7.45953,0.2418,2.04047,main (56 distinct layers),M3,sponsor
+39,American Integrity Insurance Group,8,True,8.1469,-0.0181954,-0.146895,main (56 distinct layers),M3,sponsor
+40,American Integrity Insurance Group,9.75,True,8.81522,0.100787,0.934776,main (56 distinct layers),M3,sponsor
+41,American Integrity Insurance Group,12.25,True,8.85564,0.324471,3.39436,main (56 distinct layers),M3,sponsor
+42,American Integrity Insurance Group,25.5,True,11.0157,0.839358,14.4843,main (56 distinct layers),M3,sponsor
+43,North Carolina Insurance Underwriting Association,6.9,True,8.64243,-0.225162,-1.74243,main (56 distinct layers),M3,sponsor
+44,Heritage Property and Casualty Insurance Company,7.75,True,8.4927,-0.0915136,-0.742695,main (56 distinct layers),M3,sponsor
+45,Heritage Property and Casualty Insurance Company,4.5,True,7.86411,-0.558232,-3.36411,main (56 distinct layers),M3,sponsor
+46,Security First Insurance Company,6.5,True,7.57169,-0.152614,-1.07169,main (56 distinct layers),M3,sponsor
+47,Security First Insurance Company,7.5,True,9.52791,-0.239322,-2.02791,main (56 distinct layers),M3,sponsor
+48,Louisiana Citizens Property Insurance Corporation,7,True,7.69534,-0.0947048,-0.69534,main (56 distinct layers),M3,sponsor
+49,Florida Peninsula Insurance Company,7.75,True,7.99214,-0.0307662,-0.242144,main (56 distinct layers),M3,sponsor
+50,Citizens Property Insurance Corporation,8.75,True,5.94525,0.386461,2.80475,main (56 distinct layers),M3,sponsor
+51,Citizens Property Insurance Corporation,9.75,True,6.70267,0.374761,3.04733,main (56 distinct layers),M3,sponsor
+52,Citizens Property Insurance Corporation,11.25,True,7.955,0.346568,3.295,main (56 distinct layers),M3,sponsor
+53,Citizens Property Insurance Corporation,13,True,9.82005,0.280523,3.17995,main (56 distinct layers),M3,sponsor
+54,Slide Insurance Company,7.25,True,6.38253,0.127438,0.867474,main (56 distinct layers),M3,sponsor
+55,Slide Insurance Company,7.75,True,6.98357,0.104133,0.76643,main (56 distinct layers),M3,sponsor
+0,Sanders Re Ltd. (Series 2017-1),3,True,5.1451,-0.539433,-2.1451,without guidance prices,M1,series
+1,Alamo Re Ltd. (Series 2017-1),3.75,True,7.62262,-0.709364,-3.87262,without guidance prices,M1,series
+2,Everglades Re II Ltd. (Series 2017-1),5,True,8.25344,-0.501192,-3.25344,without guidance prices,M1,series
+3,Alamo Re Ltd. (Series 2018-1),3.25,True,7.47192,-0.832497,-4.22192,without guidance prices,M1,series
+4,Bowline Re Ltd. (Series 2018-1),4.5,True,7.28292,-0.481454,-2.78292,without guidance prices,M1,series
+5,Everglades Re II Ltd. (Series 2018-1),4.75,True,8.20736,-0.546887,-3.45736,without guidance prices,M1,series
+6,Long Point Re III Ltd. (Series 2018-1),2.75,True,6.25151,-0.821223,-3.50151,without guidance prices,M1,series
+7,Cape Lookout Re Ltd. (Series 2019-1),4.25,True,7.3195,-0.543623,-3.0695,without guidance prices,M1,series
+8,Integrity Re Ltd. (Series 2019-1),4.75,True,5.90229,-0.217196,-1.15229,without guidance prices,M1,series
+9,Everglades Re II Ltd. (Series 2020-2),6.25,True,6.09738,0.0247221,0.152619,without guidance prices,M1,series
+10,Alamo Re II Pte. Ltd. (Series 2020-1),5.75,True,7.75485,-0.299119,-2.00485,without guidance prices,M1,series
+11,Everglades Re II Ltd. (Series 2021-1),5.75,True,5.73257,0.00303551,0.0174277,without guidance prices,M1,series
+12,Everglades Re II Ltd. (Series 2021-1),6.75,True,7.4234,-0.0950951,-0.673403,without guidance prices,M1,series
+13,Everglades Re II Ltd. (Series 2021-2),5.75,True,5.48166,0.0477918,0.26834,without guidance prices,M1,series
+14,Cape Lookout Re Ltd. (Series 2022-1),5,True,7.09635,-0.350143,-2.09635,without guidance prices,M1,series
+15,Everglades Re II Ltd. (Series 2022-1),7.75,True,4.58114,0.525744,3.16886,without guidance prices,M1,series
+16,Lightning Re Ltd. (Series 2023-1),11,True,7.70644,0.355839,3.29356,without guidance prices,M1,series
+17,Alamo Re Ltd. (Series 2023-1),8.5,True,8.41008,0.0106355,0.0899225,without guidance prices,M1,series
+18,Cape Lookout Re Ltd. (Series 2023-1),6.5,True,6.55751,-0.00880898,-0.0575113,without guidance prices,M1,series
+19,Everglades Re II Ltd. (Series 2023-1),11.375,True,7.12515,0.467788,4.24985,without guidance prices,M1,series
+20,Everglades Re II Ltd. (Series 2023-2),10.125,True,4.86236,0.733484,5.26264,without guidance prices,M1,series
+21,Cape Lookout Re Ltd. (Series 2024-1),8,True,9.74836,-0.197657,-1.74836,without guidance prices,M1,series
+22,Citrus Re Ltd. (Series 2024-1),9.25,True,6.18622,0.402299,3.06378,without guidance prices,M1,series
+23,Citrus Re Ltd. (Series 2024-1),10.5,True,6.81304,0.432537,3.68696,without guidance prices,M1,series
+24,Alamo Re Ltd. (Series 2024-1),6,True,6.72592,-0.114209,-0.725918,without guidance prices,M1,series
+25,Alamo Re Ltd. (Series 2024-1),7.75,True,8.20878,-0.0575117,-0.458782,without guidance prices,M1,series
+26,Alamo Re Ltd. (Series 2024-1),11.25,True,11.3067,-0.00502549,-0.056679,without guidance prices,M1,series
+27,Everglades Re II Ltd. (Series 2024-1),10.5,True,5.94837,0.568258,4.55163,without guidance prices,M1,series
+28,Everglades Re II Ltd. (Series 2024-1),11.5,True,6.74612,0.53338,4.75388,without guidance prices,M1,series
+29,Everglades Re II Ltd. (Series 2024-1),12.75,True,7.83883,0.486442,4.91117,without guidance prices,M1,series
+30,Nature Coast Re Ltd. (Series 2025-1),9.75,True,10.5281,-0.0767767,-0.778059,without guidance prices,M1,series
+31,Gateway Re Ltd. (Series 2025-1),10.5,True,11.0912,-0.0547785,-0.591219,without guidance prices,M1,series
+32,Gateway Re Ltd. (Series 2025-1),6.25,True,7.7263,-0.212049,-1.4763,without guidance prices,M1,series
+33,Gateway Re Ltd. (Series 2025-1),4.25,True,5.57971,-0.272218,-1.32971,without guidance prices,M1,series
+34,Gateway Re Ltd. (Series 2025-1),8.25,True,6.34172,0.263064,1.90828,without guidance prices,M1,series
+35,Gateway Re Ltd. (Series 2025-1),9.5,True,6.34172,0.404142,3.15828,without guidance prices,M1,series
+36,Integrity Re III Ltd. (Series 2025-1),8,True,7.00135,0.133338,0.998649,without guidance prices,M1,series
+37,Integrity Re III Ltd. (Series 2025-1),9.75,True,7.81788,0.220854,1.93212,without guidance prices,M1,series
+38,Integrity Re III Ltd. (Series 2025-1),12.25,True,8.71863,0.340064,3.53137,without guidance prices,M1,series
+39,Integrity Re III Ltd. (Series 2025-1),25.5,True,11.3337,0.810894,14.1663,without guidance prices,M1,series
+40,Cape Lookout Re Ltd. (Series 2025-1),6.9,True,8.96687,-0.262015,-2.06687,without guidance prices,M1,series
+41,Citrus Re Ltd. (Series 2025-1),7.75,True,7.17528,0.0770516,0.574724,without guidance prices,M1,series
+42,Citrus Re Ltd. (Series 2025-1),4.5,True,6.48789,-0.365859,-1.98789,without guidance prices,M1,series
+43,First Coast Re IV Ltd. (Series 2025-1),6.5,True,6.35102,0.023187,0.148982,without guidance prices,M1,series
+44,First Coast Re IV Ltd. (Series 2025-1),7.5,True,8.96506,-0.178432,-1.46506,without guidance prices,M1,series
+45,Bayou Re Ltd. (Series 2025-1),7,True,7.47455,-0.0655934,-0.474547,without guidance prices,M1,series
+46,Palm Re Ltd. (Series 2025-1),7.75,True,7.76244,-0.00160385,-0.0124398,without guidance prices,M1,series
+47,Everglades Re II Ltd. (Series 2025-1),8.75,True,6.98947,0.224649,1.76053,without guidance prices,M1,series
+48,Everglades Re II Ltd. (Series 2025-1),9.75,True,7.83275,0.218954,1.91725,without guidance prices,M1,series
+49,Everglades Re II Ltd. (Series 2025-1),11.25,True,8.79068,0.246676,2.45932,without guidance prices,M1,series
+50,Everglades Re II Ltd. (Series 2025-1),13,True,9.79953,0.282615,3.20047,without guidance prices,M1,series
+51,Purple Re Ltd. (Series 2025-1),7.25,True,5.39228,0.296032,1.85772,without guidance prices,M1,series
+52,Purple Re Ltd. (Series 2025-1),7.75,True,6.04634,0.24824,1.70366,without guidance prices,M1,series
+0,Allstate,3,True,5.1451,-0.539433,-2.1451,without guidance prices,M1,sponsor
+1,Texas Windstorm Insurance Association,3.75,True,7.85646,-0.73958,-4.10646,without guidance prices,M1,sponsor
+2,Citizens Property Insurance Corporation,5,True,7.66488,-0.427211,-2.66488,without guidance prices,M1,sponsor
+3,Texas Windstorm Insurance Association,3.25,True,7.68003,-0.859968,-4.43003,without guidance prices,M1,sponsor
+4,Transatlantic Reinsurance Company,4.5,True,7.28292,-0.481454,-2.78292,without guidance prices,M1,sponsor
+5,Citizens Property Insurance Corporation,4.75,True,7.59995,-0.469997,-2.84995,without guidance prices,M1,sponsor
+6,Travelers,2.75,True,6.25151,-0.821223,-3.50151,without guidance prices,M1,sponsor
+7,North Carolina Insurance Underwriting Association,4.25,True,7.44619,-0.560783,-3.19619,without guidance prices,M1,sponsor
+8,American Integrity Insurance Group,4.75,True,6.0923,-0.248882,-1.3423,without guidance prices,M1,sponsor
+9,Citizens Property Insurance Corporation,6.25,True,5.20515,0.182932,1.04485,without guidance prices,M1,sponsor
+10,Texas Windstorm Insurance Association,5.75,True,8.05947,-0.337647,-2.30947,without guidance prices,M1,sponsor
+11,Citizens Property Insurance Corporation,5.75,True,4.77889,0.184992,0.971113,without guidance prices,M1,sponsor
+12,Citizens Property Insurance Corporation,6.75,True,6.74458,0.000803601,0.00542212,without guidance prices,M1,sponsor
+13,Citizens Property Insurance Corporation,5.75,True,4.5265,0.23925,1.2235,without guidance prices,M1,sponsor
+14,North Carolina Insurance Underwriting Association,5,True,7.23647,-0.369695,-2.23647,without guidance prices,M1,sponsor
+15,Citizens Property Insurance Corporation,7.75,True,3.78785,0.715894,3.96215,without guidance prices,M1,sponsor
+16,Citizens Property Insurance Corporation,11,True,7.17497,0.427297,3.82503,without guidance prices,M1,sponsor
+17,Texas Windstorm Insurance Association,8.5,True,8.81672,-0.0365841,-0.316723,without guidance prices,M1,sponsor
+18,North Carolina Insurance Underwriting Association,6.5,True,6.7124,-0.0321545,-0.2124,without guidance prices,M1,sponsor
+19,Citizens Property Insurance Corporation,11.375,True,6.47682,0.563188,4.89818,without guidance prices,M1,sponsor
+20,Citizens Property Insurance Corporation,10.125,True,4.1237,0.898256,6.0013,without guidance prices,M1,sponsor
+21,North Carolina Insurance Underwriting Association,8,True,10.0319,-0.226324,-2.03185,without guidance prices,M1,sponsor
+22,Heritage Property and Casualty Insurance Company,9.25,True,6.23379,0.394639,3.01621,without guidance prices,M1,sponsor
+23,Heritage Property and Casualty Insurance Company,10.5,True,6.8539,0.426558,3.6461,without guidance prices,M1,sponsor
+24,Texas Windstorm Insurance Association,6,True,6.98082,-0.151407,-0.980818,without guidance prices,M1,sponsor
+25,Texas Windstorm Insurance Association,7.75,True,8.56858,-0.100409,-0.818582,without guidance prices,M1,sponsor
+26,Texas Windstorm Insurance Association,11.25,True,11.9109,-0.0570836,-0.660874,without guidance prices,M1,sponsor
+27,Citizens Property Insurance Corporation,10.5,True,5.27547,0.688308,5.22453,without guidance prices,M1,sponsor
+28,Citizens Property Insurance Corporation,11.5,True,6.2067,0.616717,5.2933,without guidance prices,M1,sponsor
+29,Citizens Property Insurance Corporation,12.75,True,7.5349,0.525985,5.2151,without guidance prices,M1,sponsor
+30,SafePoint Insurance Company,9.75,True,10.5281,-0.0767767,-0.778059,without guidance prices,M1,sponsor
+31,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,10.5,True,11.0912,-0.0547785,-0.591219,without guidance prices,M1,sponsor
+32,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,6.25,True,7.7263,-0.212049,-1.4763,without guidance prices,M1,sponsor
+33,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,4.25,True,5.57971,-0.272218,-1.32971,without guidance prices,M1,sponsor
+34,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,8.25,True,6.34172,0.263064,1.90828,without guidance prices,M1,sponsor
+35,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,9.5,True,6.34172,0.404142,3.15828,without guidance prices,M1,sponsor
+36,American Integrity Insurance Group,8,True,7.03741,0.128201,0.962588,without guidance prices,M1,sponsor
+37,American Integrity Insurance Group,9.75,True,7.82712,0.219672,1.92288,without guidance prices,M1,sponsor
+38,American Integrity Insurance Group,12.25,True,8.69488,0.342792,3.55512,without guidance prices,M1,sponsor
+39,American Integrity Insurance Group,25.5,True,11.197,0.823029,14.303,without guidance prices,M1,sponsor
+40,North Carolina Insurance Underwriting Association,6.9,True,9.20683,-0.288424,-2.30683,without guidance prices,M1,sponsor
+41,Heritage Property and Casualty Insurance Company,7.75,True,7.05331,0.0941964,0.696694,without guidance prices,M1,sponsor
+42,Heritage Property and Casualty Insurance Company,4.5,True,6.35464,-0.345107,-1.85464,without guidance prices,M1,sponsor
+43,Security First Insurance Company,6.5,True,6.35102,0.023187,0.148982,without guidance prices,M1,sponsor
+44,Security First Insurance Company,7.5,True,8.96506,-0.178432,-1.46506,without guidance prices,M1,sponsor
+45,Louisiana Citizens Property Insurance Corporation,7,True,7.47455,-0.0655934,-0.474547,without guidance prices,M1,sponsor
+46,Florida Peninsula Insurance Company,7.75,True,7.76244,-0.00160385,-0.0124398,without guidance prices,M1,sponsor
+47,Citizens Property Insurance Corporation,8.75,True,6.37581,0.316542,2.37419,without guidance prices,M1,sponsor
+48,Citizens Property Insurance Corporation,9.75,True,7.50234,0.262053,2.24766,without guidance prices,M1,sponsor
+49,Citizens Property Insurance Corporation,11.25,True,8.84646,0.240351,2.40354,without guidance prices,M1,sponsor
+50,Citizens Property Insurance Corporation,13,True,10.3315,0.229752,2.6685,without guidance prices,M1,sponsor
+51,Slide Insurance Company,7.25,True,5.39228,0.296032,1.85772,without guidance prices,M1,sponsor
+52,Slide Insurance Company,7.75,True,6.04634,0.24824,1.70366,without guidance prices,M1,sponsor
+0,Sanders Re Ltd. (Series 2017-1),3,True,2.99209,0.00263958,0.00790829,without guidance prices,M2,series
+1,Alamo Re Ltd. (Series 2017-1),3.75,True,4.44635,-0.170327,-0.696346,without guidance prices,M2,series
+2,Everglades Re II Ltd. (Series 2017-1),5,True,4.21368,0.171101,0.786319,without guidance prices,M2,series
+3,Alamo Re Ltd. (Series 2018-1),3.25,True,4.00535,-0.208976,-0.75535,without guidance prices,M2,series
+4,Bowline Re Ltd. (Series 2018-1),4.5,True,3.52157,0.245172,0.978434,without guidance prices,M2,series
+5,Everglades Re II Ltd. (Series 2018-1),4.75,True,3.90216,0.196614,0.847837,without guidance prices,M2,series
+6,Long Point Re III Ltd. (Series 2018-1),2.75,True,3.47832,-0.234948,-0.728319,without guidance prices,M2,series
+7,Cape Lookout Re Ltd. (Series 2019-1),4.25,True,5.64475,-0.283808,-1.39475,without guidance prices,M2,series
+8,Integrity Re Ltd. (Series 2019-1),4.75,True,3.57633,0.283808,1.17367,without guidance prices,M2,series
+9,Everglades Re II Ltd. (Series 2020-2),6.25,True,4.7596,0.272417,1.4904,without guidance prices,M2,series
+10,Alamo Re II Pte. Ltd. (Series 2020-1),5.75,True,7.55052,-0.272417,-1.80052,without guidance prices,M2,series
+11,Everglades Re II Ltd. (Series 2021-1),5.75,True,5.93998,-0.0325067,-0.189985,without guidance prices,M2,series
+12,Everglades Re II Ltd. (Series 2021-1),6.75,True,7.30179,-0.0785775,-0.551794,without guidance prices,M2,series
+13,Everglades Re II Ltd. (Series 2021-2),5.75,True,5.4421,0.0550354,0.307903,without guidance prices,M2,series
+14,Cape Lookout Re Ltd. (Series 2022-1),5,True,10.793,-0.76946,-5.79301,without guidance prices,M2,series
+15,Everglades Re II Ltd. (Series 2022-1),7.75,True,3.59029,0.76946,4.15971,without guidance prices,M2,series
+16,Lightning Re Ltd. (Series 2023-1),11,True,10.0127,0.0940388,0.987278,without guidance prices,M2,series
+17,Alamo Re Ltd. (Series 2023-1),8.5,True,11.6633,-0.316381,-3.1633,without guidance prices,M2,series
+18,Cape Lookout Re Ltd. (Series 2023-1),6.5,True,9.67401,-0.397641,-3.17401,without guidance prices,M2,series
+19,Everglades Re II Ltd. (Series 2023-1),11.375,True,9.20715,0.211438,2.16785,without guidance prices,M2,series
+20,Everglades Re II Ltd. (Series 2023-2),10.125,True,6.62032,0.424864,3.50468,without guidance prices,M2,series
+21,Cape Lookout Re Ltd. (Series 2024-1),8,True,12.0731,-0.411537,-4.07309,without guidance prices,M2,series
+22,Citrus Re Ltd. (Series 2024-1),9.25,True,7.75042,0.176876,1.49958,without guidance prices,M2,series
+23,Citrus Re Ltd. (Series 2024-1),10.5,True,8.36756,0.227013,2.13244,without guidance prices,M2,series
+24,Alamo Re Ltd. (Series 2024-1),6,True,9.64756,-0.474946,-3.64756,without guidance prices,M2,series
+25,Alamo Re Ltd. (Series 2024-1),7.75,True,11.3782,-0.38401,-3.62824,without guidance prices,M2,series
+26,Alamo Re Ltd. (Series 2024-1),11.25,True,14.8332,-0.276501,-3.58321,without guidance prices,M2,series
+27,Everglades Re II Ltd. (Series 2024-1),10.5,True,6.90292,0.419431,3.59708,without guidance prices,M2,series
+28,Everglades Re II Ltd. (Series 2024-1),11.5,True,7.65419,0.407093,3.84581,without guidance prices,M2,series
+29,Everglades Re II Ltd. (Series 2024-1),12.75,True,8.65804,0.387043,4.09196,without guidance prices,M2,series
+30,Nature Coast Re Ltd. (Series 2025-1),9.75,True,10.7533,-0.0979489,-1.00334,without guidance prices,M2,series
+31,Gateway Re Ltd. (Series 2025-1),10.5,True,11.2238,-0.0666576,-0.723759,without guidance prices,M2,series
+32,Gateway Re Ltd. (Series 2025-1),6.25,True,8.56933,-0.315608,-2.31933,without guidance prices,M2,series
+33,Gateway Re Ltd. (Series 2025-1),4.25,True,6.72102,-0.458321,-2.47102,without guidance prices,M2,series
+34,Gateway Re Ltd. (Series 2025-1),8.25,True,7.39489,0.109424,0.855112,without guidance prices,M2,series
+35,Gateway Re Ltd. (Series 2025-1),9.5,True,7.39489,0.250503,2.10511,without guidance prices,M2,series
+36,Integrity Re III Ltd. (Series 2025-1),8,True,7.61104,0.0498416,0.388959,without guidance prices,M2,series
+37,Integrity Re III Ltd. (Series 2025-1),9.75,True,8.21863,0.170863,1.53137,without guidance prices,M2,series
+38,Integrity Re III Ltd. (Series 2025-1),12.25,True,8.86694,0.323196,3.38306,without guidance prices,M2,series
+39,Integrity Re III Ltd. (Series 2025-1),25.5,True,10.6438,0.873705,14.8562,without guidance prices,M2,series
+40,Cape Lookout Re Ltd. (Series 2025-1),6.9,True,9.51905,-0.321774,-2.61905,without guidance prices,M2,series
+41,Citrus Re Ltd. (Series 2025-1),7.75,True,8.09893,-0.0440389,-0.348928,without guidance prices,M2,series
+42,Citrus Re Ltd. (Series 2025-1),4.5,True,7.50631,-0.511667,-3.00631,without guidance prices,M2,series
+43,First Coast Re IV Ltd. (Series 2025-1),6.5,True,7.27599,-0.112777,-0.775987,without guidance prices,M2,series
+44,First Coast Re IV Ltd. (Series 2025-1),7.5,True,9.53317,-0.239874,-2.03317,without guidance prices,M2,series
+45,Bayou Re Ltd. (Series 2025-1),7,True,8.21358,-0.159879,-1.21358,without guidance prices,M2,series
+46,Palm Re Ltd. (Series 2025-1),7.75,True,8.44267,-0.085606,-0.692672,without guidance prices,M2,series
+47,Everglades Re II Ltd. (Series 2025-1),8.75,True,7.61859,0.138462,1.13141,without guidance prices,M2,series
+48,Everglades Re II Ltd. (Series 2025-1),9.75,True,8.34766,0.155285,1.40234,without guidance prices,M2,series
+49,Everglades Re II Ltd. (Series 2025-1),11.25,True,9.1573,0.205817,2.0927,without guidance prices,M2,series
+50,Everglades Re II Ltd. (Series 2025-1),13,True,9.99132,0.263233,3.00868,without guidance prices,M2,series
+51,Purple Re Ltd. (Series 2025-1),7.25,True,6.26266,0.146397,0.987342,without guidance prices,M2,series
+52,Purple Re Ltd. (Series 2025-1),7.75,True,6.85709,0.12241,0.892913,without guidance prices,M2,series
+0,Allstate,3,True,2.99209,0.00263958,0.00790829,without guidance prices,M2,sponsor
+1,Texas Windstorm Insurance Association,3.75,True,4.51925,-0.186591,-0.769251,without guidance prices,M2,sponsor
+2,Citizens Property Insurance Corporation,5,True,4.46751,0.112606,0.532487,without guidance prices,M2,sponsor
+3,Texas Windstorm Insurance Association,3.25,True,4.02052,-0.212757,-0.770523,without guidance prices,M2,sponsor
+4,Transatlantic Reinsurance Company,4.5,True,3.52157,0.245172,0.978434,without guidance prices,M2,sponsor
+5,Citizens Property Insurance Corporation,4.75,True,4.03075,0.164192,0.719249,without guidance prices,M2,sponsor
+6,Travelers,2.75,True,3.47832,-0.234948,-0.728319,without guidance prices,M2,sponsor
+7,North Carolina Insurance Underwriting Association,4.25,True,5.81459,-0.313451,-1.56459,without guidance prices,M2,sponsor
+8,American Integrity Insurance Group,4.75,True,3.79474,0.22453,0.955264,without guidance prices,M2,sponsor
+9,Citizens Property Insurance Corporation,6.25,True,4.57785,0.311352,1.67215,without guidance prices,M2,sponsor
+10,Texas Windstorm Insurance Association,5.75,True,7.70824,-0.29309,-1.95824,without guidance prices,M2,sponsor
+11,Citizens Property Insurance Corporation,5.75,False,,,,without guidance prices,M2,sponsor
+12,Citizens Property Insurance Corporation,6.75,False,,,,without guidance prices,M2,sponsor
+13,Citizens Property Insurance Corporation,5.75,False,,,,without guidance prices,M2,sponsor
+14,North Carolina Insurance Underwriting Association,5,True,11.1316,-0.800352,-6.13163,without guidance prices,M2,sponsor
+15,Citizens Property Insurance Corporation,7.75,True,3.44327,0.811271,4.30673,without guidance prices,M2,sponsor
+16,Citizens Property Insurance Corporation,11,True,7.7606,0.348836,3.2394,without guidance prices,M2,sponsor
+17,Texas Windstorm Insurance Association,8.5,True,11.8755,-0.334409,-3.37547,without guidance prices,M2,sponsor
+18,North Carolina Insurance Underwriting Association,6.5,True,9.56968,-0.386798,-3.06968,without guidance prices,M2,sponsor
+19,Citizens Property Insurance Corporation,11.375,True,7.20083,0.457221,4.17417,without guidance prices,M2,sponsor
+20,Citizens Property Insurance Corporation,10.125,True,5.17596,0.670982,4.94904,without guidance prices,M2,sponsor
+21,North Carolina Insurance Underwriting Association,8,True,12.413,-0.439299,-4.41295,without guidance prices,M2,sponsor
+22,Heritage Property and Casualty Insurance Company,9.25,True,7.84805,0.164359,1.40195,without guidance prices,M2,sponsor
+23,Heritage Property and Casualty Insurance Company,10.5,True,8.43075,0.219489,2.06925,without guidance prices,M2,sponsor
+24,Texas Windstorm Insurance Association,6,True,9.59422,-0.469402,-3.59422,without guidance prices,M2,sponsor
+25,Texas Windstorm Insurance Association,7.75,True,11.4739,-0.39238,-3.72388,without guidance prices,M2,sponsor
+26,Texas Windstorm Insurance Association,11.25,True,15.2961,-0.307232,-4.04613,without guidance prices,M2,sponsor
+27,Citizens Property Insurance Corporation,10.5,True,6.67712,0.452688,3.82288,without guidance prices,M2,sponsor
+28,Citizens Property Insurance Corporation,11.5,True,7.52004,0.424776,3.97996,without guidance prices,M2,sponsor
+29,Citizens Property Insurance Corporation,12.75,True,8.6658,0.386147,4.0842,without guidance prices,M2,sponsor
+30,SafePoint Insurance Company,9.75,True,10.7533,-0.0979489,-1.00334,without guidance prices,M2,sponsor
+31,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,10.5,True,11.2238,-0.0666576,-0.723759,without guidance prices,M2,sponsor
+32,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,6.25,True,8.56933,-0.315608,-2.31933,without guidance prices,M2,sponsor
+33,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,4.25,True,6.72102,-0.458321,-2.47102,without guidance prices,M2,sponsor
+34,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,8.25,True,7.39489,0.109424,0.855112,without guidance prices,M2,sponsor
+35,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,9.5,True,7.39489,0.250503,2.10511,without guidance prices,M2,sponsor
+36,American Integrity Insurance Group,8,True,7.60494,0.0506433,0.395058,without guidance prices,M2,sponsor
+37,American Integrity Insurance Group,9.75,True,8.23015,0.169463,1.51985,without guidance prices,M2,sponsor
+38,American Integrity Insurance Group,12.25,True,8.89872,0.319618,3.35128,without guidance prices,M2,sponsor
+39,American Integrity Insurance Group,25.5,True,10.738,0.86489,14.762,without guidance prices,M2,sponsor
+40,North Carolina Insurance Underwriting Association,6.9,True,9.68537,-0.339095,-2.78537,without guidance prices,M2,sponsor
+41,Heritage Property and Casualty Insurance Company,7.75,True,8.07464,-0.041036,-0.324645,without guidance prices,M2,sponsor
+42,Heritage Property and Casualty Insurance Company,4.5,True,7.46294,-0.505872,-2.96294,without guidance prices,M2,sponsor
+43,Security First Insurance Company,6.5,True,7.27599,-0.112777,-0.775987,without guidance prices,M2,sponsor
+44,Security First Insurance Company,7.5,True,9.53317,-0.239874,-2.03317,without guidance prices,M2,sponsor
+45,Louisiana Citizens Property Insurance Corporation,7,True,8.21358,-0.159879,-1.21358,without guidance prices,M2,sponsor
+46,Florida Peninsula Insurance Company,7.75,True,8.44267,-0.085606,-0.692672,without guidance prices,M2,sponsor
+47,Citizens Property Insurance Corporation,8.75,True,7.47686,0.157241,1.27314,without guidance prices,M2,sponsor
+48,Citizens Property Insurance Corporation,9.75,True,8.42159,0.146468,1.32841,without guidance prices,M2,sponsor
+49,Citizens Property Insurance Corporation,11.25,True,9.50028,0.169047,1.74972,without guidance prices,M2,sponsor
+50,Citizens Property Insurance Corporation,13,True,10.642,0.200143,2.35802,without guidance prices,M2,sponsor
+51,Slide Insurance Company,7.25,True,6.26266,0.146397,0.987342,without guidance prices,M2,sponsor
+52,Slide Insurance Company,7.75,True,6.85709,0.12241,0.892913,without guidance prices,M2,sponsor
+0,Sanders Re Ltd. (Series 2017-1),3,True,2.88182,0.040189,0.118176,without guidance prices,M3,series
+1,Alamo Re Ltd. (Series 2017-1),3.75,True,4.41764,-0.16385,-0.667642,without guidance prices,M3,series
+2,Everglades Re II Ltd. (Series 2017-1),5,True,4.39038,0.130023,0.609622,without guidance prices,M3,series
+3,Alamo Re Ltd. (Series 2018-1),3.25,True,3.8664,-0.173668,-0.616395,without guidance prices,M3,series
+4,Bowline Re Ltd. (Series 2018-1),4.5,True,3.65268,0.208616,0.84732,without guidance prices,M3,series
+5,Everglades Re II Ltd. (Series 2018-1),4.75,True,3.96163,0.18149,0.788375,without guidance prices,M3,series
+6,Long Point Re III Ltd. (Series 2018-1),2.75,True,3.21386,-0.155873,-0.463864,without guidance prices,M3,series
+7,Cape Lookout Re Ltd. (Series 2019-1),4.25,True,4.68806,-0.0981001,-0.438061,without guidance prices,M3,series
+8,Integrity Re Ltd. (Series 2019-1),4.75,True,4.30615,0.0981001,0.443849,without guidance prices,M3,series
+9,Everglades Re II Ltd. (Series 2020-2),6.25,True,5.27935,0.168778,0.97065,without guidance prices,M3,series
+10,Alamo Re II Pte. Ltd. (Series 2020-1),5.75,True,6.80718,-0.168778,-1.05718,without guidance prices,M3,series
+11,Everglades Re II Ltd. (Series 2021-1),5.75,True,5.91347,-0.028033,-0.16347,without guidance prices,M3,series
+12,Everglades Re II Ltd. (Series 2021-1),6.75,True,7.55906,-0.113204,-0.809056,without guidance prices,M3,series
+13,Everglades Re II Ltd. (Series 2021-2),5.75,True,5.36401,0.0694886,0.385993,without guidance prices,M3,series
+14,Cape Lookout Re Ltd. (Series 2022-1),5,True,10.5391,-0.745654,-5.5391,without guidance prices,M3,series
+15,Everglades Re II Ltd. (Series 2022-1),7.75,True,3.67678,0.745654,4.07322,without guidance prices,M3,series
+16,Lightning Re Ltd. (Series 2023-1),11,True,10.3279,0.0630467,0.672104,without guidance prices,M3,series
+17,Alamo Re Ltd. (Series 2023-1),8.5,True,11.4773,-0.300303,-2.97728,without guidance prices,M3,series
+18,Cape Lookout Re Ltd. (Series 2023-1),6.5,True,9.74035,-0.404475,-3.24035,without guidance prices,M3,series
+19,Everglades Re II Ltd. (Series 2023-1),11.375,True,9.37347,0.193535,2.00153,without guidance prices,M3,series
+20,Everglades Re II Ltd. (Series 2023-2),10.125,True,6.23979,0.484061,3.88521,without guidance prices,M3,series
+21,Cape Lookout Re Ltd. (Series 2024-1),8,True,11.5772,-0.369592,-3.57716,without guidance prices,M3,series
+22,Citrus Re Ltd. (Series 2024-1),9.25,True,9.32603,-0.00818564,-0.0760279,without guidance prices,M3,series
+23,Citrus Re Ltd. (Series 2024-1),10.5,True,10.0964,0.0391988,0.403625,without guidance prices,M3,series
+24,Alamo Re Ltd. (Series 2024-1),6,True,9.01238,-0.40684,-3.01238,without guidance prices,M3,series
+25,Alamo Re Ltd. (Series 2024-1),7.75,True,10.7037,-0.3229,-2.95374,without guidance prices,M3,series
+26,Alamo Re Ltd. (Series 2024-1),11.25,True,14.3269,-0.241772,-3.07692,without guidance prices,M3,series
+27,Everglades Re II Ltd. (Series 2024-1),10.5,True,6.1614,0.53307,4.3386,without guidance prices,M3,series
+28,Everglades Re II Ltd. (Series 2024-1),11.5,True,6.96392,0.501605,4.53608,without guidance prices,M3,series
+29,Everglades Re II Ltd. (Series 2024-1),12.75,True,8.63892,0.389254,4.11108,without guidance prices,M3,series
+30,Nature Coast Re Ltd. (Series 2025-1),9.75,True,12.4399,-0.243642,-2.6899,without guidance prices,M3,series
+31,Gateway Re Ltd. (Series 2025-1),10.5,True,12.4029,-0.166552,-1.90286,without guidance prices,M3,series
+32,Gateway Re Ltd. (Series 2025-1),6.25,True,8.76669,-0.338378,-2.51669,without guidance prices,M3,series
+33,Gateway Re Ltd. (Series 2025-1),4.25,True,6.83896,-0.475716,-2.58896,without guidance prices,M3,series
+34,Gateway Re Ltd. (Series 2025-1),8.25,True,8.2554,-0.000654743,-0.0054034,without guidance prices,M3,series
+35,Gateway Re Ltd. (Series 2025-1),9.5,True,7.34763,0.256914,2.15237,without guidance prices,M3,series
+36,Integrity Re III Ltd. (Series 2025-1),8,True,8.0657,-0.00817835,-0.0656951,without guidance prices,M3,series
+37,Integrity Re III Ltd. (Series 2025-1),9.75,True,8.73828,0.109554,1.01172,without guidance prices,M3,series
+38,Integrity Re III Ltd. (Series 2025-1),12.25,True,8.87148,0.322684,3.37852,without guidance prices,M3,series
+39,Integrity Re III Ltd. (Series 2025-1),25.5,True,11.0251,0.838505,14.4749,without guidance prices,M3,series
+40,Cape Lookout Re Ltd. (Series 2025-1),6.9,True,8.4916,-0.207556,-1.5916,without guidance prices,M3,series
+41,Citrus Re Ltd. (Series 2025-1),7.75,True,8.39571,-0.0800285,-0.645714,without guidance prices,M3,series
+42,Citrus Re Ltd. (Series 2025-1),4.5,True,7.73373,-0.541514,-3.23373,without guidance prices,M3,series
+43,First Coast Re IV Ltd. (Series 2025-1),6.5,True,7.46622,-0.138586,-0.966217,without guidance prices,M3,series
+44,First Coast Re IV Ltd. (Series 2025-1),7.5,True,9.59925,-0.246782,-2.09925,without guidance prices,M3,series
+45,Bayou Re Ltd. (Series 2025-1),7,True,7.69955,-0.0952519,-0.699551,without guidance prices,M3,series
+46,Palm Re Ltd. (Series 2025-1),7.75,True,8.00926,-0.0329054,-0.259259,without guidance prices,M3,series
+47,Everglades Re II Ltd. (Series 2025-1),8.75,True,6.23237,0.339297,2.51763,without guidance prices,M3,series
+48,Everglades Re II Ltd. (Series 2025-1),9.75,True,6.84148,0.354263,2.90852,without guidance prices,M3,series
+49,Everglades Re II Ltd. (Series 2025-1),11.25,True,7.84941,0.359929,3.40059,without guidance prices,M3,series
+50,Everglades Re II Ltd. (Series 2025-1),13,True,9.32222,0.332549,3.67778,without guidance prices,M3,series
+51,Purple Re Ltd. (Series 2025-1),7.25,True,6.22212,0.152891,1.02788,without guidance prices,M3,series
+52,Purple Re Ltd. (Series 2025-1),7.75,True,6.85744,0.122359,0.892562,without guidance prices,M3,series
+0,Allstate,3,True,2.88182,0.040189,0.118176,without guidance prices,M3,sponsor
+1,Texas Windstorm Insurance Association,3.75,True,4.50069,-0.182475,-0.750692,without guidance prices,M3,sponsor
+2,Citizens Property Insurance Corporation,5,True,4.92966,0.0141684,0.0703427,without guidance prices,M3,sponsor
+3,Texas Windstorm Insurance Association,3.25,True,3.96633,-0.199186,-0.71633,without guidance prices,M3,sponsor
+4,Transatlantic Reinsurance Company,4.5,True,3.65268,0.208616,0.84732,without guidance prices,M3,sponsor
+5,Citizens Property Insurance Corporation,4.75,True,4.40163,0.076169,0.348367,without guidance prices,M3,sponsor
+6,Travelers,2.75,True,3.21386,-0.155873,-0.463864,without guidance prices,M3,sponsor
+7,North Carolina Insurance Underwriting Association,4.25,True,5.11923,-0.186086,-0.869234,without guidance prices,M3,sponsor
+8,American Integrity Insurance Group,4.75,True,4.198,0.123536,0.551997,without guidance prices,M3,sponsor
+9,Citizens Property Insurance Corporation,6.25,True,5.60313,0.109257,0.646874,without guidance prices,M3,sponsor
+10,Texas Windstorm Insurance Association,5.75,True,7.20406,-0.225445,-1.45406,without guidance prices,M3,sponsor
+11,Citizens Property Insurance Corporation,5.75,False,,,,without guidance prices,M3,sponsor
+12,Citizens Property Insurance Corporation,6.75,False,,,,without guidance prices,M3,sponsor
+13,Citizens Property Insurance Corporation,5.75,False,,,,without guidance prices,M3,sponsor
+14,North Carolina Insurance Underwriting Association,5,True,10.9125,-0.780469,-5.91247,without guidance prices,M3,sponsor
+15,Citizens Property Insurance Corporation,7.75,True,3.54193,0.783022,4.20807,without guidance prices,M3,sponsor
+16,Citizens Property Insurance Corporation,11,True,7.8719,0.334596,3.1281,without guidance prices,M3,sponsor
+17,Texas Windstorm Insurance Association,8.5,True,11.8043,-0.328399,-3.30431,without guidance prices,M3,sponsor
+18,North Carolina Insurance Underwriting Association,6.5,True,9.65592,-0.395769,-3.15592,without guidance prices,M3,sponsor
+19,Citizens Property Insurance Corporation,11.375,True,7.62169,0.400419,3.75331,without guidance prices,M3,sponsor
+20,Citizens Property Insurance Corporation,10.125,True,4.79015,0.748445,5.33485,without guidance prices,M3,sponsor
+21,North Carolina Insurance Underwriting Association,8,True,12.0323,-0.408156,-4.03234,without guidance prices,M3,sponsor
+22,Heritage Property and Casualty Insurance Company,9.25,True,9.71089,-0.048624,-0.460887,without guidance prices,M3,sponsor
+23,Heritage Property and Casualty Insurance Company,10.5,True,10.4614,0.00368597,0.0386315,without guidance prices,M3,sponsor
+24,Texas Windstorm Insurance Association,6,True,9.03812,-0.409692,-3.03812,without guidance prices,M3,sponsor
+25,Texas Windstorm Insurance Association,7.75,True,10.8878,-0.339947,-3.13776,without guidance prices,M3,sponsor
+26,Texas Windstorm Insurance Association,11.25,True,14.8801,-0.279658,-3.63012,without guidance prices,M3,sponsor
+27,Citizens Property Insurance Corporation,10.5,True,5.5813,0.631953,4.9187,without guidance prices,M3,sponsor
+28,Citizens Property Insurance Corporation,11.5,True,6.48817,0.572367,5.01183,without guidance prices,M3,sponsor
+29,Citizens Property Insurance Corporation,12.75,True,8.63764,0.389402,4.11236,without guidance prices,M3,sponsor
+30,SafePoint Insurance Company,9.75,True,12.4399,-0.243642,-2.6899,without guidance prices,M3,sponsor
+31,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,10.5,True,12.4029,-0.166552,-1.90286,without guidance prices,M3,sponsor
+32,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,6.25,True,8.76669,-0.338378,-2.51669,without guidance prices,M3,sponsor
+33,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,4.25,True,6.83896,-0.475716,-2.58896,without guidance prices,M3,sponsor
+34,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,8.25,True,8.2554,-0.000654743,-0.0054034,without guidance prices,M3,sponsor
+35,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,9.5,True,7.34763,0.256914,2.15237,without guidance prices,M3,sponsor
+36,American Integrity Insurance Group,8,True,7.99682,0.000397765,0.00318148,without guidance prices,M3,sponsor
+37,American Integrity Insurance Group,9.75,True,8.6643,0.118056,1.0857,without guidance prices,M3,sponsor
+38,American Integrity Insurance Group,12.25,True,8.87005,0.322846,3.37995,without guidance prices,M3,sponsor
+39,American Integrity Insurance Group,25.5,True,10.9871,0.841958,14.5129,without guidance prices,M3,sponsor
+40,North Carolina Insurance Underwriting Association,6.9,True,8.90241,-0.254801,-2.00241,without guidance prices,M3,sponsor
+41,Heritage Property and Casualty Insurance Company,7.75,True,8.40975,-0.0816992,-0.659752,without guidance prices,M3,sponsor
+42,Heritage Property and Casualty Insurance Company,4.5,True,7.74859,-0.543433,-3.24859,without guidance prices,M3,sponsor
+43,Security First Insurance Company,6.5,True,7.46622,-0.138586,-0.966217,without guidance prices,M3,sponsor
+44,Security First Insurance Company,7.5,True,9.59925,-0.246782,-2.09925,without guidance prices,M3,sponsor
+45,Louisiana Citizens Property Insurance Corporation,7,True,7.69955,-0.0952519,-0.699551,without guidance prices,M3,sponsor
+46,Florida Peninsula Insurance Company,7.75,True,8.00926,-0.0329054,-0.259259,without guidance prices,M3,sponsor
+47,Citizens Property Insurance Corporation,8.75,True,5.78402,0.413955,2.96598,without guidance prices,M3,sponsor
+48,Citizens Property Insurance Corporation,9.75,True,6.58572,0.392363,3.16428,without guidance prices,M3,sponsor
+49,Citizens Property Insurance Corporation,11.25,True,7.93293,0.349346,3.31707,without guidance prices,M3,sponsor
+50,Citizens Property Insurance Corporation,13,True,9.97782,0.264585,3.02218,without guidance prices,M3,sponsor
+51,Slide Insurance Company,7.25,True,6.22212,0.152891,1.02788,without guidance prices,M3,sponsor
+52,Slide Insurance Company,7.75,True,6.85744,0.122359,0.892562,without guidance prices,M3,sponsor
+0,Citrus Re Ltd. (Series 2017-1),6,True,10.7971,-0.587516,-4.79708,without discount notes,M1,series
+1,Sanders Re Ltd. (Series 2017-1),3,True,4.79331,-0.468609,-1.79331,without discount notes,M1,series
+2,Alamo Re Ltd. (Series 2017-1),3.75,True,7.19371,-0.651451,-3.44371,without discount notes,M1,series
+3,Everglades Re II Ltd. (Series 2017-1),5,True,7.79949,-0.44462,-2.79949,without discount notes,M1,series
+4,Alamo Re Ltd. (Series 2018-1),3.25,True,7.04939,-0.774286,-3.79939,without discount notes,M1,series
+5,Bowline Re Ltd. (Series 2018-1),4.5,True,6.86732,-0.422697,-2.36732,without discount notes,M1,series
+6,Everglades Re II Ltd. (Series 2018-1),4.75,True,7.75483,-0.490171,-3.00483,without discount notes,M1,series
+7,Long Point Re III Ltd. (Series 2018-1),2.75,True,5.87619,-0.759308,-3.12619,without discount notes,M1,series
+8,Cape Lookout Re Ltd. (Series 2019-1),4.25,True,6.90266,-0.484988,-2.65266,without discount notes,M1,series
+9,Alamo Re Ltd. (Series 2019-1),4.5,True,7.41236,-0.499071,-2.91236,without discount notes,M1,series
+10,Integrity Re Ltd. (Series 2019-1),4.75,True,5.52837,-0.151748,-0.778366,without discount notes,M1,series
+11,Everglades Re II Ltd. (Series 2020-2),6.25,True,5.71498,0.0894914,0.535024,without discount notes,M1,series
+12,Alamo Re II Pte. Ltd. (Series 2020-1),5.75,True,7.32203,-0.241687,-1.57203,without discount notes,M1,series
+13,Alamo Re Ltd. (Series 2021-1),4,True,7.32101,-0.604454,-3.32101,without discount notes,M1,series
+14,Everglades Re II Ltd. (Series 2021-1),5.75,True,5.35394,0.071368,0.396065,without discount notes,M1,series
+15,Everglades Re II Ltd. (Series 2021-1),6.75,True,6.99287,-0.0353479,-0.242866,without discount notes,M1,series
+16,Everglades Re II Ltd. (Series 2021-2),5.75,True,5.11429,0.117161,0.635711,without discount notes,M1,series
+17,Cape Lookout Re Ltd. (Series 2022-1),5,True,6.68702,-0.29073,-1.68702,without discount notes,M1,series
+18,Everglades Re II Ltd. (Series 2022-1),7.75,True,4.22729,0.606131,3.52271,without discount notes,M1,series
+19,Lightning Re Ltd. (Series 2023-1),11,True,7.27916,0.41288,3.72084,without discount notes,M1,series
+20,Alamo Re Ltd. (Series 2023-1),8.5,True,7.95758,0.0659408,0.542417,without discount notes,M1,series
+21,Cape Lookout Re Ltd. (Series 2023-1),6.5,True,6.16282,0.0532677,0.33718,without discount notes,M1,series
+22,Cape Lookout Re Ltd. (Series 2024-1),8,True,9.24027,-0.14413,-1.24027,without discount notes,M1,series
+23,Citrus Re Ltd. (Series 2024-1),9.25,True,5.78495,0.469364,3.46505,without discount notes,M1,series
+24,Citrus Re Ltd. (Series 2024-1),10.5,True,6.39452,0.495934,4.10548,without discount notes,M1,series
+25,Alamo Re Ltd. (Series 2024-1),6,True,6.32096,-0.0521123,-0.320964,without discount notes,M1,series
+26,Alamo Re Ltd. (Series 2024-1),7.75,True,7.73952,0.0013538,0.0104849,without discount notes,M1,series
+27,Alamo Re Ltd. (Series 2024-1),11.25,True,10.7158,0.0486472,0.534183,without discount notes,M1,series
+28,Everglades Re II Ltd. (Series 2024-1),10.5,True,5.54403,0.638654,4.95597,without discount notes,M1,series
+29,Everglades Re II Ltd. (Series 2024-1),11.5,True,6.32139,0.598408,5.17861,without discount notes,M1,series
+30,Everglades Re II Ltd. (Series 2024-1),12.75,True,7.3925,0.545066,5.3575,without discount notes,M1,series
+31,Nature Coast Re Ltd. (Series 2025-1),9.75,True,9.99432,-0.0247494,-0.244318,without discount notes,M1,series
+32,Gateway Re Ltd. (Series 2025-1),10.5,True,10.4825,0.00166887,0.0175085,without discount notes,M1,series
+33,Gateway Re Ltd. (Series 2025-1),4.25,True,5.241,-0.209594,-0.991004,without discount notes,M1,series
+34,Gateway Re Ltd. (Series 2025-1),9.5,True,5.96361,0.465616,3.53639,without discount notes,M1,series
+35,Integrity Re III Ltd. (Series 2025-1),8,True,6.60898,0.191012,1.39102,without discount notes,M1,series
+36,Integrity Re III Ltd. (Series 2025-1),9.75,True,7.3995,0.275854,2.3505,without discount notes,M1,series
+37,Integrity Re III Ltd. (Series 2025-1),12.25,True,8.27389,0.392421,3.97611,without discount notes,M1,series
+38,Integrity Re III Ltd. (Series 2025-1),25.5,True,10.8242,0.856894,14.6758,without discount notes,M1,series
+39,Cape Lookout Re Ltd. (Series 2025-1),6.9,True,8.48818,-0.207153,-1.58818,without discount notes,M1,series
+40,Citrus Re Ltd. (Series 2025-1),7.75,True,6.75532,0.137363,0.994681,without discount notes,M1,series
+41,Citrus Re Ltd. (Series 2025-1),4.5,True,6.09002,-0.302574,-1.59002,without discount notes,M1,series
+42,First Coast Re IV Ltd. (Series 2025-1),6.5,True,5.9591,0.0868825,0.540899,without discount notes,M1,series
+43,First Coast Re IV Ltd. (Series 2025-1),7.5,True,8.4845,-0.123338,-0.984498,without discount notes,M1,series
+44,Bayou Re Ltd. (Series 2025-1),7,True,7.05217,-0.00742575,-0.0521737,without discount notes,M1,series
+45,Palm Re Ltd. (Series 2025-1),7.75,True,7.33106,0.0555727,0.41894,without discount notes,M1,series
+46,Everglades Re II Ltd. (Series 2025-1),8.75,True,6.5712,0.286357,2.1788,without discount notes,M1,series
+47,Everglades Re II Ltd. (Series 2025-1),9.75,True,7.38308,0.278076,2.36692,without discount notes,M1,series
+48,Everglades Re II Ltd. (Series 2025-1),11.25,True,8.30775,0.30318,2.94225,without discount notes,M1,series
+49,Everglades Re II Ltd. (Series 2025-1),13,True,9.28403,0.336653,3.71597,without discount notes,M1,series
+50,Purple Re Ltd. (Series 2025-1),7.25,True,5.00456,0.370652,2.24544,without discount notes,M1,series
+51,Purple Re Ltd. (Series 2025-1),7.75,True,5.63938,0.317918,2.11062,without discount notes,M1,series
+0,Heritage Property and Casualty Insurance Company,6,True,10.7542,-0.583536,-4.7542,without discount notes,M1,sponsor
+1,Allstate,3,True,4.79331,-0.468609,-1.79331,without discount notes,M1,sponsor
+2,Texas Windstorm Insurance Association,3.75,True,7.56045,-0.701175,-3.81045,without discount notes,M1,sponsor
+3,Citizens Property Insurance Corporation,5,True,7.22975,-0.368767,-2.22975,without discount notes,M1,sponsor
+4,Texas Windstorm Insurance Association,3.25,True,7.38775,-0.821168,-4.13775,without discount notes,M1,sponsor
+5,Transatlantic Reinsurance Company,4.5,True,6.86732,-0.422697,-2.36732,without discount notes,M1,sponsor
+6,Citizens Property Insurance Corporation,4.75,True,7.17266,-0.412131,-2.42266,without discount notes,M1,sponsor
+7,Travelers,2.75,True,5.87619,-0.759308,-3.12619,without discount notes,M1,sponsor
+8,North Carolina Insurance Underwriting Association,4.25,True,6.98739,-0.497189,-2.73739,without discount notes,M1,sponsor
+9,Texas Windstorm Insurance Association,4.5,True,7.81555,-0.552038,-3.31555,without discount notes,M1,sponsor
+10,American Integrity Insurance Group,4.75,True,5.71949,-0.185735,-0.969488,without discount notes,M1,sponsor
+11,Citizens Property Insurance Corporation,6.25,True,5.04054,0.215069,1.20946,without discount notes,M1,sponsor
+12,Texas Windstorm Insurance Association,5.75,True,7.75926,-0.299687,-2.00926,without discount notes,M1,sponsor
+13,Texas Windstorm Insurance Association,4,True,7.70274,-0.655282,-3.70274,without discount notes,M1,sponsor
+14,Citizens Property Insurance Corporation,5.75,True,4.65471,0.21132,1.09529,without discount notes,M1,sponsor
+15,Citizens Property Insurance Corporation,6.75,True,6.41725,0.0505527,0.332749,without discount notes,M1,sponsor
+16,Citizens Property Insurance Corporation,5.75,True,4.42518,0.26189,1.32482,without discount notes,M1,sponsor
+17,North Carolina Insurance Underwriting Association,5,True,6.78874,-0.305827,-1.78874,without discount notes,M1,sponsor
+18,Citizens Property Insurance Corporation,7.75,True,3.74818,0.726423,4.00182,without discount notes,M1,sponsor
+19,Citizens Property Insurance Corporation,11,True,6.79811,0.481251,4.20189,without discount notes,M1,sponsor
+20,Texas Windstorm Insurance Association,8.5,True,8.5016,-0.000188638,-0.00160357,without discount notes,M1,sponsor
+21,North Carolina Insurance Underwriting Association,6.5,True,6.29256,0.0324342,0.20744,without discount notes,M1,sponsor
+22,North Carolina Insurance Underwriting Association,8,True,9.44067,-0.165586,-1.44067,without discount notes,M1,sponsor
+23,Heritage Property and Casualty Insurance Company,9.25,True,5.7915,0.468232,3.4585,without discount notes,M1,sponsor
+24,Heritage Property and Casualty Insurance Company,10.5,True,6.44722,0.487726,4.05278,without discount notes,M1,sponsor
+25,Texas Windstorm Insurance Association,6,True,6.70398,-0.110943,-0.703984,without discount notes,M1,sponsor
+26,Texas Windstorm Insurance Association,7.75,True,8.25822,-0.0635165,-0.508222,without discount notes,M1,sponsor
+27,Texas Windstorm Insurance Association,11.25,True,11.5455,-0.0259298,-0.295525,without discount notes,M1,sponsor
+28,Citizens Property Insurance Corporation,10.5,True,5.10397,0.721357,5.39603,without discount notes,M1,sponsor
+29,Citizens Property Insurance Corporation,11.5,True,5.93894,0.660817,5.56106,without discount notes,M1,sponsor
+30,Citizens Property Insurance Corporation,12.75,True,7.11542,0.583267,5.63458,without discount notes,M1,sponsor
+31,SafePoint Insurance Company,9.75,True,9.99432,-0.0247494,-0.244318,without discount notes,M1,sponsor
+32,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,10.5,True,10.4825,0.00166887,0.0175085,without discount notes,M1,sponsor
+33,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,4.25,True,5.241,-0.209594,-0.991004,without discount notes,M1,sponsor
+34,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,9.5,True,5.96361,0.465616,3.53639,without discount notes,M1,sponsor
+35,American Integrity Insurance Group,8,True,6.63767,0.18668,1.36233,without discount notes,M1,sponsor
+36,American Integrity Insurance Group,9.75,True,7.40799,0.274709,2.34201,without discount notes,M1,sponsor
+37,American Integrity Insurance Group,12.25,True,8.25733,0.394425,3.99267,without discount notes,M1,sponsor
+38,American Integrity Insurance Group,25.5,True,10.721,0.866475,14.779,without discount notes,M1,sponsor
+39,North Carolina Insurance Underwriting Association,6.9,True,8.65715,-0.226864,-1.75715,without discount notes,M1,sponsor
+40,Heritage Property and Casualty Insurance Company,7.75,True,6.65977,0.151608,1.09023,without discount notes,M1,sponsor
+41,Heritage Property and Casualty Insurance Company,4.5,True,5.91865,-0.27403,-1.41865,without discount notes,M1,sponsor
+42,Security First Insurance Company,6.5,True,5.9591,0.0868825,0.540899,without discount notes,M1,sponsor
+43,Security First Insurance Company,7.5,True,8.4845,-0.123338,-0.984498,without discount notes,M1,sponsor
+44,Louisiana Citizens Property Insurance Corporation,7,True,7.05217,-0.00742575,-0.0521737,without discount notes,M1,sponsor
+45,Florida Peninsula Insurance Company,7.75,True,7.33106,0.0555727,0.41894,without discount notes,M1,sponsor
+46,Citizens Property Insurance Corporation,8.75,True,6.08962,0.362469,2.66038,without discount notes,M1,sponsor
+47,Citizens Property Insurance Corporation,9.75,True,7.08675,0.31904,2.66325,without discount notes,M1,sponsor
+48,Citizens Property Insurance Corporation,11.25,True,8.26333,0.308541,2.98667,without discount notes,M1,sponsor
+49,Citizens Property Insurance Corporation,13,True,9.54921,0.308491,3.45079,without discount notes,M1,sponsor
+50,Slide Insurance Company,7.25,True,5.00456,0.370652,2.24544,without discount notes,M1,sponsor
+51,Slide Insurance Company,7.75,True,5.63938,0.317918,2.11062,without discount notes,M1,sponsor
+0,Citrus Re Ltd. (Series 2017-1),6,True,5.65926,0.0584657,0.340737,without discount notes,M2,series
+1,Sanders Re Ltd. (Series 2017-1),3,True,3.00864,-0.00287557,-0.00863912,without discount notes,M2,series
+2,Alamo Re Ltd. (Series 2017-1),3.75,True,4.45674,-0.172663,-0.706745,without discount notes,M2,series
+3,Everglades Re II Ltd. (Series 2017-1),5,True,4.4257,0.122009,0.574299,without discount notes,M2,series
+4,Alamo Re Ltd. (Series 2018-1),3.25,True,4.01009,-0.210159,-0.760092,without discount notes,M2,series
+5,Bowline Re Ltd. (Series 2018-1),4.5,True,3.5229,0.244792,0.977097,without discount notes,M2,series
+6,Everglades Re II Ltd. (Series 2018-1),4.75,True,3.92337,0.191195,0.826634,without discount notes,M2,series
+7,Long Point Re III Ltd. (Series 2018-1),2.75,True,3.45365,-0.227832,-0.703653,without discount notes,M2,series
+8,Cape Lookout Re Ltd. (Series 2019-1),4.25,True,4.9085,-0.14405,-0.658501,without discount notes,M2,series
+9,Alamo Re Ltd. (Series 2019-1),4.5,True,5.20162,-0.144893,-0.70162,without discount notes,M2,series
+10,Integrity Re Ltd. (Series 2019-1),4.75,True,3.54346,0.293042,1.20654,without discount notes,M2,series
+11,Everglades Re II Ltd. (Series 2020-2),6.25,True,4.72448,0.279824,1.52552,without discount notes,M2,series
+12,Alamo Re II Pte. Ltd. (Series 2020-1),5.75,True,7.60666,-0.279824,-1.85666,without discount notes,M2,series
+13,Alamo Re Ltd. (Series 2021-1),4,True,7.33799,-0.606771,-3.33799,without discount notes,M2,series
+14,Everglades Re II Ltd. (Series 2021-1),5.75,True,4.3243,0.284949,1.4257,without discount notes,M2,series
+15,Everglades Re II Ltd. (Series 2021-1),6.75,True,5.35501,0.231509,1.39499,without discount notes,M2,series
+16,Everglades Re II Ltd. (Series 2021-2),5.75,True,4.44835,0.256667,1.30165,without discount notes,M2,series
+17,Cape Lookout Re Ltd. (Series 2022-1),5,True,10.9195,-0.781108,-5.91946,without discount notes,M2,series
+18,Everglades Re II Ltd. (Series 2022-1),7.75,True,3.54871,0.781108,4.20129,without discount notes,M2,series
+19,Lightning Re Ltd. (Series 2023-1),11,True,7.70738,0.355717,3.29262,without discount notes,M2,series
+20,Alamo Re Ltd. (Series 2023-1),8.5,True,9.69891,-0.131947,-1.19891,without discount notes,M2,series
+21,Cape Lookout Re Ltd. (Series 2023-1),6.5,True,8.16363,-0.227887,-1.66363,without discount notes,M2,series
+22,Cape Lookout Re Ltd. (Series 2024-1),8,True,12.1715,-0.419656,-4.1715,without discount notes,M2,series
+23,Citrus Re Ltd. (Series 2024-1),9.25,True,7.69304,0.184307,1.55696,without discount notes,M2,series
+24,Citrus Re Ltd. (Series 2024-1),10.5,True,8.33027,0.231479,2.16973,without discount notes,M2,series
+25,Alamo Re Ltd. (Series 2024-1),6,True,9.62175,-0.472267,-3.62175,without discount notes,M2,series
+26,Alamo Re Ltd. (Series 2024-1),7.75,True,11.4244,-0.388055,-3.67436,without discount notes,M2,series
+27,Alamo Re Ltd. (Series 2024-1),11.25,True,15.0551,-0.291351,-3.80514,without discount notes,M2,series
+28,Everglades Re II Ltd. (Series 2024-1),10.5,True,6.84738,0.427509,3.65262,without discount notes,M2,series
+29,Everglades Re II Ltd. (Series 2024-1),11.5,True,7.62139,0.411388,3.87861,without discount notes,M2,series
+30,Everglades Re II Ltd. (Series 2024-1),12.75,True,8.65992,0.386825,4.09008,without discount notes,M2,series
+31,Nature Coast Re Ltd. (Series 2025-1),9.75,True,10.9466,-0.115759,-1.19657,without discount notes,M2,series
+32,Gateway Re Ltd. (Series 2025-1),10.5,True,11.3167,-0.0749084,-0.816747,without discount notes,M2,series
+33,Gateway Re Ltd. (Series 2025-1),4.25,True,6.65835,-0.448953,-2.40835,without discount notes,M2,series
+34,Gateway Re Ltd. (Series 2025-1),9.5,True,7.35003,0.256588,2.14997,without discount notes,M2,series
+35,Integrity Re III Ltd. (Series 2025-1),8,True,7.62499,0.048011,0.375014,without discount notes,M2,series
+36,Integrity Re III Ltd. (Series 2025-1),9.75,True,8.30897,0.159932,1.44103,without discount notes,M2,series
+37,Integrity Re III Ltd. (Series 2025-1),12.25,True,9.04541,0.303268,3.20459,without discount notes,M2,series
+38,Integrity Re III Ltd. (Series 2025-1),25.5,True,11.0955,0.832135,14.4045,without discount notes,M2,series
+39,Cape Lookout Re Ltd. (Series 2025-1),6.9,True,9.64016,-0.334416,-2.74016,without discount notes,M2,series
+40,Citrus Re Ltd. (Series 2025-1),7.75,True,8.16216,-0.0518156,-0.412157,without discount notes,M2,series
+41,Citrus Re Ltd. (Series 2025-1),4.5,True,7.5418,-0.516383,-3.0418,without discount notes,M2,series
+42,First Coast Re IV Ltd. (Series 2025-1),6.5,True,7.29729,-0.115701,-0.797292,without discount notes,M2,series
+43,First Coast Re IV Ltd. (Series 2025-1),7.5,True,9.65995,-0.253085,-2.15995,without discount notes,M2,series
+44,Bayou Re Ltd. (Series 2025-1),7,True,8.26823,-0.166511,-1.26823,without discount notes,M2,series
+45,Palm Re Ltd. (Series 2025-1),7.75,True,8.50646,-0.0931334,-0.756463,without discount notes,M2,series
+46,Everglades Re II Ltd. (Series 2025-1),8.75,True,7.63539,0.13626,1.11461,without discount notes,M2,series
+47,Everglades Re II Ltd. (Series 2025-1),9.75,True,8.40682,0.148224,1.34318,without discount notes,M2,series
+48,Everglades Re II Ltd. (Series 2025-1),11.25,True,9.26771,0.193832,1.98229,without discount notes,M2,series
+49,Everglades Re II Ltd. (Series 2025-1),13,True,10.1588,0.246614,2.84125,without discount notes,M2,series
+50,Purple Re Ltd. (Series 2025-1),7.25,True,6.22182,0.152939,1.02818,without discount notes,M2,series
+51,Purple Re Ltd. (Series 2025-1),7.75,True,6.83713,0.125325,0.91287,without discount notes,M2,series
+0,Heritage Property and Casualty Insurance Company,6,True,5.5767,0.0731626,0.423302,without discount notes,M2,sponsor
+1,Allstate,3,True,3.00864,-0.00287557,-0.00863912,without discount notes,M2,sponsor
+2,Texas Windstorm Insurance Association,3.75,True,4.45282,-0.171781,-0.702818,without discount notes,M2,sponsor
+3,Citizens Property Insurance Corporation,5,True,4.5031,0.104672,0.496903,without discount notes,M2,sponsor
+4,Texas Windstorm Insurance Association,3.25,True,4.02935,-0.21495,-0.779351,without discount notes,M2,sponsor
+5,Transatlantic Reinsurance Company,4.5,True,3.5229,0.244792,0.977097,without discount notes,M2,sponsor
+6,Citizens Property Insurance Corporation,4.75,True,4.04116,0.161612,0.708836,without discount notes,M2,sponsor
+7,Travelers,2.75,True,3.45365,-0.227832,-0.703653,without discount notes,M2,sponsor
+8,North Carolina Insurance Underwriting Association,4.25,True,4.95446,-0.153369,-0.704459,without discount notes,M2,sponsor
+9,Texas Windstorm Insurance Association,4.5,True,5.31542,-0.166535,-0.815421,without discount notes,M2,sponsor
+10,American Integrity Insurance Group,4.75,True,3.76908,0.231315,0.980924,without discount notes,M2,sponsor
+11,Citizens Property Insurance Corporation,6.25,True,4.56131,0.314972,1.68869,without discount notes,M2,sponsor
+12,Texas Windstorm Insurance Association,5.75,True,7.81489,-0.306832,-2.06489,without discount notes,M2,sponsor
+13,Texas Windstorm Insurance Association,4,True,7.47304,-0.625008,-3.47304,without discount notes,M2,sponsor
+14,Citizens Property Insurance Corporation,5.75,True,2.99863,0.651045,2.75137,without discount notes,M2,sponsor
+15,Citizens Property Insurance Corporation,6.75,True,3.87333,0.555428,2.87667,without discount notes,M2,sponsor
+16,Citizens Property Insurance Corporation,5.75,True,2.88016,0.691354,2.86984,without discount notes,M2,sponsor
+17,North Carolina Insurance Underwriting Association,5,True,11.1752,-0.80426,-6.17521,without discount notes,M2,sponsor
+18,Citizens Property Insurance Corporation,7.75,True,3.42294,0.817193,4.32706,without discount notes,M2,sponsor
+19,Citizens Property Insurance Corporation,11,True,7.76591,0.348151,3.23409,without discount notes,M2,sponsor
+20,Texas Windstorm Insurance Association,8.5,True,9.89976,-0.152444,-1.39976,without discount notes,M2,sponsor
+21,North Carolina Insurance Underwriting Association,6.5,True,7.91562,-0.197036,-1.41562,without discount notes,M2,sponsor
+22,North Carolina Insurance Underwriting Association,8,True,12.4461,-0.441963,-4.44607,without discount notes,M2,sponsor
+23,Heritage Property and Casualty Insurance Company,9.25,True,7.81785,0.168214,1.43215,without discount notes,M2,sponsor
+24,Heritage Property and Casualty Insurance Company,10.5,True,8.41124,0.221806,2.08876,without discount notes,M2,sponsor
+25,Texas Windstorm Insurance Association,6,True,9.54951,-0.46473,-3.54951,without discount notes,M2,sponsor
+26,Texas Windstorm Insurance Association,7.75,True,11.5551,-0.399433,-3.80509,without discount notes,M2,sponsor
+27,Texas Windstorm Insurance Association,11.25,True,15.6974,-0.333125,-4.44738,without discount notes,M2,sponsor
+28,Citizens Property Insurance Corporation,10.5,True,6.65027,0.456718,3.84973,without discount notes,M2,sponsor
+29,Citizens Property Insurance Corporation,11.5,True,7.50394,0.426919,3.99606,without discount notes,M2,sponsor
+30,Citizens Property Insurance Corporation,12.75,True,8.66674,0.386038,4.08326,without discount notes,M2,sponsor
+31,SafePoint Insurance Company,9.75,True,10.9466,-0.115759,-1.19657,without discount notes,M2,sponsor
+32,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,10.5,True,11.3167,-0.0749084,-0.816747,without discount notes,M2,sponsor
+33,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,4.25,True,6.65835,-0.448953,-2.40835,without discount notes,M2,sponsor
+34,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,9.5,True,7.35003,0.256588,2.14997,without discount notes,M2,sponsor
+35,American Integrity Insurance Group,8,True,7.61424,0.0494214,0.38576,without discount notes,M2,sponsor
+36,American Integrity Insurance Group,9.75,True,8.32502,0.158001,1.42498,without discount notes,M2,sponsor
+37,American Integrity Insurance Group,12.25,True,9.09288,0.298034,3.15712,without discount notes,M2,sponsor
+38,American Integrity Insurance Group,25.5,True,11.2427,0.818957,14.2573,without discount notes,M2,sponsor
+39,North Carolina Insurance Underwriting Association,6.9,True,9.77148,-0.347947,-2.87148,without discount notes,M2,sponsor
+40,Heritage Property and Casualty Insurance Company,7.75,True,8.14818,-0.0501013,-0.398176,without discount notes,M2,sponsor
+41,Heritage Property and Casualty Insurance Company,4.5,True,7.51817,-0.513245,-3.01817,without discount notes,M2,sponsor
+42,Security First Insurance Company,6.5,True,7.29729,-0.115701,-0.797292,without discount notes,M2,sponsor
+43,Security First Insurance Company,7.5,True,9.65995,-0.253085,-2.15995,without discount notes,M2,sponsor
+44,Louisiana Citizens Property Insurance Corporation,7,True,8.26823,-0.166511,-1.26823,without discount notes,M2,sponsor
+45,Florida Peninsula Insurance Company,7.75,True,8.50646,-0.0931334,-0.756463,without discount notes,M2,sponsor
+46,Citizens Property Insurance Corporation,8.75,True,7.49167,0.155262,1.25833,without discount notes,M2,sponsor
+47,Citizens Property Insurance Corporation,9.75,True,8.45423,0.1426,1.29577,without discount notes,M2,sponsor
+48,Citizens Property Insurance Corporation,11.25,True,9.55537,0.163265,1.69463,without discount notes,M2,sponsor
+49,Citizens Property Insurance Corporation,13,True,10.723,0.19256,2.27701,without discount notes,M2,sponsor
+50,Slide Insurance Company,7.25,True,6.22182,0.152939,1.02818,without discount notes,M2,sponsor
+51,Slide Insurance Company,7.75,True,6.83713,0.125325,0.91287,without discount notes,M2,sponsor
+0,Citrus Re Ltd. (Series 2017-1),6,True,6.4719,-0.0757097,-0.471896,without discount notes,M3,series
+1,Sanders Re Ltd. (Series 2017-1),3,True,2.80957,0.0655795,0.190426,without discount notes,M3,series
+2,Alamo Re Ltd. (Series 2017-1),3.75,True,4.24193,-0.123263,-0.491931,without discount notes,M3,series
+3,Everglades Re II Ltd. (Series 2017-1),5,True,4.38557,0.131119,0.614433,without discount notes,M3,series
+4,Alamo Re Ltd. (Series 2018-1),3.25,True,3.77437,-0.149578,-0.524369,without discount notes,M3,series
+5,Bowline Re Ltd. (Series 2018-1),4.5,True,4.02679,0.111107,0.473208,without discount notes,M3,series
+6,Everglades Re II Ltd. (Series 2018-1),4.75,True,3.88375,0.201343,0.866247,without discount notes,M3,series
+7,Long Point Re III Ltd. (Series 2018-1),2.75,True,3.12582,-0.128096,-0.375821,without discount notes,M3,series
+8,Cape Lookout Re Ltd. (Series 2019-1),4.25,True,4.23261,0.00409982,0.0173885,without discount notes,M3,series
+9,Alamo Re Ltd. (Series 2019-1),4.5,True,5.08124,-0.121478,-0.581239,without discount notes,M3,series
+10,Integrity Re Ltd. (Series 2019-1),4.75,True,4.17055,0.130097,0.579452,without discount notes,M3,series
+11,Everglades Re II Ltd. (Series 2020-2),6.25,True,5.31547,0.16196,0.934528,without discount notes,M3,series
+12,Alamo Re II Pte. Ltd. (Series 2020-1),5.75,True,6.76092,-0.16196,-1.01092,without discount notes,M3,series
+13,Alamo Re Ltd. (Series 2021-1),4,True,7.06854,-0.569359,-3.06854,without discount notes,M3,series
+14,Everglades Re II Ltd. (Series 2021-1),5.75,True,4.36722,0.275073,1.38278,without discount notes,M3,series
+15,Everglades Re II Ltd. (Series 2021-1),6.75,True,5.58155,0.190077,1.16845,without discount notes,M3,series
+16,Everglades Re II Ltd. (Series 2021-2),5.75,True,4.46824,0.252205,1.28176,without discount notes,M3,series
+17,Cape Lookout Re Ltd. (Series 2022-1),5,True,10.5174,-0.743597,-5.51744,without discount notes,M3,series
+18,Everglades Re II Ltd. (Series 2022-1),7.75,True,3.68436,0.743597,4.06564,without discount notes,M3,series
+19,Lightning Re Ltd. (Series 2023-1),11,True,7.85173,0.337161,3.14827,without discount notes,M3,series
+20,Alamo Re Ltd. (Series 2023-1),8.5,True,9.00402,-0.0576047,-0.504018,without discount notes,M3,series
+21,Cape Lookout Re Ltd. (Series 2023-1),6.5,True,7.97639,-0.204684,-1.47639,without discount notes,M3,series
+22,Cape Lookout Re Ltd. (Series 2024-1),8,True,11.5482,-0.367089,-3.54822,without discount notes,M3,series
+23,Citrus Re Ltd. (Series 2024-1),9.25,True,9.48845,-0.0254517,-0.23845,without discount notes,M3,series
+24,Citrus Re Ltd. (Series 2024-1),10.5,True,10.2752,0.0216389,0.224767,without discount notes,M3,series
+25,Alamo Re Ltd. (Series 2024-1),6,True,8.95443,-0.400388,-2.95443,without discount notes,M3,series
+26,Alamo Re Ltd. (Series 2024-1),7.75,True,10.6547,-0.318309,-2.90471,without discount notes,M3,series
+27,Alamo Re Ltd. (Series 2024-1),11.25,True,14.3229,-0.241494,-3.07293,without discount notes,M3,series
+28,Everglades Re II Ltd. (Series 2024-1),10.5,True,6.1569,0.533802,4.3431,without discount notes,M3,series
+29,Everglades Re II Ltd. (Series 2024-1),11.5,True,6.95348,0.503105,4.54652,without discount notes,M3,series
+30,Everglades Re II Ltd. (Series 2024-1),12.75,True,8.63761,0.389406,4.11239,without discount notes,M3,series
+31,Nature Coast Re Ltd. (Series 2025-1),9.75,True,14.3823,-0.388732,-4.63231,without discount notes,M3,series
+32,Gateway Re Ltd. (Series 2025-1),10.5,True,12.4086,-0.167018,-1.90864,without discount notes,M3,series
+33,Gateway Re Ltd. (Series 2025-1),4.25,True,6.8249,-0.473658,-2.5749,without discount notes,M3,series
+34,Gateway Re Ltd. (Series 2025-1),9.5,True,7.32174,0.260444,2.17826,without discount notes,M3,series
+35,Integrity Re III Ltd. (Series 2025-1),8,True,8.24664,-0.0303644,-0.246641,without discount notes,M3,series
+36,Integrity Re III Ltd. (Series 2025-1),9.75,True,9.00554,0.0794274,0.74446,without discount notes,M3,series
+37,Integrity Re III Ltd. (Series 2025-1),12.25,True,9.05667,0.302024,3.19333,without discount notes,M3,series
+38,Integrity Re III Ltd. (Series 2025-1),25.5,True,11.5534,0.7917,13.9466,without discount notes,M3,series
+39,Cape Lookout Re Ltd. (Series 2025-1),6.9,True,8.50451,-0.209076,-1.60451,without discount notes,M3,series
+40,Citrus Re Ltd. (Series 2025-1),7.75,True,8.55847,-0.0992287,-0.808471,without discount notes,M3,series
+41,Citrus Re Ltd. (Series 2025-1),4.5,True,7.8838,-0.560733,-3.3838,without discount notes,M3,series
+42,First Coast Re IV Ltd. (Series 2025-1),6.5,True,7.58286,-0.154088,-1.08286,without discount notes,M3,series
+43,First Coast Re IV Ltd. (Series 2025-1),7.5,True,9.72216,-0.259505,-2.22216,without discount notes,M3,series
+44,Bayou Re Ltd. (Series 2025-1),7,True,7.7451,-0.10115,-0.745098,without discount notes,M3,series
+45,Palm Re Ltd. (Series 2025-1),7.75,True,8.06327,-0.0396262,-0.313269,without discount notes,M3,series
+46,Everglades Re II Ltd. (Series 2025-1),8.75,True,6.26414,0.334213,2.48586,without discount notes,M3,series
+47,Everglades Re II Ltd. (Series 2025-1),9.75,True,6.87488,0.349393,2.87512,without discount notes,M3,series
+48,Everglades Re II Ltd. (Series 2025-1),11.25,True,7.89188,0.354533,3.35812,without discount notes,M3,series
+49,Everglades Re II Ltd. (Series 2025-1),13,True,9.38421,0.325921,3.61579,without discount notes,M3,series
+50,Purple Re Ltd. (Series 2025-1),7.25,True,6.2817,0.143361,0.9683,without discount notes,M3,series
+51,Purple Re Ltd. (Series 2025-1),7.75,True,6.9228,0.112873,0.827201,without discount notes,M3,series
+0,Heritage Property and Casualty Insurance Company,6,True,6.4114,-0.0663181,-0.411399,without discount notes,M3,sponsor
+1,Allstate,3,True,2.80957,0.0655795,0.190426,without discount notes,M3,sponsor
+2,Texas Windstorm Insurance Association,3.75,True,4.33516,-0.145004,-0.585164,without discount notes,M3,sponsor
+3,Citizens Property Insurance Corporation,5,True,4.44573,0.117493,0.554267,without discount notes,M3,sponsor
+4,Texas Windstorm Insurance Association,3.25,True,3.86822,-0.174139,-0.61822,without discount notes,M3,sponsor
+5,Transatlantic Reinsurance Company,4.5,True,4.02679,0.111107,0.473208,without discount notes,M3,sponsor
+6,Citizens Property Insurance Corporation,4.75,True,4.29374,0.100987,0.456262,without discount notes,M3,sponsor
+7,Travelers,2.75,True,3.12582,-0.128096,-0.375821,without discount notes,M3,sponsor
+8,North Carolina Insurance Underwriting Association,4.25,True,4.45715,-0.0475917,-0.207155,without discount notes,M3,sponsor
+9,Texas Windstorm Insurance Association,4.5,True,5.23318,-0.150941,-0.733177,without discount notes,M3,sponsor
+10,American Integrity Insurance Group,4.75,True,4.20482,0.121914,0.545183,without discount notes,M3,sponsor
+11,Citizens Property Insurance Corporation,6.25,True,5.56649,0.115816,0.683506,without discount notes,M3,sponsor
+12,Texas Windstorm Insurance Association,5.75,True,7.29445,-0.237914,-1.54445,without discount notes,M3,sponsor
+13,Texas Windstorm Insurance Association,4,True,7.2892,-0.6001,-3.2892,without discount notes,M3,sponsor
+14,Citizens Property Insurance Corporation,5.75,True,3.11533,0.612865,2.63467,without discount notes,M3,sponsor
+15,Citizens Property Insurance Corporation,6.75,True,4.27157,0.457561,2.47843,without discount notes,M3,sponsor
+16,Citizens Property Insurance Corporation,5.75,True,3.02052,0.643772,2.72948,without discount notes,M3,sponsor
+17,North Carolina Insurance Underwriting Association,5,True,10.82,-0.771959,-5.82001,without discount notes,M3,sponsor
+18,Citizens Property Insurance Corporation,7.75,True,3.61839,0.761664,4.13161,without discount notes,M3,sponsor
+19,Citizens Property Insurance Corporation,11,True,7.95321,0.324319,3.04679,without discount notes,M3,sponsor
+20,Texas Windstorm Insurance Association,8.5,True,9.39932,-0.100571,-0.899321,without discount notes,M3,sponsor
+21,North Carolina Insurance Underwriting Association,6.5,True,7.76418,-0.177719,-1.26418,without discount notes,M3,sponsor
+22,North Carolina Insurance Underwriting Association,8,True,11.9278,-0.399428,-3.92778,without discount notes,M3,sponsor
+23,Heritage Property and Casualty Insurance Company,9.25,True,10.0648,-0.0844238,-0.814832,without discount notes,M3,sponsor
+24,Heritage Property and Casualty Insurance Company,10.5,True,10.8524,-0.0330071,-0.352357,without discount notes,M3,sponsor
+25,Texas Windstorm Insurance Association,6,True,9.07547,-0.413816,-3.07547,without discount notes,M3,sponsor
+26,Texas Windstorm Insurance Association,7.75,True,10.9773,-0.348138,-3.22731,without discount notes,M3,sponsor
+27,Texas Windstorm Insurance Association,11.25,True,15.0808,-0.293054,-3.83079,without discount notes,M3,sponsor
+28,Citizens Property Insurance Corporation,10.5,True,5.78355,0.596357,4.71645,without discount notes,M3,sponsor
+29,Citizens Property Insurance Corporation,11.5,True,6.64891,0.547894,4.85109,without discount notes,M3,sponsor
+30,Citizens Property Insurance Corporation,12.75,True,8.63676,0.389504,4.11324,without discount notes,M3,sponsor
+31,SafePoint Insurance Company,9.75,True,14.3823,-0.388732,-4.63231,without discount notes,M3,sponsor
+32,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,10.5,True,12.4086,-0.167018,-1.90864,without discount notes,M3,sponsor
+33,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,4.25,True,6.8249,-0.473658,-2.5749,without discount notes,M3,sponsor
+34,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,9.5,True,7.32174,0.260444,2.17826,without discount notes,M3,sponsor
+35,American Integrity Insurance Group,8,True,8.16361,-0.0202449,-0.16361,without discount notes,M3,sponsor
+36,American Integrity Insurance Group,9.75,True,8.92304,0.0886302,0.826956,without discount notes,M3,sponsor
+37,American Integrity Insurance Group,12.25,True,9.06119,0.301526,3.18881,without discount notes,M3,sponsor
+38,American Integrity Insurance Group,25.5,True,11.5417,0.792711,13.9583,without discount notes,M3,sponsor
+39,North Carolina Insurance Underwriting Association,6.9,True,8.82865,-0.246481,-1.92865,without discount notes,M3,sponsor
+40,Heritage Property and Casualty Insurance Company,7.75,True,8.60298,-0.104416,-0.852981,without discount notes,M3,sponsor
+41,Heritage Property and Casualty Insurance Company,4.5,True,7.91884,-0.565167,-3.41884,without discount notes,M3,sponsor
+42,Security First Insurance Company,6.5,True,7.58286,-0.154088,-1.08286,without discount notes,M3,sponsor
+43,Security First Insurance Company,7.5,True,9.72216,-0.259505,-2.22216,without discount notes,M3,sponsor
+44,Louisiana Citizens Property Insurance Corporation,7,True,7.7451,-0.10115,-0.745098,without discount notes,M3,sponsor
+45,Florida Peninsula Insurance Company,7.75,True,8.06327,-0.0396262,-0.313269,without discount notes,M3,sponsor
+46,Citizens Property Insurance Corporation,8.75,True,6.03538,0.371415,2.71462,without discount notes,M3,sponsor
+47,Citizens Property Insurance Corporation,9.75,True,6.81092,0.35874,2.93908,without discount notes,M3,sponsor
+48,Citizens Property Insurance Corporation,11.25,True,8.08343,0.330551,3.16657,without discount notes,M3,sponsor
+49,Citizens Property Insurance Corporation,13,True,9.96876,0.265494,3.03124,without discount notes,M3,sponsor
+50,Slide Insurance Company,7.25,True,6.2817,0.143361,0.9683,without discount notes,M3,sponsor
+51,Slide Insurance Company,7.75,True,6.9228,0.112873,0.827201,without discount notes,M3,sponsor
+0,Citrus Re Ltd. (Series 2017-1),6,True,10.6498,-0.573777,-4.64975,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+1,Sanders Re Ltd. (Series 2017-1),3,True,5.24926,-0.559476,-2.24926,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+2,Alamo Re Ltd. (Series 2017-1),3.75,True,7.44147,-0.685312,-3.69147,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+3,Everglades Re II Ltd. (Series 2017-1),5,True,7.98781,-0.468479,-2.98781,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+4,Alamo Re Ltd. (Series 2018-1),3.25,True,7.31118,-0.81075,-4.06118,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+5,Bowline Re Ltd. (Series 2018-1),4.5,True,7.14132,-0.461821,-2.64132,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+6,Everglades Re II Ltd. (Series 2018-1),4.75,True,7.94842,-0.514829,-3.19842,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+7,Long Point Re III Ltd. (Series 2018-1),2.75,True,6.23747,-0.818974,-3.48747,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+8,Cape Lookout Re Ltd. (Series 2019-1),4.25,True,7.17418,-0.52357,-2.92418,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+9,Alamo Re Ltd. (Series 2019-1),4.5,True,7.63825,-0.529091,-3.13825,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+10,Integrity Re Ltd. (Series 2019-1),4.75,True,5.91369,-0.219125,-1.16369,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+11,Everglades Re II Ltd. (Series 2020-2),6.25,True,6.08312,0.0270638,0.16688,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+12,Alamo Re II Pte. Ltd. (Series 2020-1),5.75,True,7.55233,-0.272657,-1.80233,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+13,Everglades Re II Ltd. (Series 2021-1),5.75,True,5.75536,-0.000932364,-0.0053636,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+14,Everglades Re II Ltd. (Series 2021-1),6.75,True,7.2606,-0.07292,-0.5106,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+15,Everglades Re II Ltd. (Series 2021-2),5.75,True,5.52985,0.0390383,0.220145,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+16,Cape Lookout Re Ltd. (Series 2022-1),5,True,6.97564,-0.332986,-1.97564,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+17,Everglades Re II Ltd. (Series 2022-1),7.75,True,4.69785,0.500587,3.05215,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+18,Lightning Re Ltd. (Series 2023-1),11,True,7.50306,0.382584,3.49694,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+19,Cape Lookout Re Ltd. (Series 2023-1),6.5,True,6.49411,0.000906818,0.00589164,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+20,Everglades Re II Ltd. (Series 2023-1),11.375,True,6.99119,0.486767,4.38381,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+21,Everglades Re II Ltd. (Series 2023-2),10.125,True,4.94884,0.715855,5.17616,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+22,Cape Lookout Re Ltd. (Series 2024-1),8,True,9.25972,-0.146232,-1.25972,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+23,Citrus Re Ltd. (Series 2024-1),9.25,True,6.14816,0.40847,3.10184,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+24,Citrus Re Ltd. (Series 2024-1),10.5,True,6.70841,0.448013,3.79159,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+25,Alamo Re Ltd. (Series 2024-1),6,True,6.64081,-0.101474,-0.640808,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+26,Alamo Re Ltd. (Series 2024-1),7.75,True,7.923,-0.0220767,-0.172997,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+27,Alamo Re Ltd. (Series 2024-1),11.25,True,10.5221,0.0668905,0.727902,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+28,Everglades Re II Ltd. (Series 2024-1),10.5,True,5.92396,0.57237,4.57604,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+29,Everglades Re II Ltd. (Series 2024-1),11.5,True,6.63778,0.54957,4.86222,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+30,Everglades Re II Ltd. (Series 2024-1),12.75,True,7.60262,0.517038,5.14738,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+31,Nature Coast Re Ltd. (Series 2025-1),9.75,True,9.90514,-0.0157863,-0.155138,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+32,Gateway Re Ltd. (Series 2025-1),10.5,True,10.356,0.0138092,0.144,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+33,Gateway Re Ltd. (Series 2025-1),6.25,True,7.50756,-0.183328,-1.25756,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+34,Gateway Re Ltd. (Series 2025-1),4.25,True,5.61988,-0.279392,-1.36988,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+35,Gateway Re Ltd. (Series 2025-1),8.25,True,6.29784,0.270007,1.95216,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+36,Gateway Re Ltd. (Series 2025-1),9.5,True,6.29784,0.411085,3.20216,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+37,Integrity Re III Ltd. (Series 2025-1),8,True,6.86453,0.153074,1.13547,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+38,Integrity Re III Ltd. (Series 2025-1),9.75,True,7.53684,0.257464,2.21316,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+39,Integrity Re III Ltd. (Series 2025-1),12.25,True,8.26616,0.393355,3.98384,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+40,Integrity Re III Ltd. (Series 2025-1),25.5,True,10.3229,0.904314,15.1771,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+41,Cape Lookout Re Ltd. (Series 2025-1),6.9,True,8.59855,-0.220072,-1.69855,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+42,Citrus Re Ltd. (Series 2025-1),7.75,True,7.0439,0.0955304,0.706097,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+43,Citrus Re Ltd. (Series 2025-1),4.5,True,6.43448,-0.357594,-1.93448,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+44,First Coast Re IV Ltd. (Series 2025-1),6.5,True,6.30871,0.0298711,0.191291,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+45,First Coast Re IV Ltd. (Series 2025-1),7.5,True,8.59518,-0.136298,-1.09518,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+46,Bayou Re Ltd. (Series 2025-1),7,True,7.30464,-0.0426002,-0.304644,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+47,Palm Re Ltd. (Series 2025-1),7.75,True,7.55574,0.025385,0.194258,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+48,Everglades Re II Ltd. (Series 2025-1),8.75,True,6.8545,0.244148,1.8955,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+49,Everglades Re II Ltd. (Series 2025-1),9.75,True,7.58205,0.251484,2.16795,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+50,Everglades Re II Ltd. (Series 2025-1),11.25,True,8.39775,0.292405,2.85225,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+51,Everglades Re II Ltd. (Series 2025-1),13,True,9.24587,0.340772,3.75413,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+52,Purple Re Ltd. (Series 2025-1),7.25,True,5.4372,0.287737,1.8128,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+53,Purple Re Ltd. (Series 2025-1),7.75,True,6.0289,0.251129,1.7211,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series
+0,Heritage Property and Casualty Insurance Company,6,True,10.6007,-0.569157,-4.60066,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+1,Allstate,3,True,5.24926,-0.559476,-2.24926,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+2,Texas Windstorm Insurance Association,3.75,True,7.7224,-0.722369,-3.9724,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+3,Citizens Property Insurance Corporation,5,True,7.35142,-0.385456,-2.35142,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+4,Texas Windstorm Insurance Association,3.25,True,7.56719,-0.845166,-4.31719,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+5,Transatlantic Reinsurance Company,4.5,True,7.14132,-0.461821,-2.64132,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+6,Citizens Property Insurance Corporation,4.75,True,7.29545,-0.429106,-2.54545,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+7,Travelers,2.75,True,6.23747,-0.818974,-3.48747,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+8,North Carolina Insurance Underwriting Association,4.25,True,7.27743,-0.537859,-3.02743,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+9,Texas Windstorm Insurance Association,4.5,True,7.95088,-0.569205,-3.45088,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+10,American Integrity Insurance Group,4.75,True,6.11132,-0.251998,-1.36132,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+11,Citizens Property Insurance Corporation,6.25,True,5.19243,0.18538,1.05757,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+12,Texas Windstorm Insurance Association,5.75,True,7.90054,-0.317731,-2.15054,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+13,Citizens Property Insurance Corporation,5.75,True,4.80875,0.178762,0.941248,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+14,Citizens Property Insurance Corporation,6.75,True,6.55334,0.0295675,0.196659,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+15,Citizens Property Insurance Corporation,5.75,True,4.57996,0.227509,1.17004,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+16,North Carolina Insurance Underwriting Association,5,True,7.0947,-0.349911,-2.0947,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+17,Citizens Property Insurance Corporation,7.75,True,3.90257,0.686058,3.84743,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+18,Citizens Property Insurance Corporation,11,True,6.92786,0.462344,4.07214,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+19,North Carolina Insurance Underwriting Association,6.5,True,6.6355,-0.0206313,-0.135497,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+20,Citizens Property Insurance Corporation,11.375,True,6.31913,0.587837,5.05587,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+21,Citizens Property Insurance Corporation,10.125,True,4.21209,0.877049,5.91291,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+22,North Carolina Insurance Underwriting Association,8,True,9.48854,-0.170644,-1.48854,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+23,Heritage Property and Casualty Insurance Company,9.25,True,6.17595,0.403961,3.07405,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+24,Heritage Property and Casualty Insurance Company,10.5,True,6.78212,0.437086,3.71788,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+25,Texas Windstorm Insurance Association,6,True,6.94823,-0.146727,-0.948228,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+26,Texas Windstorm Insurance Association,7.75,True,8.34523,-0.0739976,-0.595233,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+27,Texas Windstorm Insurance Association,11.25,True,11.2022,0.0042539,0.0477548,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+28,Citizens Property Insurance Corporation,10.5,True,5.2554,0.692119,5.2446,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+29,Citizens Property Insurance Corporation,11.5,True,6.08184,0.63704,5.41816,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+30,Citizens Property Insurance Corporation,12.75,True,7.23932,0.566004,5.51068,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+31,SafePoint Insurance Company,9.75,True,9.90514,-0.0157863,-0.155138,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+32,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,10.5,True,10.356,0.0138092,0.144,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+33,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,6.25,True,7.50756,-0.183328,-1.25756,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+34,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,4.25,True,5.61988,-0.279392,-1.36988,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+35,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,8.25,True,6.29784,0.270007,1.95216,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+36,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,9.5,True,6.29784,0.411085,3.20216,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+37,American Integrity Insurance Group,8,True,6.90077,0.147808,1.09923,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+38,American Integrity Insurance Group,9.75,True,7.54761,0.256036,2.20239,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+39,American Integrity Insurance Group,12.25,True,8.24662,0.395722,4.00338,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+40,American Integrity Insurance Group,25.5,True,10.2049,0.915808,15.2951,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+41,North Carolina Insurance Underwriting Association,6.9,True,8.79072,-0.242175,-1.89072,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+42,Heritage Property and Casualty Insurance Company,7.75,True,6.97689,0.105089,0.773108,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+43,Heritage Property and Casualty Insurance Company,4.5,True,6.29414,-0.335541,-1.79414,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+44,Security First Insurance Company,6.5,True,6.30871,0.0298711,0.191291,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+45,Security First Insurance Company,7.5,True,8.59518,-0.136298,-1.09518,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+46,Louisiana Citizens Property Insurance Corporation,7,True,7.30464,-0.0426002,-0.304644,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+47,Florida Peninsula Insurance Company,7.75,True,7.55574,0.025385,0.194258,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+48,Citizens Property Insurance Corporation,8.75,True,6.23051,0.339595,2.51949,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+49,Citizens Property Insurance Corporation,9.75,True,7.2112,0.301631,2.5388,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+50,Citizens Property Insurance Corporation,11.25,True,8.36202,0.296668,2.88798,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+51,Citizens Property Insurance Corporation,13,True,9.61302,0.301831,3.38698,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+52,Slide Insurance Company,7.25,True,5.4372,0.287737,1.8128,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+53,Slide Insurance Company,7.75,True,6.0289,0.251129,1.7211,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor
+0,Citrus Re Ltd. (Series 2017-1),6,True,5.66118,0.0581263,0.338815,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+1,Sanders Re Ltd. (Series 2017-1),3,True,3.00801,-0.00266803,-0.00801476,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+2,Alamo Re Ltd. (Series 2017-1),3.75,True,4.45674,-0.172661,-0.706735,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+3,Everglades Re II Ltd. (Series 2017-1),5,True,4.42591,0.121963,0.574093,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+4,Alamo Re Ltd. (Series 2018-1),3.25,True,4.01012,-0.210167,-0.760122,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+5,Bowline Re Ltd. (Series 2018-1),4.5,True,3.52292,0.244788,0.977083,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+6,Everglades Re II Ltd. (Series 2018-1),4.75,True,3.92383,0.191077,0.826171,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+7,Long Point Re III Ltd. (Series 2018-1),2.75,True,3.45296,-0.22763,-0.702956,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+8,Cape Lookout Re Ltd. (Series 2019-1),4.25,True,4.90857,-0.144063,-0.658566,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+9,Alamo Re Ltd. (Series 2019-1),4.5,True,5.20163,-0.144895,-0.701633,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+10,Integrity Re Ltd. (Series 2019-1),4.75,True,3.54392,0.292912,1.20608,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+11,Everglades Re II Ltd. (Series 2020-2),6.25,True,4.72476,0.279765,1.52524,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+12,Alamo Re II Pte. Ltd. (Series 2020-1),5.75,True,7.60621,-0.279765,-1.85621,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+13,Everglades Re II Ltd. (Series 2021-1),5.75,True,5.94784,-0.0338281,-0.197839,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+14,Everglades Re II Ltd. (Series 2021-1),6.75,True,7.37305,-0.0882896,-0.623055,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+15,Everglades Re II Ltd. (Series 2021-2),5.75,True,5.41244,0.0605002,0.337562,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+16,Cape Lookout Re Ltd. (Series 2022-1),5,True,10.9099,-0.780233,-5.9099,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+17,Everglades Re II Ltd. (Series 2022-1),7.75,True,3.55182,0.780233,4.19818,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+18,Lightning Re Ltd. (Series 2023-1),11,True,10.8881,0.0102256,0.111908,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+19,Cape Lookout Re Ltd. (Series 2023-1),6.5,True,10.777,-0.505608,-4.27696,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+20,Everglades Re II Ltd. (Series 2023-1),11.375,True,9.89031,0.139863,1.48469,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+21,Everglades Re II Ltd. (Series 2023-2),10.125,True,6.9889,0.370684,3.1361,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+22,Cape Lookout Re Ltd. (Series 2024-1),8,True,12.1671,-0.419298,-4.16714,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+23,Citrus Re Ltd. (Series 2024-1),9.25,True,7.6943,0.184143,1.5557,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+24,Citrus Re Ltd. (Series 2024-1),10.5,True,8.33109,0.23138,2.16891,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+25,Alamo Re Ltd. (Series 2024-1),6,True,9.62257,-0.472351,-3.62257,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+26,Alamo Re Ltd. (Series 2024-1),7.75,True,11.4229,-0.387927,-3.6729,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+27,Alamo Re Ltd. (Series 2024-1),11.25,True,15.0481,-0.29088,-3.79805,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+28,Everglades Re II Ltd. (Series 2024-1),10.5,True,6.8503,0.427082,3.6497,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+29,Everglades Re II Ltd. (Series 2024-1),11.5,True,7.62312,0.411162,3.87688,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+30,Everglades Re II Ltd. (Series 2024-1),12.75,True,8.65982,0.386837,4.09018,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+31,Nature Coast Re Ltd. (Series 2025-1),9.75,True,10.8588,-0.107709,-1.1088,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+32,Gateway Re Ltd. (Series 2025-1),10.5,True,11.3663,-0.0792736,-0.866255,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+33,Gateway Re Ltd. (Series 2025-1),6.25,True,8.55597,-0.314048,-2.30597,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+34,Gateway Re Ltd. (Series 2025-1),4.25,True,6.62543,-0.443997,-2.37543,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+35,Gateway Re Ltd. (Series 2025-1),8.25,True,7.3264,0.118729,0.923599,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+36,Gateway Re Ltd. (Series 2025-1),9.5,True,7.3264,0.259807,2.1736,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+37,Integrity Re III Ltd. (Series 2025-1),8,True,7.58555,0.0531958,0.414445,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+38,Integrity Re III Ltd. (Series 2025-1),9.75,True,8.26694,0.165003,1.48306,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+39,Integrity Re III Ltd. (Series 2025-1),12.25,True,9.00068,0.308226,3.24932,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+40,Integrity Re III Ltd. (Series 2025-1),25.5,True,11.0436,0.836823,14.4564,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+41,Cape Lookout Re Ltd. (Series 2025-1),6.9,True,9.55725,-0.325779,-2.65725,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+42,Citrus Re Ltd. (Series 2025-1),7.75,True,8.06635,-0.0400078,-0.316346,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+43,Citrus Re Ltd. (Series 2025-1),4.5,True,7.44815,-0.503888,-2.94815,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+44,First Coast Re IV Ltd. (Series 2025-1),6.5,True,7.22429,-0.105646,-0.724287,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+45,First Coast Re IV Ltd. (Series 2025-1),7.5,True,9.57148,-0.243885,-2.07148,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+46,Bayou Re Ltd. (Series 2025-1),7,True,8.19946,-0.158159,-1.19946,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+47,Palm Re Ltd. (Series 2025-1),7.75,True,8.43934,-0.0852112,-0.689339,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+48,Everglades Re II Ltd. (Series 2025-1),8.75,True,7.59534,0.141519,1.15466,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+49,Everglades Re II Ltd. (Series 2025-1),9.75,True,8.35966,0.15385,1.39034,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+50,Everglades Re II Ltd. (Series 2025-1),11.25,True,9.21228,0.19983,2.03772,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+51,Everglades Re II Ltd. (Series 2025-1),13,True,10.0945,0.252962,2.90553,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+52,Purple Re Ltd. (Series 2025-1),7.25,True,6.18617,0.158686,1.06383,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+53,Purple Re Ltd. (Series 2025-1),7.75,True,6.79725,0.131175,0.952749,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series
+0,Heritage Property and Casualty Insurance Company,6,True,5.59516,0.0698572,0.404838,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+1,Allstate,3,True,3.00801,-0.00266803,-0.00801476,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+2,Texas Windstorm Insurance Association,3.75,True,4.45481,-0.172229,-0.704811,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+3,Citizens Property Insurance Corporation,5,True,4.4918,0.107184,0.508198,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+4,Texas Windstorm Insurance Association,3.25,True,4.01932,-0.212457,-0.769316,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+5,Transatlantic Reinsurance Company,4.5,True,3.52292,0.244788,0.977083,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+6,Citizens Property Insurance Corporation,4.75,True,4.02456,0.165728,0.725438,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+7,Travelers,2.75,True,3.45296,-0.22763,-0.702956,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+8,North Carolina Insurance Underwriting Association,4.25,True,4.95786,-0.154056,-0.707862,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+9,Texas Windstorm Insurance Association,4.5,True,5.25332,-0.154783,-0.75332,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+10,American Integrity Insurance Group,4.75,True,3.76908,0.231314,0.980923,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+11,Citizens Property Insurance Corporation,6.25,True,4.58773,0.309197,1.66227,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+12,Texas Windstorm Insurance Association,5.75,True,7.69375,-0.291208,-1.94375,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+13,Citizens Property Insurance Corporation,5.75,False,,,,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+14,Citizens Property Insurance Corporation,6.75,False,,,,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+15,Citizens Property Insurance Corporation,5.75,False,,,,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+16,North Carolina Insurance Underwriting Association,5,True,11.2159,-0.807892,-6.21588,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+17,Citizens Property Insurance Corporation,7.75,True,3.45544,0.807744,4.29456,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+18,Citizens Property Insurance Corporation,11,True,7.65209,0.362916,3.34791,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+19,North Carolina Insurance Underwriting Association,6.5,True,10.7695,-0.504912,-4.26946,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+20,Citizens Property Insurance Corporation,11.375,True,7.10518,0.470594,4.26982,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+21,Citizens Property Insurance Corporation,10.125,True,5.12318,0.681233,5.00182,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+22,North Carolina Insurance Underwriting Association,8,True,12.4769,-0.44444,-4.47693,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+23,Heritage Property and Casualty Insurance Company,9.25,True,7.80523,0.169829,1.44477,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+24,Heritage Property and Casualty Insurance Company,10.5,True,8.40308,0.222777,2.09692,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+25,Texas Windstorm Insurance Association,6,True,9.60036,-0.470041,-3.60036,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+26,Texas Windstorm Insurance Association,7.75,True,11.4628,-0.391415,-3.71281,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+27,Texas Windstorm Insurance Association,11.25,True,15.242,-0.303687,-3.992,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+28,Citizens Property Insurance Corporation,10.5,True,6.69317,0.450288,3.80683,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+29,Citizens Property Insurance Corporation,11.5,True,7.52964,0.4235,3.97036,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+30,Citizens Property Insurance Corporation,12.75,True,8.66524,0.386211,4.08476,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+31,SafePoint Insurance Company,9.75,True,10.8588,-0.107709,-1.1088,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+32,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,10.5,True,11.3663,-0.0792736,-0.866255,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+33,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,6.25,True,8.55597,-0.314048,-2.30597,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+34,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,4.25,True,6.62543,-0.443997,-2.37543,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+35,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,8.25,True,7.3264,0.118729,0.923599,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+36,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,9.5,True,7.3264,0.259807,2.1736,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+37,American Integrity Insurance Group,8,True,7.57665,0.0543704,0.42335,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+38,American Integrity Insurance Group,9.75,True,8.28392,0.162951,1.46608,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+39,American Integrity Insurance Group,12.25,True,9.04798,0.302984,3.20202,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+40,American Integrity Insurance Group,25.5,True,11.1872,0.823907,14.3128,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+41,North Carolina Insurance Underwriting Association,6.9,True,9.71007,-0.341642,-2.81007,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+42,Heritage Property and Casualty Insurance Company,7.75,True,8.05382,-0.038454,-0.303823,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+43,Heritage Property and Casualty Insurance Company,4.5,True,7.42585,-0.50089,-2.92585,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+44,Security First Insurance Company,6.5,True,7.22429,-0.105646,-0.724287,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+45,Security First Insurance Company,7.5,True,9.57148,-0.243885,-2.07148,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+46,Louisiana Citizens Property Insurance Corporation,7,True,8.19946,-0.158159,-1.19946,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+47,Florida Peninsula Insurance Company,7.75,True,8.43934,-0.0852112,-0.689339,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+48,Citizens Property Insurance Corporation,8.75,True,7.48259,0.156475,1.26741,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+49,Citizens Property Insurance Corporation,9.75,True,8.41857,0.146828,1.33143,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+50,Citizens Property Insurance Corporation,11.25,True,9.48605,0.170546,1.76395,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+51,Citizens Property Insurance Corporation,13,True,10.6146,0.202715,2.38536,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+52,Slide Insurance Company,7.25,True,6.18617,0.158686,1.06383,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+53,Slide Insurance Company,7.75,True,6.79725,0.131175,0.952749,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor
+0,Citrus Re Ltd. (Series 2017-1),6,True,6.43652,-0.0702287,-0.436521,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+1,Sanders Re Ltd. (Series 2017-1),3,True,2.8033,0.0678138,0.196697,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+2,Alamo Re Ltd. (Series 2017-1),3.75,True,4.26069,-0.127674,-0.510686,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+3,Everglades Re II Ltd. (Series 2017-1),5,True,4.39491,0.128992,0.605095,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+4,Alamo Re Ltd. (Series 2018-1),3.25,True,3.90725,-0.184179,-0.657249,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+5,Bowline Re Ltd. (Series 2018-1),4.5,True,3.50044,0.251188,0.999556,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+6,Everglades Re II Ltd. (Series 2018-1),4.75,True,4.0048,0.170652,0.745203,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+7,Long Point Re III Ltd. (Series 2018-1),2.75,True,3.23671,-0.162956,-0.486708,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+8,Cape Lookout Re Ltd. (Series 2019-1),4.25,True,4.29708,-0.0110172,-0.0470819,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+9,Alamo Re Ltd. (Series 2019-1),4.5,True,5.10341,-0.125831,-0.603407,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+10,Integrity Re Ltd. (Series 2019-1),4.75,True,4.08891,0.149866,0.661089,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+11,Everglades Re II Ltd. (Series 2020-2),6.25,True,5.24093,0.176082,1.00907,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+12,Alamo Re II Pte. Ltd. (Series 2020-1),5.75,True,6.85708,-0.176082,-1.10708,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+13,Everglades Re II Ltd. (Series 2021-1),5.75,True,5.918,-0.0287987,-0.168,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+14,Everglades Re II Ltd. (Series 2021-1),6.75,True,7.58483,-0.116608,-0.83483,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+15,Everglades Re II Ltd. (Series 2021-2),5.75,True,5.35236,0.0716623,0.39764,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+16,Cape Lookout Re Ltd. (Series 2022-1),5,True,10.6025,-0.751648,-5.60246,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+17,Everglades Re II Ltd. (Series 2022-1),7.75,True,3.65481,0.751648,4.09519,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+18,Lightning Re Ltd. (Series 2023-1),11,True,11.1286,-0.0116223,-0.128592,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+19,Cape Lookout Re Ltd. (Series 2023-1),6.5,True,10.9887,-0.525061,-4.48865,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+20,Everglades Re II Ltd. (Series 2023-1),11.375,True,10.0758,0.121281,1.29919,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+21,Everglades Re II Ltd. (Series 2023-2),10.125,True,6.60687,0.426897,3.51813,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+22,Cape Lookout Re Ltd. (Series 2024-1),8,True,11.6424,-0.375216,-3.64245,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+23,Citrus Re Ltd. (Series 2024-1),9.25,True,9.20654,0.00470965,0.0434619,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+24,Citrus Re Ltd. (Series 2024-1),10.5,True,9.98124,0.0506677,0.518758,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+25,Alamo Re Ltd. (Series 2024-1),6,True,9.01658,-0.407306,-3.01658,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+26,Alamo Re Ltd. (Series 2024-1),7.75,True,10.753,-0.327491,-3.00299,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+27,Alamo Re Ltd. (Series 2024-1),11.25,True,14.4815,-0.252503,-3.23149,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+28,Everglades Re II Ltd. (Series 2024-1),10.5,True,6.19,0.52844,4.31,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+29,Everglades Re II Ltd. (Series 2024-1),11.5,True,6.99358,0.497354,4.50642,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+30,Everglades Re II Ltd. (Series 2024-1),12.75,True,8.64023,0.389102,4.10977,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+31,Nature Coast Re Ltd. (Series 2025-1),9.75,True,12.038,-0.210798,-2.28796,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+32,Gateway Re Ltd. (Series 2025-1),10.5,True,12.4475,-0.170141,-1.94745,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+33,Gateway Re Ltd. (Series 2025-1),6.25,True,8.76635,-0.338339,-2.51635,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+34,Gateway Re Ltd. (Series 2025-1),4.25,True,6.80285,-0.470423,-2.55285,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+35,Gateway Re Ltd. (Series 2025-1),8.25,True,8.20571,0.00538315,0.0442916,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+36,Gateway Re Ltd. (Series 2025-1),9.5,True,7.32985,0.259337,2.17015,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+37,Integrity Re III Ltd. (Series 2025-1),8,True,8.13183,-0.0163446,-0.131832,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+38,Integrity Re III Ltd. (Series 2025-1),9.75,True,8.8874,0.0926324,0.862597,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+39,Integrity Re III Ltd. (Series 2025-1),12.25,True,9.01488,0.306649,3.23512,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+40,Integrity Re III Ltd. (Series 2025-1),25.5,True,11.4849,0.797649,14.0151,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+41,Cape Lookout Re Ltd. (Series 2025-1),6.9,True,8.55524,-0.215023,-1.65524,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+42,Citrus Re Ltd. (Series 2025-1),7.75,True,8.38205,-0.0783995,-0.632048,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+43,Citrus Re Ltd. (Series 2025-1),4.5,True,7.70812,-0.538197,-3.20812,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+44,First Coast Re IV Ltd. (Series 2025-1),6.5,True,7.44344,-0.13553,-0.943435,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+45,First Coast Re IV Ltd. (Series 2025-1),7.5,True,9.62646,-0.249612,-2.12646,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+46,Bayou Re Ltd. (Series 2025-1),7,True,7.7162,-0.0974118,-0.716199,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+47,Palm Re Ltd. (Series 2025-1),7.75,True,8.02961,-0.0354428,-0.279608,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+48,Everglades Re II Ltd. (Series 2025-1),8.75,True,6.28775,0.330451,2.46225,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+49,Everglades Re II Ltd. (Series 2025-1),9.75,True,6.90739,0.344675,2.84261,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+50,Everglades Re II Ltd. (Series 2025-1),11.25,True,7.91672,0.351392,3.33328,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+51,Everglades Re II Ltd. (Series 2025-1),13,True,9.37612,0.326783,3.62388,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+52,Purple Re Ltd. (Series 2025-1),7.25,True,6.19793,0.156786,1.05207,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+53,Purple Re Ltd. (Series 2025-1),7.75,True,6.83936,0.124998,0.910636,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series
+0,Heritage Property and Casualty Insurance Company,6,True,6.33849,-0.0548815,-0.338493,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+1,Allstate,3,True,2.8033,0.0678138,0.196697,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+2,Texas Windstorm Insurance Association,3.75,True,4.33379,-0.144686,-0.583789,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+3,Citizens Property Insurance Corporation,5,True,4.43859,0.1191,0.561406,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+4,Texas Windstorm Insurance Association,3.25,True,3.96115,-0.19788,-0.711154,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+5,Transatlantic Reinsurance Company,4.5,True,3.50044,0.251188,0.999556,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+6,Citizens Property Insurance Corporation,4.75,True,4.27869,0.104497,0.471309,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+7,Travelers,2.75,True,3.23671,-0.162956,-0.486708,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+8,North Carolina Insurance Underwriting Association,4.25,True,4.52321,-0.0623034,-0.273212,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+9,Texas Windstorm Insurance Association,4.5,True,5.18933,-0.142527,-0.689331,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+10,American Integrity Insurance Group,4.75,True,4.14853,0.13539,0.601467,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+11,Citizens Property Insurance Corporation,6.25,True,5.60872,0.108259,0.641282,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+12,Texas Windstorm Insurance Association,5.75,True,7.20522,-0.225607,-1.45522,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+13,Citizens Property Insurance Corporation,5.75,False,,,,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+14,Citizens Property Insurance Corporation,6.75,False,,,,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+15,Citizens Property Insurance Corporation,5.75,False,,,,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+16,North Carolina Insurance Underwriting Association,5,True,11.0016,-0.788602,-6.00159,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+17,Citizens Property Insurance Corporation,7.75,True,3.64094,0.755452,4.10906,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+18,Citizens Property Insurance Corporation,11,True,7.75581,0.349453,3.24419,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+19,North Carolina Insurance Underwriting Association,6.5,True,11.0435,-0.530039,-4.54349,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+20,Citizens Property Insurance Corporation,11.375,True,7.35494,0.436046,4.02006,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+21,Citizens Property Insurance Corporation,10.125,True,4.80183,0.74601,5.32317,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+22,North Carolina Insurance Underwriting Association,8,True,12.0926,-0.413155,-4.09263,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+23,Heritage Property and Casualty Insurance Company,9.25,True,9.62822,-0.0400748,-0.37822,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+24,Heritage Property and Casualty Insurance Company,10.5,True,10.3989,0.00967755,0.101124,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+25,Texas Windstorm Insurance Association,6,True,9.09776,-0.416269,-3.09776,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+26,Texas Windstorm Insurance Association,7.75,True,10.9041,-0.341451,-3.15415,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+27,Texas Windstorm Insurance Association,11.25,True,14.7659,-0.271954,-3.51592,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+28,Citizens Property Insurance Corporation,10.5,True,5.78465,0.596167,4.71535,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+29,Citizens Property Insurance Corporation,11.5,True,6.64251,0.548857,4.85749,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+30,Citizens Property Insurance Corporation,12.75,True,8.6353,0.389673,4.1147,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+31,SafePoint Insurance Company,9.75,True,12.038,-0.210798,-2.28796,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+32,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,10.5,True,12.4475,-0.170141,-1.94745,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+33,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,6.25,True,8.76635,-0.338339,-2.51635,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+34,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,4.25,True,6.80285,-0.470423,-2.55285,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+35,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,8.25,True,8.20571,0.00538315,0.0442916,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+36,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,9.5,True,7.32985,0.259337,2.17015,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+37,American Integrity Insurance Group,8,True,8.05464,-0.00680696,-0.0546414,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+38,American Integrity Insurance Group,9.75,True,8.81248,0.101098,0.937515,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+39,American Integrity Insurance Group,12.25,True,9.02857,0.305132,3.22143,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+40,American Integrity Insurance Group,25.5,True,11.4886,0.797324,14.0114,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+41,North Carolina Insurance Underwriting Association,6.9,True,8.92719,-0.25758,-2.02719,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+42,Heritage Property and Casualty Insurance Company,7.75,True,8.39129,-0.0795016,-0.641292,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+43,Heritage Property and Casualty Insurance Company,4.5,True,7.70986,-0.538422,-3.20986,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+44,Security First Insurance Company,6.5,True,7.44344,-0.13553,-0.943435,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+45,Security First Insurance Company,7.5,True,9.62646,-0.249612,-2.12646,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+46,Louisiana Citizens Property Insurance Corporation,7,True,7.7162,-0.0974118,-0.716199,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+47,Florida Peninsula Insurance Company,7.75,True,8.02961,-0.0354428,-0.279608,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+48,Citizens Property Insurance Corporation,8.75,True,5.94415,0.386646,2.80585,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+49,Citizens Property Insurance Corporation,9.75,True,6.69739,0.375549,3.05261,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+50,Citizens Property Insurance Corporation,11.25,True,7.94482,0.347848,3.30518,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+51,Citizens Property Insurance Corporation,13,True,9.8041,0.282148,3.1959,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+52,Slide Insurance Company,7.25,True,6.19793,0.156786,1.05207,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+53,Slide Insurance Company,7.75,True,6.83936,0.124998,0.910636,"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor
+0,Sanders Re Ltd. (Series 2017-1),3,True,4.73612,-0.456606,-1.73612,without all flagged rows,M1,series
+1,Alamo Re Ltd. (Series 2017-1),3.75,True,7.4615,-0.688001,-3.7115,without all flagged rows,M1,series
+2,Everglades Re II Ltd. (Series 2017-1),5,True,8.16657,-0.490611,-3.16657,without all flagged rows,M1,series
+3,Alamo Re Ltd. (Series 2018-1),3.25,True,7.29397,-0.808393,-4.04397,without all flagged rows,M1,series
+4,Bowline Re Ltd. (Series 2018-1),4.5,True,7.08607,-0.454054,-2.58607,without all flagged rows,M1,series
+5,Everglades Re II Ltd. (Series 2018-1),4.75,True,8.11444,-0.5355,-3.36444,without all flagged rows,M1,series
+6,Long Point Re III Ltd. (Series 2018-1),2.75,True,5.94969,-0.771739,-3.19969,without all flagged rows,M1,series
+7,Cape Lookout Re Ltd. (Series 2019-1),4.25,True,7.12634,-0.516878,-2.87634,without all flagged rows,M1,series
+8,Integrity Re Ltd. (Series 2019-1),4.75,True,5.57035,-0.159313,-0.820347,without all flagged rows,M1,series
+9,Everglades Re II Ltd. (Series 2020-2),6.25,True,5.78438,0.0774197,0.465617,without all flagged rows,M1,series
+10,Alamo Re II Pte. Ltd. (Series 2020-1),5.75,True,7.61097,-0.28039,-1.86097,without all flagged rows,M1,series
+11,Everglades Re II Ltd. (Series 2021-1),5.75,True,5.3838,0.065806,0.366203,without all flagged rows,M1,series
+12,Everglades Re II Ltd. (Series 2021-1),6.75,True,7.23391,-0.0692374,-0.483912,without all flagged rows,M1,series
+13,Everglades Re II Ltd. (Series 2021-2),5.75,True,5.11452,0.117117,0.635485,without all flagged rows,M1,series
+14,Cape Lookout Re Ltd. (Series 2022-1),5,True,6.88026,-0.319219,-1.88026,without all flagged rows,M1,series
+15,Everglades Re II Ltd. (Series 2022-1),7.75,True,4.15158,0.624204,3.59842,without all flagged rows,M1,series
+16,Lightning Re Ltd. (Series 2023-1),11,True,7.5618,0.374786,3.4382,without all flagged rows,M1,series
+17,Cape Lookout Re Ltd. (Series 2023-1),6.5,True,6.2878,0.0331908,0.212199,without all flagged rows,M1,series
+18,Cape Lookout Re Ltd. (Series 2024-1),8,True,9.87571,-0.210636,-1.87571,without all flagged rows,M1,series
+19,Citrus Re Ltd. (Series 2024-1),9.25,True,5.87758,0.453478,3.37242,without all flagged rows,M1,series
+20,Citrus Re Ltd. (Series 2024-1),10.5,True,6.56178,0.470113,3.93822,without all flagged rows,M1,series
+21,Alamo Re Ltd. (Series 2024-1),6,True,6.47198,-0.0757228,-0.471981,without all flagged rows,M1,series
+22,Alamo Re Ltd. (Series 2024-1),7.75,True,8.12816,-0.047642,-0.378162,without all flagged rows,M1,series
+23,Alamo Re Ltd. (Series 2024-1),11.25,True,11.7225,-0.0411447,-0.472532,without all flagged rows,M1,series
+24,Everglades Re II Ltd. (Series 2024-1),10.5,True,5.61783,0.625429,4.88217,without all flagged rows,M1,series
+25,Everglades Re II Ltd. (Series 2024-1),11.5,True,6.48738,0.572488,5.01262,without all flagged rows,M1,series
+26,Everglades Re II Ltd. (Series 2024-1),12.75,True,7.70237,0.504003,5.04763,without all flagged rows,M1,series
+27,Nature Coast Re Ltd. (Series 2025-1),9.75,True,10.7947,-0.101791,-1.04473,without all flagged rows,M1,series
+28,Gateway Re Ltd. (Series 2025-1),10.5,True,11.3951,-0.0818109,-0.895132,without all flagged rows,M1,series
+29,Gateway Re Ltd. (Series 2025-1),4.25,True,5.24666,-0.210673,-0.99666,without all flagged rows,M1,series
+30,Gateway Re Ltd. (Series 2025-1),9.5,True,6.06242,0.449183,3.43758,without all flagged rows,M1,series
+31,Integrity Re III Ltd. (Series 2025-1),8,True,6.798,0.162813,1.202,without all flagged rows,M1,series
+32,Integrity Re III Ltd. (Series 2025-1),9.75,True,7.74949,0.22964,2.00051,without all flagged rows,M1,series
+33,Integrity Re III Ltd. (Series 2025-1),12.25,True,8.82095,0.328396,3.42905,without all flagged rows,M1,series
+34,Integrity Re III Ltd. (Series 2025-1),25.5,True,12.045,0.750027,13.455,without all flagged rows,M1,series
+35,Cape Lookout Re Ltd. (Series 2025-1),6.9,True,8.97648,-0.263086,-2.07648,without all flagged rows,M1,series
+36,Citrus Re Ltd. (Series 2025-1),7.75,True,6.96105,0.107362,0.788945,without all flagged rows,M1,series
+37,Citrus Re Ltd. (Series 2025-1),4.5,True,6.20634,-0.321494,-1.70634,without all flagged rows,M1,series
+38,First Coast Re IV Ltd. (Series 2025-1),6.5,True,6.06152,0.0698412,0.438478,without all flagged rows,M1,series
+39,First Coast Re IV Ltd. (Series 2025-1),7.5,True,8.97287,-0.179302,-1.47287,without all flagged rows,M1,series
+40,Bayou Re Ltd. (Series 2025-1),7,True,7.30031,-0.0420061,-0.300306,without all flagged rows,M1,series
+41,Palm Re Ltd. (Series 2025-1),7.75,True,7.62161,0.0167046,0.128385,without all flagged rows,M1,series
+42,Everglades Re II Ltd. (Series 2025-1),8.75,True,6.76909,0.256687,1.98091,without all flagged rows,M1,series
+43,Everglades Re II Ltd. (Series 2025-1),9.75,True,7.71319,0.234335,2.03681,without all flagged rows,M1,series
+44,Everglades Re II Ltd. (Series 2025-1),11.25,True,8.8038,0.245184,2.4462,without all flagged rows,M1,series
+45,Everglades Re II Ltd. (Series 2025-1),13,True,9.97132,0.265236,3.02868,without all flagged rows,M1,series
+46,Purple Re Ltd. (Series 2025-1),7.25,True,5.00817,0.36993,2.24183,without all flagged rows,M1,series
+47,Purple Re Ltd. (Series 2025-1),7.75,True,5.71161,0.305192,2.03839,without all flagged rows,M1,series
+0,Allstate,3,True,4.73612,-0.456606,-1.73612,without all flagged rows,M1,sponsor
+1,Texas Windstorm Insurance Association,3.75,True,7.69993,-0.719456,-3.94993,without all flagged rows,M1,sponsor
+2,Citizens Property Insurance Corporation,5,True,7.6129,-0.420406,-2.6129,without all flagged rows,M1,sponsor
+3,Texas Windstorm Insurance Association,3.25,True,7.50434,-0.836827,-4.25434,without all flagged rows,M1,sponsor
+4,Transatlantic Reinsurance Company,4.5,True,7.08607,-0.454054,-2.58607,without all flagged rows,M1,sponsor
+5,Citizens Property Insurance Corporation,4.75,True,7.54661,-0.462954,-2.79661,without all flagged rows,M1,sponsor
+6,Travelers,2.75,True,5.94969,-0.771739,-3.19969,without all flagged rows,M1,sponsor
+7,North Carolina Insurance Underwriting Association,4.25,True,7.2521,-0.534372,-3.0021,without all flagged rows,M1,sponsor
+8,American Integrity Insurance Group,4.75,True,5.74338,-0.189903,-0.99338,without all flagged rows,M1,sponsor
+9,Citizens Property Insurance Corporation,6.25,True,5.11426,0.200549,1.13574,without all flagged rows,M1,sponsor
+10,Texas Windstorm Insurance Association,5.75,True,7.92572,-0.320913,-2.17572,without all flagged rows,M1,sponsor
+11,Citizens Property Insurance Corporation,5.75,True,4.68424,0.204996,1.06576,without all flagged rows,M1,sponsor
+12,Citizens Property Insurance Corporation,6.75,True,6.67494,0.0111826,0.0750621,without all flagged rows,M1,sponsor
+13,Citizens Property Insurance Corporation,5.75,True,4.43013,0.26077,1.31987,without all flagged rows,M1,sponsor
+14,North Carolina Insurance Underwriting Association,5,True,7.02088,-0.339451,-2.02088,without all flagged rows,M1,sponsor
+15,Citizens Property Insurance Corporation,7.75,True,3.6888,0.742391,4.0612,without all flagged rows,M1,sponsor
+16,Citizens Property Insurance Corporation,11,True,7.11317,0.435948,3.88683,without all flagged rows,M1,sponsor
+17,North Carolina Insurance Underwriting Association,6.5,True,6.44706,0.00817754,0.0529372,without all flagged rows,M1,sponsor
+18,North Carolina Insurance Underwriting Association,8,True,10.169,-0.239906,-2.16904,without all flagged rows,M1,sponsor
+19,Heritage Property and Casualty Insurance Company,9.25,True,5.91445,0.447224,3.33555,without all flagged rows,M1,sponsor
+20,Heritage Property and Casualty Insurance Company,10.5,True,6.59278,0.465401,3.90722,without all flagged rows,M1,sponsor
+21,Texas Windstorm Insurance Association,6,True,6.73516,-0.115582,-0.735159,without all flagged rows,M1,sponsor
+22,Texas Windstorm Insurance Association,7.75,True,8.49524,-0.0918136,-0.745244,without all flagged rows,M1,sponsor
+23,Texas Windstorm Insurance Association,11.25,True,12.3372,-0.0922471,-1.08715,without all flagged rows,M1,sponsor
+24,Citizens Property Insurance Corporation,10.5,True,5.18529,0.70555,5.31471,without all flagged rows,M1,sponsor
+25,Citizens Property Insurance Corporation,11.5,True,6.12837,0.629418,5.37163,without all flagged rows,M1,sponsor
+26,Citizens Property Insurance Corporation,12.75,True,7.48022,0.533268,5.26978,without all flagged rows,M1,sponsor
+27,SafePoint Insurance Company,9.75,True,10.7947,-0.101791,-1.04473,without all flagged rows,M1,sponsor
+28,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,10.5,True,11.3951,-0.0818109,-0.895132,without all flagged rows,M1,sponsor
+29,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,4.25,True,5.24666,-0.210673,-0.99666,without all flagged rows,M1,sponsor
+30,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,9.5,True,6.06242,0.449183,3.43758,without all flagged rows,M1,sponsor
+31,American Integrity Insurance Group,8,True,6.82851,0.158335,1.17149,without all flagged rows,M1,sponsor
+32,American Integrity Insurance Group,9.75,True,7.75807,0.228534,1.99193,without all flagged rows,M1,sponsor
+33,American Integrity Insurance Group,12.25,True,8.80131,0.330625,3.44869,without all flagged rows,M1,sponsor
+34,American Integrity Insurance Group,25.5,True,11.9222,0.760276,13.5778,without all flagged rows,M1,sponsor
+35,North Carolina Insurance Underwriting Association,6.9,True,9.22589,-0.290492,-2.32589,without all flagged rows,M1,sponsor
+36,Heritage Property and Casualty Insurance Company,7.75,True,6.81284,0.128884,0.937162,without all flagged rows,M1,sponsor
+37,Heritage Property and Casualty Insurance Company,4.5,True,6.04591,-0.295305,-1.54591,without all flagged rows,M1,sponsor
+38,Security First Insurance Company,6.5,True,6.06152,0.0698412,0.438478,without all flagged rows,M1,sponsor
+39,Security First Insurance Company,7.5,True,8.97287,-0.179302,-1.47287,without all flagged rows,M1,sponsor
+40,Louisiana Citizens Property Insurance Corporation,7,True,7.30031,-0.0420061,-0.300306,without all flagged rows,M1,sponsor
+41,Florida Peninsula Insurance Company,7.75,True,7.62161,0.0167046,0.128385,without all flagged rows,M1,sponsor
+42,Citizens Property Insurance Corporation,8.75,True,6.30008,0.328492,2.44992,without all flagged rows,M1,sponsor
+43,Citizens Property Insurance Corporation,9.75,True,7.44699,0.269457,2.30301,without all flagged rows,M1,sponsor
+44,Citizens Property Insurance Corporation,11.25,True,8.82172,0.243151,2.42828,without all flagged rows,M1,sponsor
+45,Citizens Property Insurance Corporation,13,True,10.3474,0.228217,2.65263,without all flagged rows,M1,sponsor
+46,Slide Insurance Company,7.25,True,5.00817,0.36993,2.24183,without all flagged rows,M1,sponsor
+47,Slide Insurance Company,7.75,True,5.71161,0.305192,2.03839,without all flagged rows,M1,sponsor
+0,Sanders Re Ltd. (Series 2017-1),3,True,2.85678,0.0489173,0.14322,without all flagged rows,M2,series
+1,Alamo Re Ltd. (Series 2017-1),3.75,True,4.51836,-0.186393,-0.768357,without all flagged rows,M2,series
+2,Everglades Re II Ltd. (Series 2017-1),5,True,4.33013,0.143839,0.669866,without all flagged rows,M2,series
+3,Alamo Re Ltd. (Series 2018-1),3.25,True,4.01909,-0.212401,-0.76909,without all flagged rows,M2,series
+4,Bowline Re Ltd. (Series 2018-1),4.5,True,3.5254,0.244083,0.974597,without all flagged rows,M2,series
+5,Everglades Re II Ltd. (Series 2018-1),4.75,True,3.96199,0.181399,0.788011,without all flagged rows,M2,series
+6,Long Point Re III Ltd. (Series 2018-1),2.75,True,3.41039,-0.215226,-0.66039,without all flagged rows,M2,series
+7,Cape Lookout Re Ltd. (Series 2019-1),4.25,True,5.75934,-0.303904,-1.50934,without all flagged rows,M2,series
+8,Integrity Re Ltd. (Series 2019-1),4.75,True,3.50518,0.303904,1.24482,without all flagged rows,M2,series
+9,Everglades Re II Ltd. (Series 2020-2),6.25,True,4.65574,0.294481,1.59426,without all flagged rows,M2,series
+10,Alamo Re II Pte. Ltd. (Series 2020-1),5.75,True,7.71897,-0.294481,-1.96897,without all flagged rows,M2,series
+11,Everglades Re II Ltd. (Series 2021-1),5.75,True,5.96293,-0.036362,-0.212929,without all flagged rows,M2,series
+12,Everglades Re II Ltd. (Series 2021-1),6.75,True,7.51166,-0.106914,-0.761658,without all flagged rows,M2,series
+13,Everglades Re II Ltd. (Series 2021-2),5.75,True,5.35705,0.0707859,0.392947,without all flagged rows,M2,series
+14,Cape Lookout Re Ltd. (Series 2022-1),5,True,11.225,-0.808708,-6.22503,without all flagged rows,M2,series
+15,Everglades Re II Ltd. (Series 2022-1),7.75,True,3.45211,0.808708,4.29789,without all flagged rows,M2,series
+16,Lightning Re Ltd. (Series 2023-1),11,True,7.525,0.379665,3.475,without all flagged rows,M2,series
+17,Cape Lookout Re Ltd. (Series 2023-1),6.5,True,9.50167,-0.379665,-3.00167,without all flagged rows,M2,series
+18,Cape Lookout Re Ltd. (Series 2024-1),8,True,12.3898,-0.437432,-4.3898,without all flagged rows,M2,series
+19,Citrus Re Ltd. (Series 2024-1),9.25,True,7.57602,0.199635,1.67398,without all flagged rows,M2,series
+20,Citrus Re Ltd. (Series 2024-1),10.5,True,8.25388,0.240692,2.24612,without all flagged rows,M2,series
+21,Alamo Re Ltd. (Series 2024-1),6,True,9.56689,-0.466549,-3.56689,without all flagged rows,M2,series
+22,Alamo Re Ltd. (Series 2024-1),7.75,True,11.5234,-0.396687,-3.7734,without all flagged rows,M2,series
+23,Alamo Re Ltd. (Series 2024-1),11.25,True,15.5399,-0.323043,-4.2899,without all flagged rows,M2,series
+24,Everglades Re II Ltd. (Series 2024-1),10.5,True,6.72456,0.445609,3.77544,without all flagged rows,M2,series
+25,Everglades Re II Ltd. (Series 2024-1),11.5,True,7.5484,0.421012,3.9516,without all flagged rows,M2,series
+26,Everglades Re II Ltd. (Series 2024-1),12.75,True,8.66415,0.386338,4.08585,without all flagged rows,M2,series
+27,Nature Coast Re Ltd. (Series 2025-1),9.75,True,11.154,-0.134534,-1.40403,without all flagged rows,M2,series
+28,Gateway Re Ltd. (Series 2025-1),10.5,True,11.5494,-0.0952585,-1.0494,without all flagged rows,M2,series
+29,Gateway Re Ltd. (Series 2025-1),4.25,True,6.50627,-0.425847,-2.25627,without all flagged rows,M2,series
+30,Gateway Re Ltd. (Series 2025-1),9.5,True,7.24054,0.271597,2.25946,without all flagged rows,M2,series
+31,Integrity Re III Ltd. (Series 2025-1),8,True,7.60908,0.0500993,0.39092,without all flagged rows,M2,series
+32,Integrity Re III Ltd. (Series 2025-1),9.75,True,8.33275,0.157073,1.41725,without all flagged rows,M2,series
+33,Integrity Re III Ltd. (Series 2025-1),12.25,True,9.11578,0.295519,3.13422,without all flagged rows,M2,series
+34,Integrity Re III Ltd. (Series 2025-1),25.5,True,11.3142,0.812622,14.1858,without all flagged rows,M2,series
+35,Cape Lookout Re Ltd. (Series 2025-1),6.9,True,9.71192,-0.341833,-2.81192,without all flagged rows,M2,series
+36,Citrus Re Ltd. (Series 2025-1),7.75,True,8.10771,-0.0451232,-0.357714,without all flagged rows,M2,series
+37,Citrus Re Ltd. (Series 2025-1),4.5,True,7.44999,-0.504135,-2.94999,without all flagged rows,M2,series
+38,First Coast Re IV Ltd. (Series 2025-1),6.5,True,7.19414,-0.101464,-0.694139,without all flagged rows,M2,series
+39,First Coast Re IV Ltd. (Series 2025-1),7.5,True,9.7261,-0.259909,-2.2261,without all flagged rows,M2,series
+40,Bayou Re Ltd. (Series 2025-1),7,True,8.23676,-0.162697,-1.23676,without all flagged rows,M2,series
+41,Palm Re Ltd. (Series 2025-1),7.75,True,8.49456,-0.0917328,-0.744557,without all flagged rows,M2,series
+42,Everglades Re II Ltd. (Series 2025-1),8.75,True,7.59383,0.141717,1.15617,without all flagged rows,M2,series
+43,Everglades Re II Ltd. (Series 2025-1),9.75,True,8.42041,0.146609,1.32959,without all flagged rows,M2,series
+44,Everglades Re II Ltd. (Series 2025-1),11.25,True,9.34942,0.185054,1.90058,without all flagged rows,M2,series
+45,Everglades Re II Ltd. (Series 2025-1),13,True,10.3177,0.23109,2.68231,without all flagged rows,M2,series
+46,Purple Re Ltd. (Series 2025-1),7.25,True,6.04314,0.182078,1.20686,without all flagged rows,M2,series
+47,Purple Re Ltd. (Series 2025-1),7.75,True,6.69442,0.146419,1.05558,without all flagged rows,M2,series
+0,Allstate,3,True,2.85678,0.0489173,0.14322,without all flagged rows,M2,sponsor
+1,Texas Windstorm Insurance Association,3.75,True,4.57832,-0.199577,-0.828324,without all flagged rows,M2,sponsor
+2,Citizens Property Insurance Corporation,5,True,4.50061,0.105225,0.499391,without all flagged rows,M2,sponsor
+3,Texas Windstorm Insurance Association,3.25,True,4.03186,-0.215574,-0.781864,without all flagged rows,M2,sponsor
+4,Transatlantic Reinsurance Company,4.5,True,3.5254,0.244083,0.974597,without all flagged rows,M2,sponsor
+5,Citizens Property Insurance Corporation,4.75,True,4.04765,0.160008,0.702347,without all flagged rows,M2,sponsor
+6,Travelers,2.75,True,3.41039,-0.215226,-0.66039,without all flagged rows,M2,sponsor
+7,North Carolina Insurance Underwriting Association,4.25,True,5.95305,-0.336985,-1.70305,without all flagged rows,M2,sponsor
+8,American Integrity Insurance Group,4.75,True,3.71653,0.245353,1.03347,without all flagged rows,M2,sponsor
+9,Citizens Property Insurance Corporation,6.25,True,4.55105,0.317222,1.69895,without all flagged rows,M2,sponsor
+10,Texas Windstorm Insurance Association,5.75,True,7.84548,-0.310737,-2.09548,without all flagged rows,M2,sponsor
+11,Citizens Property Insurance Corporation,5.75,False,,,,without all flagged rows,M2,sponsor
+12,Citizens Property Insurance Corporation,6.75,False,,,,without all flagged rows,M2,sponsor
+13,Citizens Property Insurance Corporation,5.75,False,,,,without all flagged rows,M2,sponsor
+14,North Carolina Insurance Underwriting Association,5,True,11.6107,-0.842491,-6.61072,without all flagged rows,M2,sponsor
+15,Citizens Property Insurance Corporation,7.75,True,3.41036,0.820876,4.33964,without all flagged rows,M2,sponsor
+16,Citizens Property Insurance Corporation,11,True,7.6966,0.357117,3.3034,without all flagged rows,M2,sponsor
+17,North Carolina Insurance Underwriting Association,6.5,True,9.20156,-0.347571,-2.70156,without all flagged rows,M2,sponsor
+18,North Carolina Insurance Underwriting Association,8,True,12.7747,-0.468027,-4.77472,without all flagged rows,M2,sponsor
+19,Heritage Property and Casualty Insurance Company,9.25,True,7.685,0.185354,1.565,without all flagged rows,M2,sponsor
+20,Heritage Property and Casualty Insurance Company,10.5,True,8.32503,0.232108,2.17497,without all flagged rows,M2,sponsor
+21,Texas Windstorm Insurance Association,6,True,9.53684,-0.463402,-3.53684,without all flagged rows,M2,sponsor
+22,Texas Windstorm Insurance Association,7.75,True,11.5783,-0.401437,-3.82827,without all flagged rows,M2,sponsor
+23,Texas Windstorm Insurance Association,11.25,True,15.8133,-0.340485,-4.56333,without all flagged rows,M2,sponsor
+24,Citizens Property Insurance Corporation,10.5,True,6.63362,0.459224,3.86638,without all flagged rows,M2,sponsor
+25,Citizens Property Insurance Corporation,11.5,True,7.49395,0.428251,4.00605,without all flagged rows,M2,sponsor
+26,Citizens Property Insurance Corporation,12.75,True,8.66733,0.385971,4.08267,without all flagged rows,M2,sponsor
+27,SafePoint Insurance Company,9.75,True,11.154,-0.134534,-1.40403,without all flagged rows,M2,sponsor
+28,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,10.5,True,11.5494,-0.0952585,-1.0494,without all flagged rows,M2,sponsor
+29,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,4.25,True,6.50627,-0.425847,-2.25627,without all flagged rows,M2,sponsor
+30,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,9.5,True,7.24054,0.271597,2.25946,without all flagged rows,M2,sponsor
+31,American Integrity Insurance Group,8,True,7.60049,0.0512283,0.399506,without all flagged rows,M2,sponsor
+32,American Integrity Insurance Group,9.75,True,8.34564,0.155528,1.40436,without all flagged rows,M2,sponsor
+33,American Integrity Insurance Group,12.25,True,9.15405,0.291329,3.09595,without all flagged rows,M2,sponsor
+34,American Integrity Insurance Group,25.5,True,11.4342,0.802072,14.0658,without all flagged rows,M2,sponsor
+35,North Carolina Insurance Underwriting Association,6.9,True,9.88798,-0.359798,-2.98798,without all flagged rows,M2,sponsor
+36,Heritage Property and Casualty Insurance Company,7.75,True,8.07468,-0.0410408,-0.324683,without all flagged rows,M2,sponsor
+37,Heritage Property and Casualty Insurance Company,4.5,True,7.39453,-0.496664,-2.89453,without all flagged rows,M2,sponsor
+38,Security First Insurance Company,6.5,True,7.19414,-0.101464,-0.694139,without all flagged rows,M2,sponsor
+39,Security First Insurance Company,7.5,True,9.7261,-0.259909,-2.2261,without all flagged rows,M2,sponsor
+40,Louisiana Citizens Property Insurance Corporation,7,True,8.23676,-0.162697,-1.23676,without all flagged rows,M2,sponsor
+41,Florida Peninsula Insurance Company,7.75,True,8.49456,-0.0917328,-0.744557,without all flagged rows,M2,sponsor
+42,Citizens Property Insurance Corporation,8.75,True,7.48488,0.156168,1.26512,without all flagged rows,M2,sponsor
+43,Citizens Property Insurance Corporation,9.75,True,8.4565,0.142332,1.2935,without all flagged rows,M2,sponsor
+44,Citizens Property Insurance Corporation,11.25,True,9.56931,0.161807,1.68069,without all flagged rows,M2,sponsor
+45,Citizens Property Insurance Corporation,13,True,10.7507,0.189981,2.24933,without all flagged rows,M2,sponsor
+46,Slide Insurance Company,7.25,True,6.04314,0.182078,1.20686,without all flagged rows,M2,sponsor
+47,Slide Insurance Company,7.75,True,6.69442,0.146419,1.05558,without all flagged rows,M2,sponsor
+0,Sanders Re Ltd. (Series 2017-1),3,True,2.76717,0.0807859,0.232827,without all flagged rows,M3,series
+1,Alamo Re Ltd. (Series 2017-1),3.75,True,4.47729,-0.177262,-0.727289,without all flagged rows,M3,series
+2,Everglades Re II Ltd. (Series 2017-1),5,True,4.49831,0.105735,0.501687,without all flagged rows,M3,series
+3,Alamo Re Ltd. (Series 2018-1),3.25,True,3.81852,-0.161209,-0.568524,without all flagged rows,M3,series
+4,Bowline Re Ltd. (Series 2018-1),4.5,True,3.87722,0.14896,0.622784,without all flagged rows,M3,series
+5,Everglades Re II Ltd. (Series 2018-1),4.75,True,3.95119,0.184127,0.798808,without all flagged rows,M3,series
+6,Long Point Re III Ltd. (Series 2018-1),2.75,True,3.10394,-0.121072,-0.353943,without all flagged rows,M3,series
+7,Cape Lookout Re Ltd. (Series 2019-1),4.25,True,4.75438,-0.112147,-0.504379,without all flagged rows,M3,series
+8,Integrity Re Ltd. (Series 2019-1),4.75,True,4.24609,0.112147,0.503915,without all flagged rows,M3,series
+9,Everglades Re II Ltd. (Series 2020-2),6.25,True,5.19166,0.185528,1.05834,without all flagged rows,M3,series
+10,Alamo Re II Pte. Ltd. (Series 2020-1),5.75,True,6.92216,-0.185528,-1.17216,without all flagged rows,M3,series
+11,Everglades Re II Ltd. (Series 2021-1),5.75,True,5.93208,-0.0311756,-0.182083,without all flagged rows,M3,series
+12,Everglades Re II Ltd. (Series 2021-1),6.75,True,7.75052,-0.138217,-1.00052,without all flagged rows,M3,series
+13,Everglades Re II Ltd. (Series 2021-2),5.75,True,5.29116,0.0831626,0.458841,without all flagged rows,M3,series
+14,Cape Lookout Re Ltd. (Series 2022-1),5,True,10.8949,-0.778861,-5.89494,without all flagged rows,M3,series
+15,Everglades Re II Ltd. (Series 2022-1),7.75,True,3.5567,0.778861,4.1933,without all flagged rows,M3,series
+16,Lightning Re Ltd. (Series 2023-1),11,True,7.52036,0.380281,3.47964,without all flagged rows,M3,series
+17,Cape Lookout Re Ltd. (Series 2023-1),6.5,True,9.50752,-0.380281,-3.00752,without all flagged rows,M3,series
+18,Cape Lookout Re Ltd. (Series 2024-1),8,True,11.8276,-0.390995,-3.82761,without all flagged rows,M3,series
+19,Citrus Re Ltd. (Series 2024-1),9.25,True,9.15213,0.0106373,0.0978733,without all flagged rows,M3,series
+20,Citrus Re Ltd. (Series 2024-1),10.5,True,9.98209,0.0505829,0.517911,without all flagged rows,M3,series
+21,Alamo Re Ltd. (Series 2024-1),6,True,8.94498,-0.399333,-2.94498,without all flagged rows,M3,series
+22,Alamo Re Ltd. (Series 2024-1),7.75,True,10.8187,-0.333585,-3.06872,without all flagged rows,M3,series
+23,Alamo Re Ltd. (Series 2024-1),11.25,True,14.9113,-0.281752,-3.66131,without all flagged rows,M3,series
+24,Everglades Re II Ltd. (Series 2024-1),10.5,True,5.99645,0.560208,4.50355,without all flagged rows,M3,series
+25,Everglades Re II Ltd. (Series 2024-1),11.5,True,6.85441,0.517455,4.64559,without all flagged rows,M3,series
+26,Everglades Re II Ltd. (Series 2024-1),12.75,True,8.64334,0.388742,4.10666,without all flagged rows,M3,series
+27,Nature Coast Re Ltd. (Series 2025-1),9.75,True,14.7,-0.410582,-4.95003,without all flagged rows,M3,series
+28,Gateway Re Ltd. (Series 2025-1),10.5,True,12.7536,-0.194436,-2.25357,without all flagged rows,M3,series
+29,Gateway Re Ltd. (Series 2025-1),4.25,True,6.61427,-0.44231,-2.36427,without all flagged rows,M3,series
+30,Gateway Re Ltd. (Series 2025-1),9.5,True,7.1797,0.280035,2.3203,without all flagged rows,M3,series
+31,Integrity Re III Ltd. (Series 2025-1),8,True,8.09656,-0.0119978,-0.0965607,without all flagged rows,M3,series
+32,Integrity Re III Ltd. (Series 2025-1),9.75,True,8.87726,0.0937749,0.872745,without all flagged rows,M3,series
+33,Integrity Re III Ltd. (Series 2025-1),12.25,True,9.10003,0.297248,3.14997,without all flagged rows,M3,series
+34,Integrity Re III Ltd. (Series 2025-1),25.5,True,11.6459,0.783721,13.8541,without all flagged rows,M3,series
+35,Cape Lookout Re Ltd. (Series 2025-1),6.9,True,8.65336,-0.226426,-1.75336,without all flagged rows,M3,series
+36,Citrus Re Ltd. (Series 2025-1),7.75,True,8.47194,-0.0890662,-0.721936,without all flagged rows,M3,series
+37,Citrus Re Ltd. (Series 2025-1),4.5,True,7.74782,-0.543333,-3.24782,without all flagged rows,M3,series
+38,First Coast Re IV Ltd. (Series 2025-1),6.5,True,7.44201,-0.135339,-0.94201,without all flagged rows,M3,series
+39,First Coast Re IV Ltd. (Series 2025-1),7.5,True,9.81476,-0.268985,-2.31476,without all flagged rows,M3,series
+40,Bayou Re Ltd. (Series 2025-1),7,True,7.73395,-0.0997096,-0.73395,without all flagged rows,M3,series
+41,Palm Re Ltd. (Series 2025-1),7.75,True,8.07174,-0.040676,-0.321738,without all flagged rows,M3,series
+42,Everglades Re II Ltd. (Series 2025-1),8.75,True,6.23738,0.338494,2.51262,without all flagged rows,M3,series
+43,Everglades Re II Ltd. (Series 2025-1),9.75,True,6.91561,0.343486,2.83439,without all flagged rows,M3,series
+44,Everglades Re II Ltd. (Series 2025-1),11.25,True,8.0164,0.338878,3.2336,without all flagged rows,M3,series
+45,Everglades Re II Ltd. (Series 2025-1),13,True,9.61472,0.301654,3.38528,without all flagged rows,M3,series
+46,Purple Re Ltd. (Series 2025-1),7.25,True,6.06226,0.178919,1.18774,without all flagged rows,M3,series
+47,Purple Re Ltd. (Series 2025-1),7.75,True,6.74762,0.138503,1.00238,without all flagged rows,M3,series
+0,Allstate,3,True,2.76717,0.0807859,0.232827,without all flagged rows,M3,sponsor
+1,Texas Windstorm Insurance Association,3.75,True,4.54203,-0.191617,-0.792026,without all flagged rows,M3,sponsor
+2,Citizens Property Insurance Corporation,5,True,4.92932,0.014236,0.0706757,without all flagged rows,M3,sponsor
+3,Texas Windstorm Insurance Association,3.25,True,3.87434,-0.175721,-0.624343,without all flagged rows,M3,sponsor
+4,Transatlantic Reinsurance Company,4.5,True,3.87722,0.14896,0.622784,without all flagged rows,M3,sponsor
+5,Citizens Property Insurance Corporation,4.75,True,4.4089,0.0745191,0.341099,without all flagged rows,M3,sponsor
+6,Travelers,2.75,True,3.10394,-0.121072,-0.353943,without all flagged rows,M3,sponsor
+7,North Carolina Insurance Underwriting Association,4.25,True,5.27936,-0.216886,-1.02936,without all flagged rows,M3,sponsor
+8,American Integrity Insurance Group,4.75,True,4.12652,0.140711,0.623484,without all flagged rows,M3,sponsor
+9,Citizens Property Insurance Corporation,6.25,True,5.57623,0.114069,0.67377,without all flagged rows,M3,sponsor
+10,Texas Windstorm Insurance Association,5.75,True,7.29362,-0.237799,-1.54362,without all flagged rows,M3,sponsor
+11,Citizens Property Insurance Corporation,5.75,False,,,,without all flagged rows,M3,sponsor
+12,Citizens Property Insurance Corporation,6.75,False,,,,without all flagged rows,M3,sponsor
+13,Citizens Property Insurance Corporation,5.75,False,,,,without all flagged rows,M3,sponsor
+14,North Carolina Insurance Underwriting Association,5,True,11.384,-0.82277,-6.38399,without all flagged rows,M3,sponsor
+15,Citizens Property Insurance Corporation,7.75,True,3.53264,0.785647,4.21736,without all flagged rows,M3,sponsor
+16,Citizens Property Insurance Corporation,11,True,7.63621,0.364994,3.36379,without all flagged rows,M3,sponsor
+17,North Carolina Insurance Underwriting Association,6.5,True,9.42397,-0.371455,-2.92397,without all flagged rows,M3,sponsor
+18,North Carolina Insurance Underwriting Association,8,True,12.3978,-0.43808,-4.39784,without all flagged rows,M3,sponsor
+19,Heritage Property and Casualty Insurance Company,9.25,True,9.64936,-0.042268,-0.399359,without all flagged rows,M3,sponsor
+20,Heritage Property and Casualty Insurance Company,10.5,True,10.4633,0.0034973,0.0366575,without all flagged rows,M3,sponsor
+21,Texas Windstorm Insurance Association,6,True,8.99942,-0.405401,-2.99942,without all flagged rows,M3,sponsor
+22,Texas Windstorm Insurance Association,7.75,True,10.9568,-0.346268,-3.20681,without all flagged rows,M3,sponsor
+23,Texas Windstorm Insurance Association,11.25,True,15.2323,-0.303048,-3.98227,without all flagged rows,M3,sponsor
+24,Citizens Property Insurance Corporation,10.5,True,5.59056,0.630295,4.90944,without all flagged rows,M3,sponsor
+25,Citizens Property Insurance Corporation,11.5,True,6.49978,0.570579,5.00022,without all flagged rows,M3,sponsor
+26,Citizens Property Insurance Corporation,12.75,True,8.63846,0.389307,4.11154,without all flagged rows,M3,sponsor
+27,SafePoint Insurance Company,9.75,True,14.7,-0.410582,-4.95003,without all flagged rows,M3,sponsor
+28,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,10.5,True,12.7536,-0.194436,-2.25357,without all flagged rows,M3,sponsor
+29,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,4.25,True,6.61427,-0.44231,-2.36427,without all flagged rows,M3,sponsor
+30,SureChoice Underwriters Reciprocal Exchange and SafeChoice Insurance Company,9.5,True,7.1797,0.280035,2.3203,without all flagged rows,M3,sponsor
+31,American Integrity Insurance Group,8,True,8.00307,-0.000383701,-0.0030702,without all flagged rows,M3,sponsor
+32,American Integrity Insurance Group,9.75,True,8.77579,0.10527,0.974206,without all flagged rows,M3,sponsor
+33,American Integrity Insurance Group,12.25,True,9.09124,0.298215,3.15876,without all flagged rows,M3,sponsor
+34,American Integrity Insurance Group,25.5,True,11.5873,0.788772,13.9127,without all flagged rows,M3,sponsor
+35,North Carolina Insurance Underwriting Association,6.9,True,9.16561,-0.283937,-2.26561,without all flagged rows,M3,sponsor
+36,Heritage Property and Casualty Insurance Company,7.75,True,8.48747,-0.0908977,-0.737466,without all flagged rows,M3,sponsor
+37,Heritage Property and Casualty Insurance Company,4.5,True,7.7641,-0.545433,-3.2641,without all flagged rows,M3,sponsor
+38,Security First Insurance Company,6.5,True,7.44201,-0.135339,-0.94201,without all flagged rows,M3,sponsor
+39,Security First Insurance Company,7.5,True,9.81476,-0.268985,-2.31476,without all flagged rows,M3,sponsor
+40,Louisiana Citizens Property Insurance Corporation,7,True,7.73395,-0.0997096,-0.73395,without all flagged rows,M3,sponsor
+41,Florida Peninsula Insurance Company,7.75,True,8.07174,-0.040676,-0.321738,without all flagged rows,M3,sponsor
+42,Citizens Property Insurance Corporation,8.75,True,5.87237,0.398796,2.87763,without all flagged rows,M3,sponsor
+43,Citizens Property Insurance Corporation,9.75,True,6.68962,0.376711,3.06038,without all flagged rows,M3,sponsor
+44,Citizens Property Insurance Corporation,11.25,True,8.05447,0.334141,3.19553,without all flagged rows,M3,sponsor
+45,Citizens Property Insurance Corporation,13,True,10.1169,0.250742,2.8831,without all flagged rows,M3,sponsor
+46,Slide Insurance Company,7.25,True,6.06226,0.178919,1.18774,without all flagged rows,M3,sponsor
+47,Slide Insurance Company,7.75,True,6.74762,0.138503,1.00238,without all flagged rows,M3,sponsor

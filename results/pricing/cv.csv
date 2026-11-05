@@ -1,0 +1,31 @@
+sample,model,held_out,n_rows,n_predicted,n_unpredictable,rmse_log,mae_log,rmse_pp,mae_pp,median_abs_pp
+main (56 distinct layers),M1,series,56,56,0,0.398096,0.321615,3.32896,2.39885,1.98979
+main (56 distinct layers),M1,sponsor,56,56,0,0.428018,0.349706,3.47865,2.55242,2.1775
+main (56 distinct layers),M2,series,56,56,0,0.321575,0.267674,3.02161,2.13926,1.44526
+main (56 distinct layers),M2,sponsor,56,56,0,0.366926,0.303496,3.20217,2.34178,1.96484
+main (56 distinct layers),M3,series,56,56,0,0.31718,0.253266,2.99297,2.05937,1.40357
+main (56 distinct layers),M3,sponsor,56,56,0,0.362811,0.292519,3.19953,2.30485,2.25464
+without guidance prices,M1,series,53,53,0,0.382461,0.3055,3.18405,2.30658,1.93212
+without guidance prices,M1,sponsor,53,53,0,0.41009,0.334168,3.32436,2.47383,2.1451
+without guidance prices,M2,series,53,53,0,0.319343,0.261875,3.08115,2.16228,1.49958
+without guidance prices,M2,sponsor,53,50,3,0.34888,0.289918,3.3038,2.39843,1.85398
+without guidance prices,M3,series,53,53,0,0.317166,0.25117,3.0724,2.10493,1.5916
+without guidance prices,M3,sponsor,53,50,3,0.355621,0.284594,3.34669,2.38356,2.12581
+without discount notes,M1,series,52,52,0,0.391502,0.318222,3.2748,2.34746,2.14471
+without discount notes,M1,sponsor,52,52,0,0.411913,0.339162,3.37656,2.46608,2.17019
+without discount notes,M2,series,52,52,0,0.325382,0.269537,3.04125,2.14613,1.43336
+without discount notes,M2,sponsor,52,52,0,0.357545,0.292459,3.12183,2.24633,1.56042
+without discount notes,M3,series,52,52,0,0.319085,0.255317,3.03156,2.08474,1.33227
+without discount notes,M3,sponsor,52,52,0,0.351678,0.282402,3.1468,2.23507,1.91865
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,series,54,54,0,0.39614,0.320116,3.34098,2.41089,1.9639
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,sponsor,54,54,0,0.423747,0.347954,3.48076,2.56437,2.17647
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,series,54,54,0,0.312253,0.250711,3.00236,2.05904,1.4367
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,sponsor,54,51,3,0.342681,0.281346,3.22803,2.31531,1.66227
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,series,54,54,0,0.311022,0.242462,2.98536,2.00981,1.07958
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,sponsor,54,51,3,0.347978,0.277299,3.25881,2.29978,2.02719
+without all flagged rows,M1,series,48,48,0,0.378278,0.309038,3.14332,2.3134,1.99071
+without all flagged rows,M1,sponsor,48,48,0,0.395555,0.328736,3.2339,2.43099,2.17238
+without all flagged rows,M2,series,48,48,0,0.330224,0.273318,3.15987,2.24293,1.5518
+without all flagged rows,M2,sponsor,48,45,3,0.342082,0.285571,3.2747,2.36154,1.69895
+without all flagged rows,M3,series,48,48,0,0.327425,0.263254,3.18881,2.22268,1.47055
+without all flagged rows,M3,sponsor,48,45,3,0.348987,0.281173,3.37276,2.39031,2.26561

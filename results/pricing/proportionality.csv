@@ -1,0 +1,6 @@
+sample,M1_b,M1_lo,M1_hi,M2_b,M2_lo,M2_hi,proportionality_rejected
+main (56 distinct layers),0.552522,0.0939422,0.965587,0.466365,0.114555,0.830396,True
+without guidance prices,0.618604,0.168704,1.01572,0.490627,0.111998,0.896352,False
+without discount notes,0.634843,0.174268,1.03299,0.5103,0.163356,0.877114,False
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",0.556416,0.0937926,0.971523,0.510485,0.171147,0.880531,True
+without all flagged rows,0.702804,0.262057,1.08429,0.547218,0.160163,0.943962,False
