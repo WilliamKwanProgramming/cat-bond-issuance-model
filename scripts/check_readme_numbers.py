@@ -154,7 +154,9 @@ CHECKS = [
     (T, "| All hurricanes | 25.0 | 17 | 33 | 15 | 36 | 17 |", README, "25.0 hurricanes for 1980-2019 against 17 observed (p = 0.21)"),
     (T, "| OEP | 100 | 1.814 | 0.027 |", README, "1.814% of TIV"),
     # mutation check
-    ("results/mutation_check.txt", "37 of 37 mutants caught", README, "37 of 37 mutants caught"),
+    ("results/mutation_check.txt", "39 of 39 mutants caught", README, "39 of 39 mutants caught"),
+    # run time of the full reproduction (shared 2-core VM)
+    ("results/MANIFEST.txt", "total:   1091 s wall", README, "(about 18 minutes on a shared 2-core VM)"),
 ]
 
 

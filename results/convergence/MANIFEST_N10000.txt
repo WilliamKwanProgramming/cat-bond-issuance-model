@@ -1,7 +1,7 @@
 command: python3 scripts/run_convergence.py --n-years 10000 --n-seeds 20 --seed-start 1001
 seed:    1001
-git:     416d1b7885bbb35dfdcc98d4d73e3792f5793fe8 (clean)
-date:    2026-11-05T09:07:02Z
+git:     c0b9fd98b02f833d1e542bf675def0cc413748a8 (clean)
+date:    2026-11-05T11:07:34Z
 python:  3.13.18; numpy 2.5.3
 machine: x86_64 Linux
 N10000: seeds 1001..1020

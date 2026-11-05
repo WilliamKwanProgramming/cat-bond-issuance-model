@@ -1,7 +1,7 @@
 command: python3 scripts/run_hazard.py
 seed:    none (deterministic)
-git:     2ad29bd8b6bc389fa49b39a3510a1f25fc912379 (uncommitted changes in src/ or scripts/)
-date:    2026-11-05T10:46:45Z
+git:     c0b9fd98b02f833d1e542bf675def0cc413748a8 (clean)
+date:    2026-11-05T11:02:20Z
 python:  3.13.18; numpy 2.5.3
 machine: x86_64 Linux
 data: data/raw/AL.rda, data/raw/storms.csv, data/raw/us_counties.geojson (real, public)
