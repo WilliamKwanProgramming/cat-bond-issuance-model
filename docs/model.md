@@ -13,7 +13,8 @@ uses for US hurricanes (Emanuel 2011), implemented here directly.
 
 ## Pre-specified choices
 
-Fixed before any frequency test, loss, layer or out-of-sample result was looked at.
+Fixed before any frequency test, loss, layer or out-of-sample result was looked at. "Brief" in
+the reason column means the project description this repository was built from fixed the choice.
 
 | Choice | Value | Reason |
 |---|---|---|

@@ -1,8 +1,9 @@
 # Assumptions and their sources
 
 Every input that is not estimated from data, with its value, its source and where it is used.
-"Own assumption" means a stated choice with no external source. The model is teaching-grade and
-the portfolio is hypothetical; see `docs/model.md`.
+"Own assumption" means a stated choice with no external source; "brief" means the choice was
+fixed by the project description this repository was built from, before any result existed. The
+model is teaching-grade and the portfolio is hypothetical; see `docs/model.md`.
 
 ## Portfolio (hypothetical)
 
