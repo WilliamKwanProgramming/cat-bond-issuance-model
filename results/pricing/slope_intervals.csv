@@ -1,0 +1,66 @@
+sample,model,method,b,se,lo,hi,n_clusters,n_boot,p_b_eq_1
+main (56 distinct layers),M1,"HC3, t(n-k)",0.552522,0.186526,0.178558,0.926485,,,0.0199215
+main (56 distinct layers),M1,"CR1 series, t(G-1)",0.552522,0.186563,0.174154,0.930889,37,,0.0217662
+main (56 distinct layers),M1,"wild cluster bootstrap series (WCR, Rademacher)",0.552522,0.186563,0.0939422,0.965587,37,9999,0.0355036
+main (56 distinct layers),M1,"CR1 sponsor, t(G-1)",0.552522,0.213589,0.0910899,1.01395,14,,0.056317
+main (56 distinct layers),M1,"wild cluster bootstrap sponsor (WCR, Rademacher)",0.552522,0.213589,0.166597,1.15502,14,9999,0.157316
+main (56 distinct layers),M2,"HC3, t(n-k)",0.466365,0.168202,0.127791,0.804938,,,0.00269168
+main (56 distinct layers),M2,"CR1 series, t(G-1)",0.466365,0.152858,0.156354,0.776375,37,,0.00129081
+main (56 distinct layers),M2,"wild cluster bootstrap series (WCR, Rademacher)",0.466365,0.152858,0.114555,0.830396,37,9999,0.00830083
+main (56 distinct layers),M2,"CR1 sponsor, t(G-1)",0.466365,0.158329,0.124317,0.808413,14,,0.00501964
+main (56 distinct layers),M2,"wild cluster bootstrap sponsor (WCR, Rademacher)",0.466365,0.158329,0.146407,0.871149,14,9999,0.0156016
+main (56 distinct layers),M3,"HC3, t(n-k)",0.492271,0.174351,0.14089,0.843652,,,0.00561882
+main (56 distinct layers),M3,"CR1 series, t(G-1)",0.492271,0.156755,0.174357,0.810185,37,,0.00258074
+main (56 distinct layers),M3,"CR1 sponsor, t(G-1)",0.492271,0.169086,0.126983,0.857559,14,,0.0101842
+without guidance prices,M1,"HC3, t(n-k)",0.618604,0.177843,0.26157,0.975638,,,0.0367743
+without guidance prices,M1,"CR1 series, t(G-1)",0.618604,0.175548,0.261449,0.975759,34,,0.0370933
+without guidance prices,M1,"wild cluster bootstrap series (WCR, Rademacher)",0.618604,0.175548,0.168704,1.01572,34,9999,0.0591059
+without guidance prices,M1,"CR1 sponsor, t(G-1)",0.618604,0.207963,0.169327,1.06788,14,,0.0896462
+without guidance prices,M1,"wild cluster bootstrap sponsor (WCR, Rademacher)",0.618604,0.207963,0.235712,1.15339,14,9999,0.20312
+without guidance prices,M2,"HC3, t(n-k)",0.490627,0.183864,0.119829,0.861425,,,0.00823584
+without guidance prices,M2,"CR1 series, t(G-1)",0.490627,0.165278,0.154366,0.826888,34,,0.00413254
+without guidance prices,M2,"wild cluster bootstrap series (WCR, Rademacher)",0.490627,0.165278,0.111998,0.896352,34,9999,0.0177018
+without guidance prices,M2,"CR1 sponsor, t(G-1)",0.490627,0.169791,0.123816,0.857438,14,,0.0102389
+without guidance prices,M2,"wild cluster bootstrap sponsor (WCR, Rademacher)",0.490627,0.169791,0.138822,0.937971,14,9999,0.0385039
+without guidance prices,M3,"HC3, t(n-k)",0.526599,0.197699,0.127337,0.925861,,,0.0212953
+without guidance prices,M3,"CR1 series, t(G-1)",0.526599,0.173207,0.174207,0.87899,34,,0.0100029
+without guidance prices,M3,"CR1 sponsor, t(G-1)",0.526599,0.188155,0.120115,0.933083,14,,0.0257972
+without discount notes,M1,"HC3, t(n-k)",0.634843,0.181749,0.26979,0.999896,,,0.049937
+without discount notes,M1,"CR1 series, t(G-1)",0.634843,0.182384,0.264193,1.00549,35,,0.0532993
+without discount notes,M1,"wild cluster bootstrap series (WCR, Rademacher)",0.634843,0.182384,0.174268,1.03299,35,9999,0.0713071
+without discount notes,M1,"CR1 sponsor, t(G-1)",0.634843,0.19935,0.204174,1.06551,14,,0.0899935
+without discount notes,M1,"wild cluster bootstrap sponsor (WCR, Rademacher)",0.634843,0.19935,0.2343,1.17258,14,9999,0.184018
+without discount notes,M2,"HC3, t(n-k)",0.5103,0.170636,0.165943,0.854657,,,0.00640375
+without discount notes,M2,"CR1 series, t(G-1)",0.5103,0.152124,0.201147,0.819453,35,,0.00282668
+without discount notes,M2,"wild cluster bootstrap series (WCR, Rademacher)",0.5103,0.152124,0.163356,0.877114,35,9999,0.0146015
+without discount notes,M2,"CR1 sponsor, t(G-1)",0.5103,0.153381,0.178941,0.841659,14,,0.00706614
+without discount notes,M2,"wild cluster bootstrap sponsor (WCR, Rademacher)",0.5103,0.153381,0.186102,0.89708,14,9999,0.0131013
+without discount notes,M3,"HC3, t(n-k)",0.528941,0.174427,0.17641,0.881472,,,0.0100982
+without discount notes,M3,"CR1 series, t(G-1)",0.528941,0.153282,0.217435,0.840447,35,,0.00415478
+without discount notes,M3,"CR1 sponsor, t(G-1)",0.528941,0.160118,0.183027,0.874854,14,,0.0114475
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,"HC3, t(n-k)",0.556416,0.186221,0.182735,0.930096,,,0.0209106
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,"CR1 series, t(G-1)",0.556416,0.185663,0.179102,0.933729,35,,0.0225778
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,"wild cluster bootstrap series (WCR, Rademacher)",0.556416,0.185663,0.0937926,0.971523,35,9999,0.0378038
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,"CR1 sponsor, t(G-1)",0.556416,0.211733,0.0989943,1.01384,14,,0.0563193
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M1,"wild cluster bootstrap sponsor (WCR, Rademacher)",0.556416,0.211733,0.16215,1.14413,14,9999,0.151915
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,"HC3, t(n-k)",0.510485,0.165049,0.177852,0.843119,,,0.00486226
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,"CR1 series, t(G-1)",0.510485,0.148538,0.208619,0.812352,35,,0.00230357
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,"wild cluster bootstrap series (WCR, Rademacher)",0.510485,0.148538,0.171147,0.880531,35,9999,0.0120012
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,"CR1 sponsor, t(G-1)",0.510485,0.149629,0.187232,0.833738,14,,0.00607137
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M2,"wild cluster bootstrap sponsor (WCR, Rademacher)",0.510485,0.149629,0.190419,0.88942,14,9999,0.0172017
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,"HC3, t(n-k)",0.535189,0.172612,0.186843,0.883535,,,0.0101352
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,"CR1 series, t(G-1)",0.535189,0.153625,0.222985,0.847393,35,,0.0047026
+"without launch-plan EL (Alamo Re 2021-1, 2023-1)",M3,"CR1 sponsor, t(G-1)",0.535189,0.16237,0.184411,0.885967,14,,0.0133291
+without all flagged rows,M1,"HC3, t(n-k)",0.702804,0.171637,0.357316,1.04829,,,0.0900589
+without all flagged rows,M1,"CR1 series, t(G-1)",0.702804,0.16998,0.355658,1.04995,31,,0.0906202
+without all flagged rows,M1,"wild cluster bootstrap series (WCR, Rademacher)",0.702804,0.16998,0.262057,1.08429,31,9999,0.121212
+without all flagged rows,M1,"CR1 sponsor, t(G-1)",0.702804,0.187096,0.298607,1.107,14,,0.136195
+without all flagged rows,M1,"wild cluster bootstrap sponsor (WCR, Rademacher)",0.702804,0.187096,0.33725,1.16895,14,9999,0.253725
+without all flagged rows,M2,"HC3, t(n-k)",0.547218,0.188831,0.164951,0.929486,,,0.0215116
+without all flagged rows,M2,"CR1 series, t(G-1)",0.547218,0.165698,0.208817,0.885619,31,,0.0104313
+without all flagged rows,M2,"wild cluster bootstrap series (WCR, Rademacher)",0.547218,0.165698,0.160163,0.943962,31,9999,0.0277028
+without all flagged rows,M2,"CR1 sponsor, t(G-1)",0.547218,0.167882,0.184532,0.909904,14,,0.0182972
+without all flagged rows,M2,"wild cluster bootstrap sponsor (WCR, Rademacher)",0.547218,0.167882,0.164879,0.943288,14,9999,0.0347035
+without all flagged rows,M3,"HC3, t(n-k)",0.575196,0.200709,0.16814,0.982252,,,0.0412808
+without all flagged rows,M3,"CR1 series, t(G-1)",0.575196,0.171411,0.225129,0.925263,31,,0.0190518
+without all flagged rows,M3,"CR1 sponsor, t(G-1)",0.575196,0.182712,0.18047,0.969922,14,,0.0369053

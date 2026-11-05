@@ -1,0 +1,10 @@
+command: python3 scripts/run_pricing.py
+seed:    6001
+git:     1efd8d95743b4ef7d2ee3879876471425be7efe7 (clean)
+date:    2026-11-05T08:39:13Z
+python:  3.13.18; numpy 2.5.3
+machine: x86_64 Linux
+data: REAL public deal terms, data/deals/cat_bond_deals.csv (Artemis pages)
+protocol: docs/pricing_protocol.md (committed before this script was first run)
+n_boot: 9999
+bootstrap_streams: numpy default_rng([seed, i]), i = 0, 1, ... in the order sample x model (M1, M2) x cluster (series, sponsor)

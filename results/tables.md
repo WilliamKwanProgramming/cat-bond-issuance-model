@@ -172,6 +172,155 @@ Source: `results/layers/layer_grid.csv`
 
 Source: `results/pricing_synthetic/coverage.csv`
 
+### Slope b of log spread on log EL, main sample of 56 distinct layers (REAL data: public deal terms from Artemis pages)
+
+| model | method | b [95% interval] | p (b = 1) | clusters | bootstrap draws |
+|---|---|---|---|---|---|
+| M1 | HC3, t(n-k) | 0.553 [0.179, 0.926] | 0.0199 |  |  |
+| M1 | CR1 series, t(G-1) | 0.553 [0.174, 0.931] | 0.0218 | 37 |  |
+| M1 | wild cluster bootstrap series (WCR, Rademacher) | 0.553 [0.094, 0.966] | 0.0355 | 37 | 9999 |
+| M1 | CR1 sponsor, t(G-1) | 0.553 [0.091, 1.014] | 0.0563 | 14 |  |
+| M1 | wild cluster bootstrap sponsor (WCR, Rademacher) | 0.553 [0.167, 1.155] | 0.1573 | 14 | 9999 |
+| M2 | HC3, t(n-k) | 0.466 [0.128, 0.805] | 0.0027 |  |  |
+| M2 | CR1 series, t(G-1) | 0.466 [0.156, 0.776] | 0.0013 | 37 |  |
+| M2 | wild cluster bootstrap series (WCR, Rademacher) | 0.466 [0.115, 0.830] | 0.0083 | 37 | 9999 |
+| M2 | CR1 sponsor, t(G-1) | 0.466 [0.124, 0.808] | 0.0050 | 14 |  |
+| M2 | wild cluster bootstrap sponsor (WCR, Rademacher) | 0.466 [0.146, 0.871] | 0.0156 | 14 | 9999 |
+| M3 | HC3, t(n-k) | 0.492 [0.141, 0.844] | 0.0056 |  |  |
+| M3 | CR1 series, t(G-1) | 0.492 [0.174, 0.810] | 0.0026 | 37 |  |
+| M3 | CR1 sponsor, t(G-1) | 0.492 [0.127, 0.858] | 0.0102 | 14 |  |
+
+Source: `results/pricing/slope_intervals.csv`
+
+### Pre-specified test of proportionality (b = 1) in every sample (REAL data: public deal terms from Artemis pages)
+
+| sample | M1 b [wild 95%, series] | M2 b [wild 95%, series] | b = 1 rejected (both exclude 1) |
+|---|---|---|---|
+| main (56 distinct layers) | 0.553 [0.094, 0.966] | 0.466 [0.115, 0.830] | yes |
+| without guidance prices | 0.619 [0.169, 1.016] | 0.491 [0.112, 0.896] | no |
+| without discount notes | 0.635 [0.174, 1.033] | 0.510 [0.163, 0.877] | no |
+| without launch-plan EL (Alamo Re 2021-1, 2023-1) | 0.556 [0.094, 0.972] | 0.510 [0.171, 0.881] | yes |
+| without all flagged rows | 0.703 [0.262, 1.084] | 0.547 [0.160, 0.944] | no |
+
+Source: `results/pricing/proportionality.csv`
+
+### M3 slope in every sample (REAL data: public deal terms from Artemis pages; no bootstrap for M3, as pre-specified)
+
+| sample | M3 b [CR1 series, t(G-1) 95%] |
+|---|---|
+| main (56 distinct layers) | 0.492 [0.174, 0.810] |
+| without guidance prices | 0.527 [0.174, 0.879] |
+| without discount notes | 0.529 [0.217, 0.840] |
+| without launch-plan EL (Alamo Re 2021-1, 2023-1) | 0.535 [0.223, 0.847] |
+| without all flagged rows | 0.575 [0.225, 0.925] |
+
+Source: `results/pricing/slope_intervals.csv`
+
+### Fit statistics (REAL data: public deal terms from Artemis pages)
+
+| sample | model | n | k | n_series | n_sponsors | sigma_log | r2 |
+|---|---|---|---|---|---|---|---|
+| main (56 distinct layers) | M1 | 56 | 2 | 37 | 14 | 0.380 | 0.208 |
+| main (56 distinct layers) | M2 | 56 | 10 | 37 | 14 | 0.258 | 0.691 |
+| main (56 distinct layers) | M3 | 56 | 12 | 37 | 14 | 0.253 | 0.714 |
+| without guidance prices | M1 | 53 | 2 | 34 | 14 | 0.366 | 0.261 |
+| without guidance prices | M2 | 53 | 10 | 34 | 14 | 0.254 | 0.700 |
+| without guidance prices | M3 | 53 | 12 | 34 | 14 | 0.251 | 0.721 |
+| without discount notes | M1 | 52 | 2 | 35 | 14 | 0.373 | 0.267 |
+| without discount notes | M2 | 52 | 10 | 35 | 14 | 0.255 | 0.712 |
+| without discount notes | M3 | 52 | 12 | 35 | 14 | 0.249 | 0.739 |
+| without launch-plan EL (Alamo Re 2021-1, 2023-1) | M1 | 54 | 2 | 35 | 14 | 0.378 | 0.217 |
+| without launch-plan EL (Alamo Re 2021-1, 2023-1) | M2 | 54 | 10 | 35 | 14 | 0.248 | 0.714 |
+| without launch-plan EL (Alamo Re 2021-1, 2023-1) | M3 | 54 | 12 | 35 | 14 | 0.245 | 0.734 |
+| without all flagged rows | M1 | 48 | 2 | 31 | 14 | 0.361 | 0.327 |
+| without all flagged rows | M2 | 48 | 10 | 31 | 14 | 0.253 | 0.726 |
+| without all flagged rows | M3 | 48 | 12 | 31 | 14 | 0.248 | 0.750 |
+
+Source: `results/pricing/fit_stats.csv`
+
+### Leave-one-series-out and leave-one-sponsor-out prediction errors (REAL data: public deal terms from Artemis pages)
+
+| sample | model | held_out | n_rows | n_predicted | n_unpredictable | rmse_log | mae_log | rmse_pp | mae_pp | median_abs_pp |
+|---|---|---|---|---|---|---|---|---|---|---|
+| main (56 distinct layers) | M1 | series | 56 | 56 | 0 | 0.398 | 0.322 | 3.33 | 2.40 | 1.99 |
+| main (56 distinct layers) | M1 | sponsor | 56 | 56 | 0 | 0.428 | 0.350 | 3.48 | 2.55 | 2.18 |
+| main (56 distinct layers) | M2 | series | 56 | 56 | 0 | 0.322 | 0.268 | 3.02 | 2.14 | 1.45 |
+| main (56 distinct layers) | M2 | sponsor | 56 | 56 | 0 | 0.367 | 0.303 | 3.20 | 2.34 | 1.96 |
+| main (56 distinct layers) | M3 | series | 56 | 56 | 0 | 0.317 | 0.253 | 2.99 | 2.06 | 1.40 |
+| main (56 distinct layers) | M3 | sponsor | 56 | 56 | 0 | 0.363 | 0.293 | 3.20 | 2.30 | 2.25 |
+| without guidance prices | M1 | series | 53 | 53 | 0 | 0.382 | 0.305 | 3.18 | 2.31 | 1.93 |
+| without guidance prices | M1 | sponsor | 53 | 53 | 0 | 0.410 | 0.334 | 3.32 | 2.47 | 2.15 |
+| without guidance prices | M2 | series | 53 | 53 | 0 | 0.319 | 0.262 | 3.08 | 2.16 | 1.50 |
+| without guidance prices | M2 | sponsor | 53 | 50 | 3 | 0.349 | 0.290 | 3.30 | 2.40 | 1.85 |
+| without guidance prices | M3 | series | 53 | 53 | 0 | 0.317 | 0.251 | 3.07 | 2.10 | 1.59 |
+| without guidance prices | M3 | sponsor | 53 | 50 | 3 | 0.356 | 0.285 | 3.35 | 2.38 | 2.13 |
+| without discount notes | M1 | series | 52 | 52 | 0 | 0.392 | 0.318 | 3.27 | 2.35 | 2.14 |
+| without discount notes | M1 | sponsor | 52 | 52 | 0 | 0.412 | 0.339 | 3.38 | 2.47 | 2.17 |
+| without discount notes | M2 | series | 52 | 52 | 0 | 0.325 | 0.270 | 3.04 | 2.15 | 1.43 |
+| without discount notes | M2 | sponsor | 52 | 52 | 0 | 0.358 | 0.292 | 3.12 | 2.25 | 1.56 |
+| without discount notes | M3 | series | 52 | 52 | 0 | 0.319 | 0.255 | 3.03 | 2.08 | 1.33 |
+| without discount notes | M3 | sponsor | 52 | 52 | 0 | 0.352 | 0.282 | 3.15 | 2.24 | 1.92 |
+| without launch-plan EL (Alamo Re 2021-1, 2023-1) | M1 | series | 54 | 54 | 0 | 0.396 | 0.320 | 3.34 | 2.41 | 1.96 |
+| without launch-plan EL (Alamo Re 2021-1, 2023-1) | M1 | sponsor | 54 | 54 | 0 | 0.424 | 0.348 | 3.48 | 2.56 | 2.18 |
+| without launch-plan EL (Alamo Re 2021-1, 2023-1) | M2 | series | 54 | 54 | 0 | 0.312 | 0.251 | 3.00 | 2.06 | 1.44 |
+| without launch-plan EL (Alamo Re 2021-1, 2023-1) | M2 | sponsor | 54 | 51 | 3 | 0.343 | 0.281 | 3.23 | 2.32 | 1.66 |
+| without launch-plan EL (Alamo Re 2021-1, 2023-1) | M3 | series | 54 | 54 | 0 | 0.311 | 0.242 | 2.99 | 2.01 | 1.08 |
+| without launch-plan EL (Alamo Re 2021-1, 2023-1) | M3 | sponsor | 54 | 51 | 3 | 0.348 | 0.277 | 3.26 | 2.30 | 2.03 |
+| without all flagged rows | M1 | series | 48 | 48 | 0 | 0.378 | 0.309 | 3.14 | 2.31 | 1.99 |
+| without all flagged rows | M1 | sponsor | 48 | 48 | 0 | 0.396 | 0.329 | 3.23 | 2.43 | 2.17 |
+| without all flagged rows | M2 | series | 48 | 48 | 0 | 0.330 | 0.273 | 3.16 | 2.24 | 1.55 |
+| without all flagged rows | M2 | sponsor | 48 | 45 | 3 | 0.342 | 0.286 | 3.27 | 2.36 | 1.70 |
+| without all flagged rows | M3 | series | 48 | 48 | 0 | 0.327 | 0.263 | 3.19 | 2.22 | 1.47 |
+| without all flagged rows | M3 | sponsor | 48 | 45 | 3 | 0.349 | 0.281 | 3.37 | 2.39 | 2.27 |
+
+Source: `results/pricing/cv.csv`
+
+### Coefficients of M2 and M3, main sample (REAL data: public deal terms from Artemis pages; standard errors, no tests)
+
+| model | term | coef | se_ols | se_hc3 | se_cr1_series | se_cr1_sponsor |
+|---|---|---|---|---|---|---|
+| M2 | const | 1.201 | 0.141 | 0.108 | 0.096 | 0.095 |
+| M2 | log_el | 0.466 | 0.106 | 0.168 | 0.153 | 0.158 |
+| M2 | year[2018] | -0.101 | 0.182 | 0.128 | 0.106 | 0.078 |
+| M2 | year[2019] | 0.116 | 0.197 | 0.128 | 0.097 | 0.104 |
+| M2 | year[2020] | 0.409 | 0.224 | 0.197 | 0.115 | 0.065 |
+| M2 | year[2021] | 0.357 | 0.184 | 0.190 | 0.164 | 0.135 |
+| M2 | year[2022] | 0.570 | 0.228 | 0.539 | 0.296 | 0.284 |
+| M2 | year[2023] | 0.843 | 0.173 | 0.150 | 0.129 | 0.127 |
+| M2 | year[2024] | 0.785 | 0.155 | 0.114 | 0.152 | 0.102 |
+| M2 | year[2025] | 0.655 | 0.140 | 0.082 | 0.081 | 0.080 |
+| M3 | const | 1.737 | 0.320 | 0.229 | 0.303 | 0.332 |
+| M3 | log_el | 0.492 | 0.108 | 0.174 | 0.157 | 0.169 |
+| M3 | year[2018] | -0.097 | 0.185 | 0.110 | 0.088 | 0.057 |
+| M3 | year[2019] | 0.070 | 0.195 | 0.074 | 0.063 | 0.050 |
+| M3 | year[2020] | 0.387 | 0.220 | 0.118 | 0.074 | 0.041 |
+| M3 | year[2021] | 0.388 | 0.182 | 0.178 | 0.156 | 0.118 |
+| M3 | year[2022] | 0.575 | 0.224 | 0.516 | 0.288 | 0.271 |
+| M3 | year[2023] | 0.872 | 0.176 | 0.164 | 0.142 | 0.120 |
+| M3 | year[2024] | 0.779 | 0.152 | 0.103 | 0.146 | 0.109 |
+| M3 | year[2025] | 0.591 | 0.141 | 0.077 | 0.096 | 0.074 |
+| M3 | trigger[industry loss index] | 0.074 | 0.162 | 0.135 | 0.104 | 0.120 |
+| M3 | log_size | -0.098 | 0.053 | 0.045 | 0.055 | 0.069 |
+
+Source: `results/pricing/coefficients.csv`
+
+### Spread / EL multiple by issue year, 56 distinct layers (REAL data: public deal terms from Artemis pages)
+
+| issue_year | n | median_el_pct | median_spread_pct | median_multiple | min_multiple | max_multiple |
+|---|---|---|---|---|---|---|
+| 2017 | 4 | 1.83 | 4.38 | 2.38 | 1.95 | 3.49 |
+| 2018 | 4 | 1.62 | 3.88 | 2.36 | 1.97 | 2.81 |
+| 2019 | 3 | 1.61 | 4.50 | 2.64 | 2.50 | 4.17 |
+| 2020 | 2 | 1.50 | 6.00 | 4.18 | 3.23 | 5.12 |
+| 2021 | 4 | 1.39 | 5.75 | 4.63 | 2.27 | 5.58 |
+| 2022 | 2 | 1.19 | 6.38 | 6.29 | 3.25 | 9.34 |
+| 2023 | 5 | 1.59 | 10.12 | 6.11 | 4.15 | 11.01 |
+| 2024 | 9 | 1.51 | 10.50 | 6.67 | 3.12 | 8.47 |
+| 2025 | 23 | 1.79 | 8.00 | 4.85 | 3.08 | 7.25 |
+| all | 56 | 1.63 | 7.62 | 4.26 | 1.95 | 11.01 |
+
+Source: `results/pricing/year_multiple.csv`
+
 ### Hypothetical portfolio by county (households: 2020 Census via UF BEBR; TIV USD 100 bn, HYPOTHETICAL)
 
 | fips | county | households_2020 | share_pct | tiv_usd_m | lon | lat |
