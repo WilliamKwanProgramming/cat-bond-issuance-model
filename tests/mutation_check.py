@@ -236,7 +236,7 @@ MUTANTS = [
         [
             (
                 S + "pricing/fit.py",
-                "meat = (x * (e / (1 - h))[:, None] ** 2).T @ x",
+                "meat = (x * loo[:, None] ** 2).T @ x",
                 "meat = (x * e[:, None] ** 2).T @ x",
             )
         ],
@@ -258,6 +258,126 @@ MUTANTS = [
                 S + "pricing/fit.py",
                 'self.sigma * np.sqrt(1.0 + np.einsum("ij,jk,ik->i"',
                 'self.sigma * np.sqrt(np.einsum("ij,jk,ik->i"',
+            )
+        ],
+    ),
+    (
+        "M26 wild bootstrap weights: 0/1 instead of Rademacher +1/-1",
+        [
+            (
+                S + "pricing/wild.py",
+                "return 2.0 * rng.integers(0, 2, size=(n_boot, n_clusters)) - 1.0",
+                "return 1.0 * rng.integers(0, 2, size=(n_boot, n_clusters))",
+            )
+        ],
+    ),
+    (
+        "M27 wild bootstrap: t* centred at the estimate instead of the null value",
+        [
+            (
+                S + "pricing/wild.py",
+                "tstar = (bstar[self.j] - beta0) / self._se(estar)",
+                "tstar = (bstar[self.j] - self.estimate) / self._se(estar)",
+            )
+        ],
+    ),
+    (
+        "M28 wild bootstrap: CR1 small-sample factor dropped G/(G-1)",
+        [
+            (
+                S + "pricing/wild.py",
+                "self.c = self.n_clusters / (self.n_clusters - 1) * (n - 1) / (n - k)",
+                "self.c = (n - 1) / (n - k)",
+            )
+        ],
+    ),
+    (
+        "M29 year fixed effects: last issue-year dummy dropped",
+        [
+            (
+                S + "pricing/fit.py",
+                "for lev in levels[cov][1:]:",
+                "for lev in levels[cov][1:-1]:",
+            )
+        ],
+    ),
+    (
+        "M30 clustering: the cluster argument is ignored (always sponsor)",
+        [
+            (
+                S + "pricing/fit.py",
+                "groups = cluster_labels(df, cluster)",
+                'groups = cluster_labels(df, "sponsor")',
+            )
+        ],
+    ),
+    (
+        "M31 clustering: all blank labels pooled into one cluster",
+        [
+            (
+                S + "pricing/fit.py",
+                'lab = lab.where(~_blank(df[column]), "__row" + row)',
+                'lab = lab.where(~_blank(df[column]), "__blank")',
+            )
+        ],
+    ),
+    (
+        "M32 leave-group-out: held-out group stays in the training rows",
+        [
+            (
+                S + "pricing/validation.py",
+                "train = rows[codes != g]",
+                "train = rows",
+            )
+        ],
+    ),
+    (
+        "M33 leave-group-out: error in points has the wrong sign",
+        [
+            (
+                S + "pricing/validation.py",
+                '"err_pp": spread - pred,',
+                '"err_pp": pred - spread,',
+            )
+        ],
+    ),
+    (
+        "M34 workbook formula: exhaustion probability counted at the attachment",
+        [
+            (
+                S + "workbook.py",
+                "return f'=COUNTIF(AnnualMax,\">=\"&({a}+{lim}))/N_years'",
+                "return f'=COUNTIF(AnnualMax,\">=\"&{a})/N_years'",
+            )
+        ],
+    ),
+    (
+        "M35 workbook formula: event layer loss capped at E instead of the limit",
+        [
+            (
+                S + "workbook.py",
+                'f"+(EventLoss>={e})*{lim}))/(N_years*{lim})"',
+                'f"+(EventLoss>={e})*{e}))/(N_years*{lim})"',
+            )
+        ],
+    ),
+    (
+        "M36 transaction stack: next layer attaches half a limit up (layers overlap)",
+        [
+            (
+                S + "transaction.py",
+                "a = a + lim",
+                "a = a + lim / 2",
+            )
+        ],
+    ),
+    (
+        "M37 deal sample: duplicate layers not removed",
+        [
+            (
+                S + "pricing/sample.py",
+                'df["duplicate"] = dup',
+                'df["duplicate"] = dup & False',
             )
         ],
     ),
