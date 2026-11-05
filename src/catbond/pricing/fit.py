@@ -4,14 +4,18 @@ Model (ordinary least squares on the rows with complete data):
 
     log(spread_pct_i) = b0 + b1 log(expected_loss_pct_i) + c' z_i + e_i,
 
-with optional covariates z: ``issue_year`` (years after 2000), ``log_size`` (log of
-size_usd_m), and the categorical ``trigger``, ``peril`` and ``region`` (treatment dummies, the
-alphabetically first level is the reference). Reported standard errors:
+with optional covariates z: ``issue_year`` (years after 2000, a linear trend), ``year_fe``
+(issue-year fixed effects), ``log_size`` (log of size_usd_m), and the categorical ``trigger``,
+``peril`` and ``region``. Categorical covariates enter as treatment dummies; the alphabetically
+first level is the reference (for ``year_fe`` the earliest year). Reported standard errors:
 
 * classical OLS, s^2 (X'X)^-1 with s^2 = e'e / (n - k);
 * HC3, (X'X)^-1 X' diag(e_i^2 / (1 - h_ii)^2) X (X'X)^-1 (heteroskedasticity-robust);
-* cluster-robust by sponsor (CR1), c (X'X)^-1 (sum_g X_g' e_g e_g' X_g) (X'X)^-1 with
-  c = G / (G - 1) (n - 1) / (n - k); a row with no sponsor is its own cluster.
+* cluster-robust (CR1), c (X'X)^-1 (sum_g X_g' e_g e_g' X_g) (X'X)^-1 with
+  c = G / (G - 1) (n - 1) / (n - k) (Cameron and Miller 2015), clustered by the column
+  named in ``cluster`` (default ``sponsor``; ``deal_name`` clusters by note series); a row with
+  a blank cluster label is its own cluster. ``SpreadFit.cluster_se`` gives the same formula for
+  any other grouping.
 
 Leave-one-out prediction errors use e_i / (1 - h_ii) (exact for OLS). The prediction interval
 for a new tranche is the classical normal-theory interval on the log scale,
@@ -54,7 +58,8 @@ DEAL_COLUMNS = [
 ]
 
 NUMERIC_COVARIATES = {"issue_year": "issue_year", "log_size": "size_usd_m"}
-CATEGORICAL_COVARIATES = ("trigger", "peril", "region")
+CATEGORICAL_COVARIATES = ("trigger", "peril", "region", "year_fe")
+COVARIATE_COLUMN = {"issue_year": "issue_year", "log_size": "size_usd_m", "year_fe": "issue_year"}
 YEAR_ORIGIN = 2000
 
 
@@ -86,7 +91,7 @@ def prepare_deals(
         c for c in ("expected_loss_pct", "spread_pct", "sponsor") if c not in deals.columns
     ]
     for cov in covariates:
-        col = NUMERIC_COVARIATES.get(cov, cov)
+        col = COVARIATE_COLUMN.get(cov, cov)
         if cov not in NUMERIC_COVARIATES and cov not in CATEGORICAL_COVARIATES:
             raise ValueError(f"unknown covariate {cov!r}")
         if col not in deals.columns:
@@ -115,12 +120,14 @@ def prepare_deals(
         drop(v.isna() | (v <= 0), f"{col} missing or <= 0")
         df = df.assign(**{col: pd.to_numeric(df[col], errors="coerce")})
     for cov in covariates:
-        col = NUMERIC_COVARIATES.get(cov, cov)
+        col = COVARIATE_COLUMN.get(cov, cov)
         if cov in NUMERIC_COVARIATES:
             v = pd.to_numeric(df[col], errors="coerce")
             bad = v.isna() | ((v <= 0) if cov == "log_size" else False)
             drop(bad, f"{col} missing" + (" or <= 0" if cov == "log_size" else ""))
             df = df.assign(**{col: pd.to_numeric(df[col], errors="coerce")})
+        elif cov == "year_fe":
+            drop(pd.to_numeric(df[col], errors="coerce").isna(), f"{col} missing")
         else:
             drop(_blank(df[col]), f"{col} missing")
     return df.reset_index(drop=True), SampleReport(n_input, len(df), dropped)
@@ -140,7 +147,12 @@ def _design(
             cols.append(np.log(df["size_usd_m"].to_numpy(dtype=float)))
             names.append("log_size")
         else:
-            vals = df[cov].astype(str).str.strip()
+            if cov == "year_fe":
+                vals = pd.Series(
+                    [str(int(v)) for v in df["issue_year"].to_numpy(dtype=float)], dtype=object
+                )
+            else:
+                vals = df[cov].astype(str).str.strip()
             if cov not in levels:
                 levels[cov] = sorted(vals.unique())
             unknown = set(vals) - set(levels[cov])
@@ -148,8 +160,28 @@ def _design(
                 raise ValueError(f"{cov}: levels not seen in the fit: {sorted(unknown)}")
             for lev in levels[cov][1:]:
                 cols.append((vals == lev).to_numpy(dtype=float))
-                names.append(f"{cov}[{lev}]")
+                names.append(f"{'year' if cov == 'year_fe' else cov}[{lev}]")
     return np.column_stack(cols), names, levels
+
+
+def cluster_labels(df: pd.DataFrame, column: str) -> np.ndarray:
+    """Integer cluster codes from ``df[column]``; a blank label is a cluster of its own."""
+    lab = df[column].astype(str).str.strip()
+    row = pd.Series(range(len(df)), index=df.index).astype(str)
+    lab = lab.where(~_blank(df[column]), "__row" + row)
+    return pd.factorize(lab)[0]
+
+
+def cluster_robust_se(
+    x: np.ndarray, e: np.ndarray, xtx_inv: np.ndarray, groups: np.ndarray
+) -> np.ndarray:
+    """CR1 standard errors (see module docstring) for residuals ``e`` and cluster codes."""
+    n, k = x.shape
+    g = int(groups.max()) + 1
+    scores = np.zeros((g, k))
+    np.add.at(scores, groups, x * e[:, None])
+    c = g / (g - 1) * (n - 1) / (n - k) if g > 1 else np.nan
+    return np.sqrt(np.diag(c * xtx_inv @ (scores.T @ scores) @ xtx_inv))
 
 
 @dataclass(frozen=True)
@@ -169,6 +201,27 @@ class SpreadFit:
     covariates: tuple[str, ...]
     levels: dict[str, list[str]]
     report: SampleReport
+    data: pd.DataFrame
+    x: np.ndarray
+    y: np.ndarray
+    cluster: str
+
+    @property
+    def resid(self) -> np.ndarray:
+        """OLS residuals on the log-spread scale."""
+        return self.y - self.x @ self.coef
+
+    @property
+    def r2(self) -> float:
+        """Coefficient of determination on the log-spread scale."""
+        e = self.resid
+        return float(1.0 - e @ e / np.sum((self.y - self.y.mean()) ** 2))
+
+    def cluster_se(self, column: str) -> np.ndarray:
+        """CR1 standard errors clustered by another column of the fitted rows."""
+        return cluster_robust_se(
+            self.x, self.resid, self.xtx_inv, cluster_labels(self.data, column)
+        )
 
     @property
     def loo_rmse(self) -> float:
@@ -209,8 +262,11 @@ def fit_log_spread(
     deals: pd.DataFrame,
     covariates: Sequence[str] = (),
     spread_basis: Sequence[str] | None = None,
+    cluster: str = "sponsor",
 ) -> SpreadFit:
     """Fit the log-spread regression on the usable rows of ``deals``."""
+    if cluster not in deals.columns:
+        raise ValueError(f"deals table lacks columns: [{cluster!r}]")
     df, report = prepare_deals(deals, covariates, spread_basis)
     x, names, levels = _design(df, covariates, None)
     n, k = x.shape
@@ -223,16 +279,15 @@ def fit_log_spread(
     h = np.einsum("ij,jk,ik->i", x, xtx_inv, x)
     s2 = float(e @ e / (n - k))
     se_ols = np.sqrt(np.diag(s2 * xtx_inv))
-    meat = (x * (e / (1 - h))[:, None] ** 2).T @ x
+    # a row with leverage 1 (e.g. the only row of a fixed-effect level) has no leave-one-out
+    # error; it is NaN, and HC3 is then undefined (NaN) as well
+    with np.errstate(divide="ignore", invalid="ignore"):
+        loo = np.where(h < 1 - 1e-10, e / (1 - h), np.nan)
+    meat = (x * loo[:, None] ** 2).T @ x
     se_hc3 = np.sqrt(np.diag(xtx_inv @ meat @ xtx_inv))
-    sponsor = df["sponsor"].astype(str).str.strip()
-    sponsor = sponsor.where(~_blank(df["sponsor"]), "__row" + df.index.astype(str))
-    groups = pd.factorize(sponsor)[0]
+    groups = cluster_labels(df, cluster)
     g = int(groups.max()) + 1
-    scores = np.zeros((g, k))
-    np.add.at(scores, groups, x * e[:, None])
-    c = g / (g - 1) * (n - 1) / (n - k) if g > 1 else np.nan
-    se_cl = np.sqrt(np.diag(c * xtx_inv @ (scores.T @ scores) @ xtx_inv))
+    se_cl = cluster_robust_se(x, e, xtx_inv, groups)
     return SpreadFit(
         names,
         coef,
@@ -243,8 +298,12 @@ def fit_log_spread(
         g,
         float(np.sqrt(s2)),
         xtx_inv,
-        e / (1 - h),
+        loo,
         tuple(covariates),
         levels,
         report,
+        df,
+        x,
+        y,
+        cluster,
     )
