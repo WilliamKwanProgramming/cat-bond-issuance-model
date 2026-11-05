@@ -3,7 +3,8 @@
 `data/deals/cat_bond_deals.csv` lists publicly reported terms of catastrophe bond tranches with
 US named-storm exposure, one row per tranche, for use as the input of a regression of spread on
 expected loss. It holds 58 tranches from 37 note series (35 source pages), issued from 2017 to
-2025, by 14 sponsors. Every number in it was read on the page named in that row's `source_url`.
+2025, by 14 sponsors. Every number in it was read on the page named in that row's `source_url`,
+except the final Bowline Re 2018-1 coupon, whose source is named in that row's `notes`.
 `scripts/validate_deals.py` checks it (run by `tests/test_deals_data.py`).
 
 ## Terms of use and attribution
@@ -20,9 +21,12 @@ redistributing it beyond this repository.
 |---|---|---|
 | Artemis deal directory, `www.artemis.bm/deal-directory/<deal>/` (one page per note series) | sponsor, date of issue, trigger, perils, rating, tranche size at pricing, initial expected loss, initial attachment probability, initial and final price guidance | 58 |
 
-Only Artemis deal pages were used. Sponsor press releases, rating-agency releases and Swiss Re
-Capital Markets reports were not used, so no row has a second, independent source and no
-aggregate cross-check against a market report was made. The pages were read on 2026-11-05 with
+Only Artemis pages were used for the values in the table: the deal directory pages and, for one
+price (Bowline Re 2018-1), one Artemis news item. Sponsor press releases, rating-agency releases
+and Swiss Re Capital Markets reports were not used, so no row's values rest on a second,
+independent source and no aggregate cross-check against a market report was made (the
+independent re-check below found sponsor documents that agree on size and rate on line for two
+rows). The pages were read on 2026-11-05 with
 a web-fetch tool that returns a summary of the page; every extraction asked for the exact phrase
 containing each number, and the numbers were taken from those phrases.
 
@@ -45,10 +49,13 @@ probably wrong, and the series was found under another address where one exists)
   states, sometimes called "base" expected loss. One series (Purple Re 2025-1) restated its
   layers before pricing; there the restated expected loss is used, the attachment probability is
   left empty because it was not restated, and `notes` gives the earlier pair.
-- `spread_pct` is the final price when the page states one (`spread_basis = final`, 54 rows).
+- `spread_pct` is the final price when the page states one (`spread_basis = final`, 55 rows).
   When the page gives only the latest guidance and does not confirm pricing, that guidance is
-  used with `spread_basis = guidance` (4 rows). The pages call this number a spread, a coupon or
-  simply the price; `notes` records when the page calls it a coupon.
+  used with `spread_basis = guidance` (3 rows: Citrus Re 2017-1, Alamo Re 2019-1 and Alamo Re
+  2021-1). Bowline Re 2018-1 is `final`: its deal page shows guidance only, but an Artemis news
+  item of 2018-05-11 (named in `notes`) reports it as priced at the 4.5 mid-point. The pages call
+  this number a spread, a coupon or simply the price; `notes` records when the page calls it a
+  coupon.
 - Discount and zero-coupon notes (Everglades Re II 2023-1 and 2023-2, Gateway Re 2025-1
   Classes AA and C1, 4 rows): `spread_pct` is the coupon or spread equivalent that the page
   itself states next to the issue price. For Everglades Re II 2023 the page calls it approximate.
@@ -84,6 +91,86 @@ filled with a note. The same rule was then applied to the one other row with an 
 (Citrus Re 2017-1, at-a-glance USD 125 million, outside the sample). The discrepancy rate (1 of
 70 fields, under 10%) did not trigger a full re-check.
 
+## Independent re-check
+
+A second reader (a separate agent, run after the table was built) re-checked 20 further rows. They were
+drawn before any page was fetched with `random.Random(20261106).sample(sorted(range(48)), 20)` from
+the 48 data rows that the first check had not covered (file lines 2, 3, 5, 6, 7, 12, 13, 14, 15,
+18, 20, 22, 23, 25, 31, 48, 49, 51, 54 and 56 before the corrections below). Ten fields per row
+were compared with the page: `issue_year`, `issue_month`, `size_usd_m`, `expected_loss_pct`,
+`attachment_prob_pct`, `spread_pct`, `rating`, `trigger`, `sponsor` and `tranche`. The pages were
+read with the same kind of summarising fetch tool, each request asked for the exact sentence, and
+every doubtful field was fetched again with different wording.
+
+| Rows checked | Fields checked | Discrepancies | Fixed |
+|---|---|---|---|
+| 20 | 200 | 2 (1.0%; Wilson 95% interval 0.27% to 3.57%) | 1 corrected, 1 left empty on purpose |
+
+None of the discrepancies is in an expected-loss, spread or size cell: 0 of 60 (95% upper bound
+6.0%). Counting the first check, 3 of 270 fields were wrong (1.1%), but the first check was made by
+the person who built the table, so the two checks are not independent. Both read the same Artemis
+pages, so they test transcription, not whether Artemis is right.
+
+- Integrity Re 2019-1: the page says its notes are Series 2019-1 Class A; the table had `single
+  tranche`. Corrected to `Class A`.
+- Everglades Re II 2023-2 (and 2023-1, which shares the page and was not in the sample): the page
+  prints 1.23% (and 1.92%) under the label attachment point and gives the dollar attachment
+  point separately. The percentages are 1.2 to 1.3 times the expected losses in the table, so they
+  are probably attachment probabilities with a wrong label, but `attachment_prob_pct` stays empty
+  rather than guessing.
+
+Two further corrections came out of the same pass (these cells were not among the 200):
+
+- Bowline Re 2018-1: `spread_basis` changed from `guidance` to `final` (value unchanged, 4.5),
+  because the Artemis news item cited in `notes` reports the bond as priced at the mid-point of
+  4.25 to 4.75.
+- Citrus Re 2025-1 `region`: Class A covers named storm in the southeast states (AL, FL, GA, MS,
+  NC, SC), and Class B covers named storm in Hawaii only; both rows had listed all seven states.
+
+**Second sources.** For six sampled rows (Alamo Re 2024-1 Classes A, B and C; Everglades Re II
+2018-1 Class A, 2021-1 Class B and 2024-1 Class B) the second reader looked for a source other than
+Artemis.
+
+- Everglades Re II 2018-1 Class A: Citizens Property Insurance Corporation's board summary of
+  2020-06-24 describes a USD 250 million capital-markets layer of its 2018 coverage at a rate on
+  line of 4.73% (the document does not name the series, so the match is by size and year). The table
+  has a size of 250 and a spread of 4.75.
+- Everglades Re II 2021-1 Class B: Citizens' board summary of 2021-07-13 gives USD 275 million at
+  a gross rate on line of 6.75%, the same as the table.
+- Everglades Re II 2024-1 and Alamo Re 2024-1: only deal totals were found outside Artemis (Citizens:
+  USD 1.1 billion in three tranches; TWIA: a USD 1.4 billion bond), which are consistent with the
+  class sizes in the table, but no class-level terms.
+- No expected loss was found in any non-Artemis source. A sponsor's rate on line is not the same
+  number as an Artemis spread (4.73 against 4.75 here), so such documents are a plausibility
+  check, not a substitute.
+
+**Rows to treat separately in any analysis.**
+
+- Three `guidance` prices (above). For Citrus Re 2017-1 the news says the price was fixed at the
+  bottom of the lowered guidance range without giving a number; 6 is the bottom of the 6 to 6.5
+  range. For Alamo Re 2019-1 the press reports the mid-point (4.5); for Alamo Re 2021-1 the press
+  reports the price fixed at the low end of the 4% guidance and no source found says it priced.
+- Four discount-note rows (Everglades Re II 2023-1 and 2023-2, Gateway Re 2025-1 Classes AA and
+  C1): the value is 100 minus the issue price, a rate-on-line type figure for one wind season, not
+  a spread over a money-market rate on a par note, and it ignores collateral yield and the
+  sub-year term.
+- Expected loss from the launch plan: Alamo Re 2023-1 (the figures were stated for a two-series
+  USD 250 million plan; the second series was dropped and the deal doubled, and the page does not
+  restate them) and Alamo Re 2021-1 (the table has 1.76; an outside article's wording implies 1.93
+  for the doubled deal; unresolved).
+- Size changes: on 16 of the 20 re-checked pages the tranche size at pricing differed from the launch
+  size (15 up, 1 down), so the expected loss and attachment probability, which are offering-stage
+  figures, may not describe the notes as issued.
+- Duplicate layers: Integrity Re III 2025-1 A1 and A2, and B1 and B2, have identical expected loss,
+  attachment probability and spread, so the 58 rows are 56 distinct layers. A regression should use
+  the distinct layers.
+- Sponsor strings: "Citizens Property Insurance Corporation" (Florida) and "Louisiana Citizens
+  Property Insurance Corporation" are different entities, so grouping by a substring would merge
+  them.
+- Spread-to-expected-loss ratios differ by issue year (compute them from the table), so a pooled
+  regression needs a control for the year, and its standard errors should allow for correlation
+  within series and within sponsor.
+
 ## Limitations
 
 - Selection: only deals that Artemis lists, and within those only the programs chosen above.
@@ -99,4 +186,4 @@ filled with a note. The same rule was then applied to the one other row with an 
 - Price wording differs between pages (spread, coupon, price), and four rows use a stated spread
   equivalent of a discount note. The table does not convert between them.
 - Extraction used a summarising fetch tool. The re-verification bounds, but does not remove, the
-  risk of a misread number in the 48 rows that were not re-checked.
+  risk of a misread number in the 28 rows that were not re-checked in either round.
