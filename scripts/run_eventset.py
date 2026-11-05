@@ -10,6 +10,7 @@ Writes to results/eventset/:
   reference_layer.csv  the pre-specified reference layer (1-in-50 to 1-in-100 OEP, rounded)
   sensitivity.csv      AAL, 1-in-100 / 1-in-250 OEP and reference-layer metrics per variant
   MANIFEST.txt
+and results/exposure/county_exposure.csv (the hypothetical portfolio by county).
 
 Usage: python3 scripts/run_eventset.py [--seed 1] [--n-years 100000]
 """
@@ -48,6 +49,7 @@ from catbond.pipeline import (
 from catbond.vulnerability import EMANUEL_V_THRESH_KT
 
 OUT = repo_root() / "results" / "eventset"
+EXPOSURE_OUT = repo_root() / "results" / "exposure"
 CLIMADA_V_HALF_KT = 74.7 / 0.514444  # CLIMADA from_emanuel_usa default, converted to kt
 
 
@@ -77,6 +79,16 @@ def main() -> int:
     inp = load_inputs()
     coast, ex = inp.region.coast_edges, inp.exposure
     OUT.mkdir(parents=True, exist_ok=True)
+    EXPOSURE_OUT.mkdir(parents=True, exist_ok=True)
+    ex.to_csv(EXPOSURE_OUT / "county_exposure.csv", index=False, float_format="%.6f")
+    write_manifest(
+        EXPOSURE_OUT,
+        None,
+        {
+            "data": "HYPOTHETICAL portfolio: USD 100 bn TIV spread "
+            "by 2020 Census households (UF BEBR table)"
+        },
+    )
 
     base_model = fit_hazard(inp.landfalls, *CALIBRATION)
     base = simulate_event_set(base_model, coast, ex, args.n_years, args.seed)

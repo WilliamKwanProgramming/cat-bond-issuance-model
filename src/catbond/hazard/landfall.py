@@ -175,8 +175,9 @@ def hybrid_landfalls(
     """Record definition outside ``gap``; geometric definition for years inside ``gap``.
 
     In ``AL.rda`` the "L" record identifier is almost absent for 1966-1984 (six "L" records in
-    19 years, none in Florida, against 50 or more per five years elsewhere after 1945), so the
-    record definition alone would undercount those years.
+    19 years, none in Florida, against 36 to 85 per five-year period in 1945-1964 and 1985-2019;
+    see results/hazard/l_flags_by_period.csv), so the record definition alone would undercount
+    those years.
     """
     in_gap = tracks["year"].between(gap[0], gap[1])
     rec = landfalls_from_records(tracks[~in_gap], region)

@@ -7,6 +7,7 @@ Writes to results/hazard/:
   frequency.csv              count models and tests for the three pre-specified windows
   intensity.csv              GPD and KDE fits against observed category frequencies
   motion_by_coast.csv        heading and translation speed by coast segment
+  l_flags_by_period.csv      number of "L" records in AL.rda per five-year period (all basins)
   MANIFEST.txt
 
 Usage: python3 scripts/run_hazard.py
@@ -214,6 +215,20 @@ def main() -> int:
     frequency_table(inp).to_csv(OUT / "frequency.csv", index=False, float_format="%.6g")
     intensity_table(inp).to_csv(OUT / "intensity.csv", index=False, float_format="%.6g")
     motion_table(inp).to_csv(OUT / "motion_by_coast.csv", index=False, float_format="%.4g")
+    lrec = inp.tracks[inp.tracks["record"] == "L"]
+    per = (lrec["year"] // 5 * 5).value_counts().sort_index()
+    per = per.reindex(range(1850, 2020, 5), fill_value=0)
+    g0, g1 = FLAG_GAP_YEARS
+    flags = pd.DataFrame(
+        {"period": [f"{y}-{y + 4}" for y in per.index], "n_L_records": per.to_numpy()}
+    )
+    gap_row = pd.DataFrame(
+        {
+            "period": [f"{g0}-{g1} (flag gap)"],
+            "n_L_records": [int(lrec["year"].between(g0, g1).sum())],
+        }
+    )
+    pd.concat([flags, gap_row]).to_csv(OUT / "l_flags_by_period.csv", index=False)
     write_manifest(
         OUT,
         None,
