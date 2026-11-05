@@ -174,21 +174,27 @@ does not validate losses.
 
 ## Pricing
 
-Spread multiple = spread / EL. Regression on a deals table (one row per tranche; columns of the
+Spread multiple = spread / EL. Regression on the deals table (one row per tranche; columns of the
 deals interface: deal_name, tranche, sponsor, issue_year, issue_month, size_usd_m, peril, region,
 trigger, expected_loss_pct, attachment_prob_pct, exhaustion_prob_pct, spread_pct, spread_basis,
-rating, source_url, access_date, notes):
-log(spread) = b0 + b1 log(EL) + optional covariates (issue year, log size, trigger, peril,
-region dummies), by OLS with classical, HC3 and sponsor-clustered (CR1) standard errors,
-exact leave-one-out errors e_i / (1 - h_ii), and a normal-theory prediction interval on the log
-scale. Rows with missing or non-positive EL or spread, a missing covariate, or (optionally) a
-spread basis other than the one requested are dropped and counted by reason. Comparable-deal
-screen: distance combining log EL and log size differences (scales 0.5 and 1.0) with penalties
-for a different peril (2.0) or region (1.0). In wave 1 the regression is run only on synthetic
-deal tables with a known generating relation (`results/pricing_synthetic/`).
+rating, source_url, access_date, notes): log(spread) = b0 + b1 log(EL) + optional covariates
+(issue-year fixed effects or a linear year trend, log size, trigger, peril, region dummies), by
+OLS with classical, HC3 and CR1 cluster-robust standard errors (clustered by note series or by
+sponsor), exact leave-one-out errors e_i / (1 - h_ii), leave-one-group-out prediction errors, a
+restricted wild cluster bootstrap-t interval for b1 (Rademacher weights, test inversion), and a
+normal-theory prediction interval on the log scale. Rows with missing or non-positive EL or
+spread, or a missing covariate, are dropped and counted by reason. The models, samples and
+decision rule used on the real table are fixed in `docs/pricing_protocol.md`; results are in
+`results/pricing/` and `docs/findings.md`. The code was first checked on synthetic deal tables
+with a known generating relation (`results/pricing_synthetic/`). Comparable-deal screen: the k
+nearest public layers by distance on log EL (scale 0.5) and issue year (scale 2 years).
 
 ## References
 
+* Cameron, A. C., J. B. Gelbach and D. L. Miller, 2008: Bootstrap-based improvements for
+  inference with clustered errors. *Review of Economics and Statistics*, 90(3), 414-427.
+* Cameron, A. C., and D. L. Miller, 2015: A practitioner's guide to cluster-robust inference.
+  *Journal of Human Resources*, 50(2), 317-372.
 * Bodoff, N. M., and Y. Gan, 2013: An analysis of the market price of cat bonds. *Variance*,
   6(2), 161-177.
 * Emanuel, K., 2011: Global warming effects on U.S. hurricane damage. *Weather, Climate, and

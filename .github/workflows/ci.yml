@@ -26,5 +26,17 @@ jobs:
         run: python scripts/fetch_data.py
       - name: Lint
         run: ruff check .
-      - name: Test
-        run: python -m pytest -q
+      - name: Validate the deal table
+        run: python scripts/validate_deals.py
+      - name: Test (the workbook recalculation tests skip without LibreOffice)
+        run: python -m pytest -q -rs
+
+  readme-numbers:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: README and findings numbers are in the committed results files
+        run: python scripts/check_readme_numbers.py

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# Regenerate every file in results/ from a clean checkout.
+# Regenerate every file in results/ and the two deliverables from a clean checkout.
+# The workbook is recalculated only where LibreOffice (soffice) is installed; the pitchbook needs
+# pdflatex and latexmk.
 # Usage: bash scripts/reproduce.sh   (from the repository root; needs the package installed,
 #        e.g. pip install -e ".[test]")
 set -euo pipefail
@@ -16,7 +18,11 @@ steps=(
   "scripts/run_convergence.py --n-years 100000 --n-seeds 20 --seed-start 2001"
   "scripts/run_param_uncertainty.py --n-boot 200 --n-years 10000 --seed 5001"
   "scripts/run_pricing_synthetic.py --reps 1000 --n 60 --seed 4001"
+  "scripts/run_pricing.py --n-boot 9999 --seed 6001"
+  "scripts/run_transaction.py"
   "scripts/make_tables.py"
+  "scripts/make_workbook.py"
+  "scripts/make_pitchbook.py"
 )
 
 start=$(date +%s)
@@ -32,7 +38,7 @@ mkdir -p results
   echo "date:    $(date -u +%Y-%m-%dT%H:%M:%SZ)"
   python3 -c 'import platform, numpy, scipy, pandas; print(f"python:  {platform.python_version()}; numpy {numpy.__version__}; scipy {scipy.__version__}; pandas {pandas.__version__}")'
   echo "machine: $(uname -m) $(uname -s); $(nproc) cores"
-  echo "seeds:   eventset 1; oos 3001; convergence 1001-1020 (N=10000), 2001-2020 (N=100000); param bootstrap 5001 (replicates 5002-5201); pricing 4001"
+  echo "seeds:   eventset 1; oos 3001; convergence 1001-1020 (N=10000), 2001-2020 (N=100000); param bootstrap 5001 (replicates 5002-5201); synthetic pricing 4001; deal-table wild bootstrap 6001"
   echo "commands (from the repository root):"
 } > results/MANIFEST.txt
 for s in "${steps[@]}"; do
@@ -42,4 +48,4 @@ for s in "${steps[@]}"; do
   python3 $s
   echo "  python3 $s  [$(( $(date +%s) - t0 )) s]" >> results/MANIFEST.txt
 done
-echo "total:   $(( $(date +%s) - start )) s" >> results/MANIFEST.txt
+echo "total:   $(( $(date +%s) - start )) s wall; CPU of this shell's children: $(times | tail -1)" >> results/MANIFEST.txt
