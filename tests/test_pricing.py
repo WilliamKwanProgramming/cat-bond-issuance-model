@@ -143,30 +143,23 @@ def test_predict_rejects_unseen_level():
         f.predict(new)
 
 
-def test_comparables():
+def test_comparables_by_el_and_year():
     deals = pd.DataFrame(
         {
             "deal_name": list("ABCDEF"),
             "expected_loss_pct": [2.0, 2.1, 6.0, 2.0, 2.0, np.nan],
             "spread_pct": [6.0, 7.0, 12.0, 5.0, 6.5, 8.0],
-            "size_usd_m": [200.0, 400.0, 200.0, 200.0, np.nan, 200.0],
-            "peril": [
-                "US named storm",
-                "US named storm",
-                "US named storm",
-                "Japan quake",
-                "us named storm ",
-                "US named storm",
-            ],
-            "region": ["Florida", "Texas", "Florida", "Japan", "Florida", "Florida"],
+            "issue_year": [2025, 2024, 2025, 2021, np.nan, 2025],
         }
     )
-    out = comparable_deals(deals, 2.0, 200.0, "US named storm", "Florida", k=4)
-    assert out["deal_name"].tolist()[0] == "A" and out["distance"].iloc[0] == 0.0
-    assert out.attrs["n_usable"] == 5 and "F" not in out["deal_name"].tolist()
+    out = comparable_deals(deals, 2.0, 2025, k=3)
+    assert out["deal_name"].tolist() == ["A", "B", "D"]
+    assert out.attrs["n_usable"] == 4 and out.attrs["n_input"] == 6
     d = out.set_index("deal_name")["distance"]
-    assert d["E"] == pytest.approx(1.0)  # missing size: one unit
-    assert d["B"] == pytest.approx(np.hypot(np.log(2.1 / 2.0) / 0.5, np.log(2.0)) + 1.0)
-    assert d["C"] == pytest.approx(np.log(3.0) / 0.5)
+    assert d["A"] == 0.0
+    assert d["B"] == pytest.approx(np.hypot(np.log(2.1 / 2.0) / 0.5, 0.5))
+    assert d["D"] == pytest.approx(2.0)
+    full = comparable_deals(deals, 2.0, 2025, k=10).set_index("deal_name")["distance"]
+    assert full["C"] == pytest.approx(np.log(3.0) / 0.5)
     assert out.set_index("deal_name")["multiple"]["A"] == pytest.approx(3.0)
     assert list(deals.columns) != DEAL_COLUMNS  # the screen needs only a subset of columns
