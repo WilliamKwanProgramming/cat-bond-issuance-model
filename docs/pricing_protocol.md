@@ -2,8 +2,8 @@
 
 This document fixes every analysis choice of the spread regression on the public deal table and
 of the hypothetical transaction **before** any model was fitted on the real table. It was
-committed together with `scripts/run_pricing.py` (commit 1efd8d9) and before any results file
-(47a6a66). The commits show what the protocol and the script said when the results were
+committed together with `scripts/run_pricing.py` (commit d6f3cb9) and before any results file
+(790837b). The commits show what the protocol and the script said when the results were
 produced; they cannot show that no fit had been run on the table before the protocol was
 written, and the statement that none had been run rests on this project's own record. Every
 model and sample listed here is reported in `results/pricing/` whatever it shows. No other

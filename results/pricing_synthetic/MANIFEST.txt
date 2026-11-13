@@ -1,6 +1,6 @@
 command: python3 scripts/run_pricing_synthetic.py --reps 1000 --n 60 --seed 4001
 seed:    4001
-git:     c0b9fd98b02f833d1e542bf675def0cc413748a8 (clean)
+git:     1379a54e3115d4b69c6e33274332adbba693a333 (clean)
 date:    2026-11-05T11:19:32Z
 python:  3.13.18; numpy 2.5.3
 machine: x86_64 Linux

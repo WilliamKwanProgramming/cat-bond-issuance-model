@@ -1,6 +1,6 @@
 command: python3 scripts/run_oos.py --seed 3001 --n-boot 2000
 seed:    3001
-git:     c0b9fd98b02f833d1e542bf675def0cc413748a8 (clean)
+git:     1379a54e3115d4b69c6e33274332adbba693a333 (clean)
 date:    2026-11-05T11:02:41Z
 python:  3.13.18; numpy 2.5.3
 machine: x86_64 Linux
